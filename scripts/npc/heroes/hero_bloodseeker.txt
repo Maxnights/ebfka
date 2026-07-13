@@ -1,0 +1,461 @@
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Ability: Bloodseeker's Bloodrage
+	//=================================================================================================================
+	"bloodseeker_bloodrage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5015"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"hero_bloodseeker.bloodRage"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+		"HasShardUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"25 37 50 62 75 87 100"	
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"14 12 10 8 6.8 5.7 4.6"
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.1"	// Primarily about the damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"						"8"
+			"attack_speed"		
+			{
+				"value"										"60 90 120 150 180 210 240"
+				"special_bonus_unique_bloodseeker_5"	"+25"
+			}
+			"spell_amp"		
+			{
+				"value"										"15 20 30 45 65 90 120"
+			}
+			"damage_pct"				
+			{
+				"value"		"0.5"
+				"special_bonus_unique_bloodseeker"		"-0.7"
+				"DamageTypeTooltip"			"DAMAGE_TYPE_PURE"
+			}
+			"max_health_dmg_pct"	
+			{
+				"value"						"0"
+				"special_bonus_shard"		"+1.0"
+			}
+			"thirst_threshold_bonus"
+			{
+				"value"			"0"
+			}
+			"can_silence"
+			{
+				"special_bonus_facet_bloodseeker_old_blood"			"0"
+			}
+			"base_damage_amp"
+			{
+				"value"				"0"
+				"CalculateSpellDamageTooltip"	"0"
+				"DamageTypeTooltip"				"DAMAGE_TYPE_PHYSICAL"
+			}
+			"AbilityManaCost"
+			{
+				"value"   "0"
+				"special_bonus_facet_bloodseeker_old_blood"			"=60"
+			}
+			"enemy_castpoint"					"0.3"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastGestureSlot"		"DEFAULT"
+	}
+	
+
+	//=================================================================================================================
+	// Ability: Bloodseekers Blood Rite/Bath
+	//=================================================================================================================
+	"imba_bloodseeker_blood_bath"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"				"components/abilities/heroes/hero_bloodseeker"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"AbilityTextureName"			"bloodseeker_blood_bath"
+        "MaxLevel"						"7"
+        "AbilityCooldown" "11"
+        "LevelsBetweenUpgrades"			"3"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.3"
+        "AbilityManaCost"				"90 100 110 120 130 140 150"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_bloodseeker.vsndevts"
+			"particle"	"particles/units/heroes/hero_bloodseeker/bloodseeker_bloodritual_ring.vpcf"
+			"particle"	"particles/generic_gameplay/generic_silence.vpcf"
+			"particle"	"particles/hero/bloodseeker/blood_bath_power.vpcf"
+		}
+
+		"AbilityValues"
+		{
+			"radius" "600"
+			"damage"
+			{
+				"value" "1275 1600 3600 6700 9800 14200 25000"
+				"special_bonus_unique_bloodseeker_2" "+100%"
+				"CalculateSpellDamageTooltip"	"1"
+			} 
+			"delay" "2.0"
+			"silence_duration" "3.0"
+			"delay_plus_castpoint_tooltip" "2.0"
+			"dmg_to_overheal" "850"
+			"max_overheal_per_instance" "200000"
+			"max_overheal_total" "1000000"
+			"overheal_duration" "7"
+			"cooldown_reduction" "25"
+			"vision_aoe" "200"
+			"vision_duration" "6.0"
+			"cooldown_reduction_talent" "6"
+		}
+
+	}
+
+
+    "special_bonus_imba_bloodseeker_5"	// Blood Rite is cast in three overlapping circles
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"special_bonus_undefined"
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		"AbilityValues"
+		{
+			"distance"				"500"
+			"circles"				"3"
+			"ad_linked_abilities" "imba_bloodseeker_blood_bath"
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Bloodseeker's Thirst
+	//=================================================================================================================
+	"bloodseeker_thirst"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_bloodseeker/bloodseeker_thirst"
+		"AbilityTextureName"			"bloodseeker_thirst"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"min_bonus_pct"					"80"
+			"bonus_movement_speed"
+			{
+				"value"						"32 48 64 80 96 112 128"
+				"LinkedSpecialBonus"		"special_bonus_unique_bloodseeker_4"
+			}			
+			"hero_kill_heal"				"3.0 4.5 6.0 7.5 9.0 10.5 12.0"
+			"creep_kill_heal"				"3.3 4.2 5.1 6.0 6.9 7.8 8.7"
+			"half_bonus_aoe"				"300"
+			"max_bonus_pct"					"25"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+	"Blood_Seeker_Blood_Smell"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"bloodseeker_thirst"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+		"AbilitySpecial"
+	    {
+	        "01"
+	        {
+	            "var_type"              "FIELD_FLOAT"
+	            "percent"                "0.5 1.0 1.5 2.0 3.5 4.25 5.0"
+	        }
+	    }
+
+	    "Modifiers"
+	    {
+	    	"blood_passive"
+	    	{
+	    		"IsHidden"	 "1"
+				"Passive"	 "1"
+				"OnAttackLanded"
+				{
+   					"RunScript"
+				    {
+				        "ScriptFile" "lua_abilities/abilities_simple.lua"
+				        "Function" "Blood_Seeker_Blood_Smell"
+				    }
+				}
+			}
+	    }
+	}
+	//=================================================================================================================
+	// Ability: Bloodseeker's Rupture
+	//=================================================================================================================
+"bloodseeker_rupture"
+{
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityType"				"ABILITY_TYPE_ULTIMATE"
+	"AbilityUnitTargetFlags"				"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_NO"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_PURE"
+	"FightRecapLevel"				"2"
+	"AbilitySound"				"hero_bloodseeker.rupture"
+	"MaxLevel"				"6"
+	"LevelsBetweenUpgrades"				"6"
+	"HasScepterUpgrade"				"1"
+	"AbilityDraftUltScepterAbility"				"bloodseeker_blood_mist"
+	"AbilityCastPoint"				"0.4"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_6"
+	"AbilityManaCost"				"100 200 300 400 500 600 700"
+	"AbilityModifierSupportValue"				"0.0"
+	"AbilityValues"
+	{
+		"duration"				"12"
+		"movement_damage_pct"
+		{
+			"value"				"35 45 55 60 70 80"
+			"CalculateSpellDamageTooltip"				"1"
+		}
+		"hp_pct"
+		{
+			"value"				"3.75"
+			"special_bonus_unique_bloodseeker_7"				"+1.875"
+			"CalculateSpellDamageTooltip"				"0"
+			"DamageTypeTooltip"				"DAMAGE_TYPE_PURE"
+			"special_bonus_scepter"				"+2.25"
+		}
+		"knockback"
+		{
+			"value"				"0"
+			"special_bonus_facet_bloodseeker_arterial_spray"				"50"
+		}
+		"knockback_duration"
+		{
+			"value"				"0"
+			"special_bonus_facet_bloodseeker_arterial_spray"				"0.1"
+		}
+		"damage_cap_amount"
+		{
+			"value"				"1250 2500 5000 10000 25000 50000"
+			"CalculateSpellDamageTooltip"				"1"
+		}
+		"AbilityCastRange"
+		{
+			"value"				"800"
+			"special_bonus_unique_bloodseeker_3"				"+475"
+		}
+		"AbilityCharges"
+		{
+			"value"				"0"
+			"special_bonus_unique_bloodseeker_rupture_charges"				"+2"
+			"special_bonus_scepter"				"+2"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"70"
+			"special_bonus_unique_bloodseeker_rupture_charges"				"=0.25"
+		}
+		"AbilityChargeRestoreTime"
+		{
+			"value"				"0"
+			"special_bonus_unique_bloodseeker_rupture_charges"				"=65"
+		}
+	}
+}
+//=================================================================================================================
+	// Ability: Bloodseeker's Blood Mist
+	//=================================================================================================================
+	"bloodseeker_blood_mist"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_bloodseeker/bloodseeker_blood_mist"
+		"AbilityTextureName"			"bloodseeker_blood_mist"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"		
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByScepter"			"1"
+		"HasScepterUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.5"
+		"AbilityCooldown"				"3.0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"hp_cost_per_second"	
+			{
+				"value"				"7"
+				"DamageTypeTooltip"		"DAMAGE_TYPE_MAGICAL"
+			}
+			"radius"				
+			{
+				"value"		"450"
+				"affected_by_aoe_increase"	"1"
+			}
+			"movement_slow"			"30"
+			"barrier_decay_pct"			"0.5"
+			"voracity_bonus_pct"		"50"
+		}
+	}
+
+	"bloodseeker_blood_mist_codex"
+	{
+		"BaseClass" "bloodseeker_blood_mist"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"		
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityTextureName"			"bloodseeker_blood_mist"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByScepter"			"0"
+		"HasScepterUpgrade"				"0"
+
+		"AbilityValues"
+		{
+			"hp_cost_per_second"	
+			{
+				"value"				"2"
+				"DamageTypeTooltip"		"DAMAGE_TYPE_MAGICAL"
+			}
+			"radius"				
+			{
+				"value"		"450"
+				"affected_by_aoe_increase"	"1"
+			}
+			"movement_slow"			"30"
+			"barrier_decay_pct"			"0.5"
+			"voracity_bonus_pct"		"50"
+			
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Bloodseeker's Thirst
+	//=================================================================================================================
+	"bloodseeker_sanguivore"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS | DOTA_ABILITY_BEHAVIOR_FORCE_NO_INNATE_UI | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"AbilityCastPoint"				"0.3"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+		"IsBreakable"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"base_heal"							"25"
+			"heal_hp_pct"				
+			{
+				"hero_levelup"	"1.5"
+			}
+			
+			"creep_lifesteal_reduction_pct"		"0"
+			"deny_lifesteal_reduction_pct"						"0"
+
+			"half_bonus_aoe"		
+			{
+				"value"		"300"
+				"affected_by_aoe_increase"	"1"
+			}
+
+			"max_hp_percent_heal_tooltip"
+			{
+				"dynamic_value"				"true"
+			}
+			"barrier_decay_pct"			
+			{
+				"value"								"0"
+				"special_bonus_unique_bloodseeker_overheal_barrier"				"1.5"
+			}
+			"max_shield_pct"
+			{
+				"value"								"0"
+				"special_bonus_unique_bloodseeker_overheal_barrier"				"+35"
+			}
+			"pure_damage_lifesteal_pct"
+			{
+				"value"								"0"
+				"special_bonus_unique_bloodseeker_pure_damage_lifesteal"				"=25"
+			}
+		}
+	}
+}

@@ -1,0 +1,214 @@
+"DOTAAbilities"
+{
+    "item_medusa_head"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"medusa_head"
+		"ScriptFile"					"items/siltbreaker/item_medusa_head"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"30.0"
+		"AbilityManaCost"				"75"
+		"ItemCost"						"3750"
+		"ItemPurchasable"				"1"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"1"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"1"
+		"AbilityValues"
+		{
+			"bonus_armor"				"6"
+			"bonus_stats"				"50"
+			"stone_duration"			"1.5"
+			"bonus_physical_damage"		"40"
+		}
+	}
+
+	"item_recipe_medusa_head_2"
+    {
+        "BaseClass"						"item_recipe_crimson_guard"
+        "ItemCost"						"1500"
+        "ItemShopTags"					""
+        "ItemRecipe"					"1"
+        "ItemResult"					"item_medusa_head_2"
+        "ItemRequirements"
+        {
+            "01" "item_medusa_head"
+        }
+    }
+
+	"item_medusa_head_2"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"medusa_head"
+		"ScriptFile"					"items/siltbreaker/item_medusa_head"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"28.0"
+		"AbilityManaCost"				"100"
+		"ItemCost"						"5250"
+		"ItemPurchasable"				"1"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"1"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"1"
+		"AbilityValues"
+		{
+			"bonus_armor"				"8"
+			"bonus_stats"				"100"
+			"stone_duration"			"1.5"
+			"bonus_physical_damage"		"55"
+		}
+	}
+
+	"item_recipe_medusa_head_3"
+    {
+        "BaseClass"						"item_recipe_crimson_guard"
+        "ItemCost"						"3000"
+        "ItemShopTags"					""
+        "ItemRecipe"					"1"
+        "ItemResult"					"item_medusa_head_3"
+        "ItemRequirements"
+        {
+            "01" "item_medusa_head_2"
+        }
+    }
+
+	"item_medusa_head_3"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"medusa_head"
+		"ScriptFile"					"items/siltbreaker/item_medusa_head"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"25.0"
+		"AbilityManaCost"				"125"
+		"ItemCost"						"8250"
+		"ItemPurchasable"				"1"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"1"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"1"
+		"AbilityValues"
+		{
+			"bonus_armor"				"11"
+			"bonus_stats"				"150"
+			"stone_duration"			"1.5"
+			"bonus_physical_damage"		"70"
+		}
+	}
+
+	"item_recipe_medusa_head_4"
+    {
+        "BaseClass"						"item_recipe_crimson_guard"
+        "ItemCost"						"5500"
+        "ItemShopTags"					""
+        "ItemRecipe"					"1"
+        "ItemResult"					"item_medusa_head_4"
+        "ItemRequirements"
+        {
+            "01" "item_medusa_head_3"
+        }
+    }
+
+	"item_medusa_head_4"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"medusa_head"
+		"ScriptFile"					"items/siltbreaker/item_medusa_head"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"22.0"
+		"AbilityManaCost"				"150"
+		"ItemCost"						"13750"
+		"ItemPurchasable"				"1"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"1"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"1"
+		"AbilityValues"
+		{
+			"bonus_armor"				"14"
+			"bonus_stats"				"200"
+			"stone_duration"			"1.5"
+			"bonus_physical_damage"		"90"
+		}
+	}
+
+	"item_recipe_medusa_head_5"
+    {
+        "BaseClass"						"item_recipe_crimson_guard"
+        "ItemCost"						"9000"
+        "ItemShopTags"					""
+        "ItemRecipe"					"1"
+        "ItemResult"					"item_medusa_head_5"
+        "ItemRequirements"
+        {
+            "01" "item_medusa_head_4"
+        }
+    }
+
+	"item_medusa_head_5"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"medusa_head"
+		"ScriptFile"					"items/siltbreaker/item_medusa_head"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"20.0"
+		"AbilityManaCost"				"175"
+		"ItemCost"						"22750"
+		"ItemPurchasable"				"1"
+		"ItemQuality"					""
+		"ItemStackable"					"0"
+		"ItemSellable"					"1"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemKillable"					"1"
+		"AbilityValues"
+		{
+			"bonus_armor"				"18"
+			"bonus_stats"				"250"
+			"stone_duration"			"1.5"
+			"bonus_physical_damage"		"110"
+		}
+	}
+}

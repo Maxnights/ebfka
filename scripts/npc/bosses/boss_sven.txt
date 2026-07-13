@@ -1,0 +1,149 @@
+"DOTAAbilities"
+{
+    "boss_sven_great_cleave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "sven_great_cleave"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"IsBreakable" "1"
+		
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"3"
+				
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{						
+			"cleave_starting_width"			"200 250 300"
+			"cleave_ending_width"			"400 440 480"
+			"cleave_distance"				"700 800 900"
+			"great_cleave_damage"
+			{
+				"value"						"70"
+				"LinkedSpecialBonus"		"special_bonus_unique_sven_8"
+			}
+			"strength_bonus"				"700 1300 2200"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	//=================================================================================================================
+	// Ability: God's Strength
+	//=================================================================================================================
+	"boss_sven_gods_strength"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "sven_gods_strength"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Sven.GodsStrength"
+		
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+ 		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_4"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.2 0.2 0.2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"50"
+		"AbilityDuration"				"35.0"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0 0 0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+        {
+            "gods_strength_damage"
+            {
+                "value"     "300 400 700"   
+                "special_bonus_unique_sven_2"       "+50"   
+            }
+            "bonus_slow_resistance"
+            {
+                "value"     "30"    
+                "special_bonus_unique_sven_gods_strength_slow_resist"       "+20"   
+            }
+        }   	
+	}
+
+    "boss_lycan_shapeshift"
+	{
+		"BaseClass" "lycan_shapeshift"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Lycan.Shapeshift.Cast"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		"MaxLevel"							"3"
+		"LevelsBetweenUpgrades"				"3"
+
+		"HasScepterUpgrade"					"1"
+		"AbilityDraftUltScepterAbility"		"lycan_wolf_bite"
+		"LinkedAbility"						"lycan_wolf_bite"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"		
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"
+			{
+				"value"				"25"
+				"special_bonus_unique_lycan_1"	"+6"
+			}
+			"speed"				"600"
+			"bonus_night_vision"		"1000"
+			"transformation_time"		"0.5"
+			"crit_chance"			
+			{
+				"value"							"50"
+				"special_bonus_unique_lycan_5"	"+15"
+			}
+			"crit_multiplier"		"500 600 700"
+			"health_bonus"			"125000 200000 250000"
+		}
+	}
+
+	"darkness"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"bosses/boss_sven/darkness"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+        
+        "AbilityTextureName"			"night_stalker_hunter_in_the_night"
+
+		// "AbilityCastRange" "9999999"
+        "AbilityCastMinimumRange" "0"
+        // "AOERadius" "99999999"
+        "AbilityCastAnimation" "ACT_DOTA_SPAWN" // Activity
+        "AnimationPlaybackRate" "1.0" // Animation speed multiplier
+        "AnimationIgnoresModelScale" "1"
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown" "20.0"
+        "AbilityCastPoint" "1.0"
+	}
+}

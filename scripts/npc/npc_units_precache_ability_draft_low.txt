@@ -1,0 +1,1223 @@
+"DOTAUnits"
+{
+	"Version"		"1"
+
+	"ad_precache_low_npc_dota_hero_antimage"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_axe"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_bane"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_bane.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_bloodseeker"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_bloodseeker.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_crystal_maiden"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_drow_ranger"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_drowranger.vsndevts"
+			"particle"				"particles/units/heroes/hero_drow/drow_frost_arrow.vpcf"
+			"particle"				"particles/units/heroes/hero_drow/drow_marksmanship_frost_arrow.vpcf"
+			"particle"				"particles/units/heroes/hero_drow/drow_marksmanship_attack.vpcf"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_earthshaker"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_juggernaut"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
+			"model"					"models/heroes/juggernaut/jugg_healing_ward.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_mirana"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_mirana.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_nevermore"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_morphling"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_morphling.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_phantom_lancer"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_phantom_lancer.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_puck"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_puck.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_pudge"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_razor"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_razor.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_sand_king"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_sandking.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_storm_spirit"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_stormspirit.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_sven"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_tiny"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_tiny.vsndevts"
+			"model"					"models/heroes/tiny_02/tiny_02.vmdl"
+			"model"					"models/heroes/tiny_03/tiny_03.vmdl"
+			"model"					"models/heroes/tiny_04/tiny_04.vmdl"
+			"model"					"models/heroes/tiny_01/tiny_01_tree.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_vengefulspirit"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
+            "particle"              "particles/units/heroes/hero_vengeful/vengeful_projection_attack.vpcf"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_windrunner"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_windrunner.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_zuus"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_kunkka"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_kunkka.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_lina"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_lina.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_lich"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_lion"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_lion.vsndevts"
+			"model"					"models/props_gameplay/frog.vmdl"
+		}
+	}
+
+	"ad_precache_low_npc_dota_hero_monkey_king"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_monkey_king.vsndevts"
+			"model"					"models/props_gameplay/banana_prop_closed.vmdl"
+			"model"					"models/props_gameplay/banana_prop_closed_mk.vmdl"
+			"model"					"models/props_gameplay/banana_prop_open.vmdl"
+		}
+	}
+
+	"ad_precache_low_npc_dota_hero_shadow_shaman"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_shadowshaman.vsndevts"
+			"model"					"models/props_gameplay/chicken.vmdl"
+			"model"					"models/heroes/shadowshaman/shadowshaman_totem.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_slardar"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_slardar.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_tidehunter"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_tidehunter.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_witch_doctor"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_witchdoctor.vsndevts"
+			"model"					"models/heroes/witchdoctor/witchdoctor_ward.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_riki"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_riki.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_enigma"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_enigma.vsndevts"
+			"model"					"models/heroes/enigma/eidelon.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_tinker"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_tinker.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_sniper"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_necrolyte"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_necrolyte.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_warlock"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_warlock.vsndevts"
+			"model"					"models/heroes/warlock/warlock_demon.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_beastmaster"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts"
+			"model"					"models/heroes/beastmaster/beastmaster_bird.vmdl"
+			"model"					"models/heroes/beastmaster/beastmaster_beast.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_queenofpain"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_queenofpain.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_venomancer"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
+			"model"					"models/heroes/venomancer/venomancer_ward.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_faceless_void"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_skeleton_king"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_skeletonking.vsndevts"
+			"model"					"models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_skeleton_melee.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_death_prophet"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_death_prophet.vsndevts"
+			"model"					"models/heroes/death_prophet/death_prophet_ghost.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_phantom_assassin"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_pugna"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts"
+			"model"					"models/heroes/pugna/pugna_ward.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_templar_assassin"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_templar_assassin.vsndevts"
+			"particle"				"particles/units/heroes/hero_templar_assassin/templar_assassin_psi_blade.vpcf"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_viper"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_viper.vsndevts"
+			"particle"				"particles/units/heroes/hero_viper/viper_poison_attack.vpcf"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_luna"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_luna.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_dragon_knight"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
+			"model"					"models/heroes/dragon_knight/dragon_knight_dragon.vmdl"
+			"particle"				"particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_corrosive.vpcf"
+			"particle"				"particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_fire.vpcf"
+			"particle"				"particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_frost.vpcf"
+			"particle"				"particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_attack_black.vpcf"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_dazzle"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_dazzle.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_rattletrap"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_rattletrap.vsndevts"
+			"model"					"models/heroes/rattletrap/rattletrap_cog.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_leshrac"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_leshrac.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_furion"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_furion.vsndevts"
+			"model"					"models/heroes/furion/treant.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_life_stealer"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_life_stealer.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_dark_seer"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_dark_seer.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_dark_willow"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_dark_willow.vsndevts"
+			"particle"				"particles/units/heroes/hero_dark_willow/dark_willow_shadow_attack.vpcf"
+			"particle"				"particles/units/heroes/hero_dark_willow/dark_willow_shadow_attack_dummy.vpcf"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_clinkz"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_clinkz.vsndevts"
+			"particle"				"particles/units/heroes/hero_clinkz/clinkz_searing_arrow.vpcf"
+			"model"					"models/heroes/clinkz/clinkz_archer.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_omniknight"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_enchantress"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_enchantress.vsndevts"
+			"particle"				"particles/units/heroes/hero_enchantress/enchantress_impetus.vpcf"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_huskar"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_huskar.vsndevts"
+			"particle"				"particles/units/heroes/hero_huskar/huskar_burning_spear.vpcf"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_night_stalker"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_nightstalker.vsndevts"
+			"model"					"models/heroes/nightstalker/nightstalker_night.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_broodmother"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_broodmother.vsndevts"
+			"model"					"models/heroes/broodmother/spiderling.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_bounty_hunter"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_weaver"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_weaver.vsndevts"
+			"model"					"models/heroes/weaver/weaver_bug.vmdl"
+            "particle"              "particles/units/heroes/hero_weaver/weaver_timelapse.vpcf"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_jakiro"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_jakiro.vsndevts"
+			"particle"				"particles/units/heroes/hero_jakiro/jakiro_base_attack.vpcf"
+			"particle"				"particles/units/heroes/hero_jakiro/jakiro_base_attack_dual.vpcf"
+			"particle"				"particles/units/heroes/hero_jakiro/jakiro_base_attack_fire.vpcf"
+			"particle"				"particles/units/heroes/hero_jakiro/jakiro_liquid_ice_projectile.vpcf"
+		}
+	}
+
+	"ad_precache_low_npc_dota_hero_batrider"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_batrider.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_chen"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_chen.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_spectre"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_doom_bringer"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_ancient_apparition"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_ancient_apparition.vsndevts"
+			"particle"				"particles/units/heroes/hero_ancient_apparition/ancient_apparition_chilling_touch.vpcf"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_ursa"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_spirit_breaker"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_spirit_breaker.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_gyrocopter"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_gyrocopter.vsndevts"
+			"model"					"models/heroes/gyro/gyro_missile.vmdl"
+			"model"					"models/heroes/gyro/gyro_sidegunner.vmdl"
+			"model"					"models/items/gyrocopter/sidegunner/unsinkable_dreadnought_sidegunner/unsinkable_dreadnought_sidegunner.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_alchemist"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_invoker"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts"
+			"model"					"models/heroes/invoker/forge_spirit.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_silencer"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_silencer.vsndevts"
+			"particle"				"particles/units/heroes/hero_silencer/silencer_glaives_of_wisdom.vpcf"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_obsidian_destroyer"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_obsidian_destroyer.vsndevts"
+			"particle"				"particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_arcane_orb.vpcf"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_lycan"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_lycan.vsndevts"
+			"model"					"models/heroes/lycan/lycan_wolf.vmdl"
+			"model"					"models/heroes/lycan/summon_wolves.vmdl"
+			"model"					"models/heroes/lycan/summon_wolves_spirited.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_brewmaster"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_brewmaster.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_shadow_demon"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_shadow_demon.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_lone_druid"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_lone_druid.vsndevts"
+			"model"					"models/heroes/lone_druid/true_form.vmdl"
+			"model"					"models/heroes/lone_druid/spirit_bear.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_chaos_knight"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_meepo"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_meepo.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_treant"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_treant.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_ogre_magi"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_undying"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
+			"model"					"models/heroes/undying/undying_flesh_golem.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_rubick"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_rubick.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_disruptor"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_disruptor.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_nyx_assassin"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_nyx_assassin.vsndevts"
+			"model"					"models/heroes/nerubian_assassin/mound.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_naga_siren"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_naga_siren.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_keeper_of_the_light"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_keeper_of_the_light.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_wisp"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_wisp.vsndevts"
+			"model"					"models/development/invisiblebox.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_visage"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_visage.vsndevts"
+			"model"					"models/heroes/visage/visage_familiar.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_slark"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_slark.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_medusa"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
+			"particle"				"particles/units/heroes/hero_medusa/medusa_venom_arrow.vpcf"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_troll_warlord"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_troll_warlord.vsndevts"
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_troll_warlord.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_centaur"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts"
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_magnataur"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_magnataur.vsndevts"
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_magnataur.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_marci"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_marci.vsndevts"
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_marci.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_shredder"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_shredder.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_bristleback"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_bristleback.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_tusk"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_skywrath_mage"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_skywrath_mage.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_abaddon"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_abaddon.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_elder_titan"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_elder_titan.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_legion_commander"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_legion_commander.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_ember_spirit"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_ember_spirit.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_earth_spirit"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_earth_spirit.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_abyssal_underlord"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_abyssal_underlord.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_terrorblade"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
+			"particle"				"particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"
+			"model"					"models/heroes/terrorblade/demon.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_phoenix"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_oracle"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_oracle.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_techies"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"
+			"model"					"models/heroes/techies/fx_techiesfx_mine.vmdl"
+			"model"					"models/heroes/techies/techies_sign.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_winter_wyvern"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_winter_wyvern.vsndevts"
+			"particle"				"particles/units/heroes/hero_winter_wyvern/winter_wyvern_arctic_attack.vpcf"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_arc_warden"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_arc_warden.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_mars"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_mars.vsndevts"
+			"model"					"models/creeps/mars_soldier/mars_soldier_custom_game.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_hoodwink"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_hoodwink.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_dawnbreaker"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_dawnbreaker.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_primal_beast"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_primal_beast.vsndevts"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_muerta"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_muerta.vsndevts"
+			"model"					"models/heroes/muerta/muerta_ult.vmdl"
+		}
+	}
+	"ad_precache_low_npc_dota_hero_pangolier"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_pangolier.vsndevts"
+		}
+	}
+
+	"ad_precache_low_npc_dota_hero_ringmaster"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_ringmaster.vsndevts"
+		}
+	}
+
+	"ad_precache_low_npc_dota_hero_kez"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_kez.vsndevts"
+		}
+	}
+
+	"ad_precache_low_npc_dota_hero_void_spirit"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_void_spirit.vsndevts"
+		}
+	}
+
+	"ad_precache_low_npc_dota_hero_largo"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_largo.vsndevts"
+		}
+	}
+
+	"ad_precache_low_npc_dota_hero_snapfire"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_snapfire.vsndevts"
+			"particle"			"particles/units/heroes/hero_snapfire/hero_snapfire_shells_projectile.vpcf"
+		}
+	}
+}

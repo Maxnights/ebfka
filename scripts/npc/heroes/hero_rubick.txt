@@ -1,0 +1,321 @@
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Rubick: Telekinesis
+	//=================================================================================================================
+"rubick_telekinesis"
+{
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES_STRONG"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"HasShardUpgrade"				"1"
+	"AbilityCastPoint"				"0.1 0.1 0.1 0.1"
+	"AbilityManaCost"				"110"
+	"AbilityCastRange"				"550 575 600 625 650 675 700"
+	"AbilityValues"
+	{
+		"lift_duration"
+		{
+			"value"				"0.95 1.2 1.45 1.7 1.95 2.2 2.45"
+			"special_bonus_unique_rubick_7"				"+0.5"
+		}
+		"stun_duration"
+		{
+			"value"				"0.9 1.1 1.3 1.5 1.7 1.9 2.1"
+			"special_bonus_unique_rubick_7"				"+0.5"
+		}
+		"radius"
+		{
+			"value"				"300 325 350 375 400 425 450"
+			"affected_by_aoe_increase"				"1"
+		}
+		"max_land_distance"
+		{
+			"value"				"375 375 375 375 375 375 375"
+			"special_bonus_unique_rubick"				"+400"
+			"special_bonus_shard"				"+225"
+		}
+		"fall_duration"				"0.3 0.3 0.3 0.3 0.3 0.3 0.3"
+		"shard_max_land_distance_bonus_pct"
+		{
+			"value"				"35"
+			"RequiresShard"				"1"
+			"special_bonus_shard"				"50"
+		}
+		"shard_cooldown_reduction_pct"
+		{
+			"value"				"0"
+			"RequiresShard"				"1"
+			"special_bonus_shard"				"0"
+		}
+		"shard_teammate_throw_delay"
+		{
+			"value"				"0.5"
+			"RequiresShard"				"1"
+			"special_bonus_shard"				"0.5"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"24 21 18 15 12 9 6"
+			"special_bonus_unique_rubick_4"				"-5"
+		}
+		"landing_damage"
+		{
+			"special_bonus_unique_rubick_8"				"300"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+}
+//=================================================================================================================
+	// Rubick: Telekinesis Land
+	//=================================================================================================================
+	"rubick_telekinesis_land"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5449"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_AOE"
+		"MaxLevel"						"1"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"					
+			{
+				"value"		"300 325 350 375 400 425 450"
+				"affected_by_aoe_increase"	"1"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Rubick: Telekinesis Land
+	//=================================================================================================================
+	"rubick_telekinesis_land_self"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"647"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"MaxLevel"						"1"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"					
+			{
+				"value"		"300 325 350 375 400 425 450"
+				"affected_by_aoe_increase"	"1"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Rubick: Fade Bolt
+	//=================================================================================================================
+"rubick_fade_bolt"
+{
+	"ID"				"5450"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"FightRecapLevel"				"1"
+	"AbilitySound"				"Hero_Rubick.FadeBolt.Cast"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastPoint"				"0.1 0.1 0.1 0.1"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_3"
+	"AbilityManaCost"				"120 130 140 150 160 170 180"
+	"AbilityCastRange"				"800 800 800 800"
+	"AbilityModifierSupportValue"				"0.35"
+	"AbilityValues"
+	{
+		"damage"				"1875 3515 5600 8150 15750 30500 60000"
+		"jump_damage_reduction_pct"
+		{
+			"value"				"6"
+			"CalculateSpellDamageTooltip"				"0"
+			"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
+		}
+		"attack_damage_reduction"
+		{
+			"value"				"35"
+			"LinkedSpecialBonus"				"special_bonus_unique_rubick_2"
+			"CalculateSpellDamageTooltip"				"0"
+			"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
+		}
+		"duration"				"10.0 10.0 10.0 10.0"
+		"radius"
+		{
+			"value"				"440"
+			"affected_by_aoe_increase"				"1"
+		}
+		"jump_delay"				"0.25 0.25 0.25 0.25"
+		"damage_reduction"
+		{
+			"value"				"6 12 18 24"
+			"special_bonus_unique_rubick_fade_bolt_spell_reduction"				"+12"
+			"CalculateSpellDamageTooltip"				"0"
+			"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"10"
+			"special_bonus_unique_rubick_3"				"-4"
+		}
+		"steals_damage"				"0"
+	}
+}
+//=================================================================================================================
+	// Rubick: Null Field
+	//=================================================================================================================
+"rubick_null_field"
+{
+	"ID"				"5451"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_4"
+	"AbilityCastGestureSlot"				"DEFAULT"
+	"AbilityCooldown"				"30"
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"magic_damage_reduction_pct"				"10 14 18 22"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"1200"
+		}
+	}
+	"IsBreakable"				"1"
+	"AbilityValues"
+	{
+		"magic_damage_reduction_pct"
+		{
+			"value"				"10 14 18 22"
+		}
+		"radius"
+		{
+			"value"				"1200"
+		}
+	}
+}
+//=================================================================================================================
+	// Rubick: Arcane Supremacy
+	//=================================================================================================================
+"rubick_arcane_supremacy"
+{
+	"ID"				"7320"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityValues"
+	{
+		"cast_range"				"100 150 200 250 300 350 400"
+		"spell_amp"
+		{
+			"value"				"14 18 22 26 30 34 38"
+			"special_bonus_unique_rubick_arcane_supremacy"				"+7"
+		}
+		"aoe_bonus"
+		{
+			"value"				"0"
+			"special_bonus_facet_rubick_arcane_accumulation"				"+25"
+		}
+		"aoe_bonus_duration"
+		{
+			"value"				"0"
+			"special_bonus_facet_rubick_arcane_accumulation"				"+10"
+		}
+	}
+	"IsBreakable"				"1"
+}
+//=================================================================================================================
+	// Rubick: Spell Steal
+	//=================================================================================================================
+"rubick_spell_steal"
+{
+	"ID"				"5452"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO"
+	"AbilityUnitTargetFlags"				"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_NO"
+	"AbilitySound"				"Hero_Rubick.SpellSteal.Cast"
+	"MaxLevel"				"6"
+	"LevelsBetweenUpgrades"				"6"
+	"AbilityType"				"ABILITY_TYPE_ULTIMATE"
+	"FightRecapLevel"				"1"
+	"HasScepterUpgrade"				"1"
+	"AbilityCastPoint"				"0.1 0.1 0.1 0.1"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_7"
+	"AbilityCooldown"				"16 12 8 4 3 0.5"
+	"AbilityManaCost"				"25 25 25"
+	"AbilityCastRange"				"1000 1000 1000"
+	"AbilityValues"
+	{
+		"projectile_speed"				"1500"
+		"stolen_debuff_amp"				"10 20 30 40 50 60"
+		"cast_range_scepter"
+		{
+			"value"				"1400"
+			"RequiresScepter"				"1"
+			"special_bonus_scepter"				"1400"
+		}
+		"duration"
+		{
+			"value"				"180 240 300 360 420 480"
+		}
+		"stolen_mana_reduction"
+		{
+			"value"				"0"
+			"special_bonus_facet_rubick_frugal_filch"				"50 50 50 65 65 80"
+			"special_bonus_unique_rubick_6"				"+40"
+		}
+		"stolen_spell_cooldown_percent"
+		{
+			"value"				"10 20 30"
+		}
+		"spell_amp_percent"
+		{
+			"special_bonus_unique_rubick_5"				"40"
+		}
+		"curiosity_steal_factor"
+		{
+			"value"				"1"
+		}
+	}
+	"HasShardUpgrade"				"1"
+}
+//=================================================================================================================
+	// Ability: Might and Magus (bonus attack damage from spell amp)
+	//=================================================================================================================
+"rubick_might_and_magus"
+{
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+	"MaxLevel"				"1"
+	"Innate"				"1"
+	"AbilityValues"
+	{
+		"aoe_bonus"					"15"
+			"magic_resist_bonus"		"0"	
+			"aoe_bonus_duration"		"20"
+	}
+	"IsBreakable"				"1"
+}
+}

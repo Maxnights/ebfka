@@ -1,0 +1,237 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Recipe: Desolator2
+	//=================================================================================================================
+	"item_recipe_desolator2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_desolator"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"25"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_desolator2"
+		"ItemRequirements"
+		{
+			"01"						"item_desolator;item_greater_crit;item_relic"
+		}
+	}
+	
+	//=================================================================================================================
+	// Desolator
+	//=================================================================================================================
+	"item_desolator2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_desolator"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"desolator/desolator2"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1220"
+		"ItemShopTags"					"damage;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"desolator"
+		"ItemDeclarations"				"DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_damage"			"2500"
+			"corruption_armor"		"-10"
+			"corruption_duration"	"7.0"
+			"critical_bonus"		"240"
+			"critical_chance"		"35"
+		}
+	}
+	//=================================================================================================================
+	// Recipe: Desolator3
+	//=================================================================================================================
+	"item_recipe_desolator3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_desolator"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"			"desolator/desolator3"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1025"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_desolator3"
+		"ItemRequirements"
+		{
+			"01"						"item_desolator2;item_scythe_2"
+		}
+	}
+	//=================================================================================================================
+	// Desolator
+	//=================================================================================================================
+	"item_desolator3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_desolator"
+		"AbilityTextureName"            "desolator/desolator3"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"AbilityBehavior"						"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"										"3135"
+		"ItemShopTags"									"damage;unique"
+		"ItemQuality"									"artifact"
+		"ItemAliases"									"desolator"
+		"ItemDisassembleRule"							"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"								"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_damage"			"5000"
+			"corruption_armor"		"-13"
+			"corruption_duration"	"7.0"
+			"critical_bonus"		"260"
+			"critical_chance"		"40"
+		}
+	}
+	//=================================================================================================================
+	// Recipe: Divine desolator
+	//=================================================================================================================
+	"item_recipe_desolator4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_desolator"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"7025"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_desolator4"
+		"ItemRequirements"
+		{
+			"01"						"item_desolator3;item_scythe_3;item_crit3"
+		}
+	}
+
+	//=================================================================================================================
+	// divine soul
+	//=================================================================================================================
+	"item_desolator4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_desolator"
+		"AbilityTextureName"			"desolator/desolator4"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"60000"
+		"ItemShopTags"					"damage;unique;health;divine;T5;damage"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"soul"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_damage"			"16000"
+			"corruption_armor"		"-17"
+			"corruption_duration"	"7.0"
+			"critical_bonus"		"290"
+			"critical_chance"		"50"
+		}
+	}
+	//=================================================================================================================
+	// Recipe: Divine desolator
+	//=================================================================================================================
+	"item_recipe_desolator5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_desolator"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"34500"
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_desolator5"
+		"ItemRequirements"
+		{
+			"01"						"item_desolator4;item_scythe_4"
+		}
+	}
+
+	//=================================================================================================================
+	// divine soul
+	//=================================================================================================================
+	"item_desolator5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_desolator"
+		"AbilityTextureName"			"desolator/desolator5"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"140000"
+		"ItemShopTags"					"damage;unique;health;bahamut;T6;damage"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"soul"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"AbilityCastPoint"	"0.0"
+		"AbilityCastPoint"	"1500.0"
+		"AbilityCooldown"	"0"
+		"AbilityManaCost"	"0"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_damage"			"50000"
+			"corruption_armor"		"-22"
+			"corruption_duration"	"7.0"
+			"critical_bonus"		"420"
+			"critical_chance"		"60"
+		}
+	}
+}

@@ -1,0 +1,261 @@
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Oracle: Fortune's End
+	//=================================================================================================================
+"oracle_fortunes_end"
+{
+	"ID"				"5637"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_BOTH"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"				"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"FightRecapLevel"				"1"
+	"AbilitySound"				"Hero_Oracle.FortunesEnd.Target"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastRange"				"850"
+	"AbilityCastPoint"				"0"
+	"AbilityCooldown"				"6"
+	"AbilityManaCost"				"100"
+	"AbilityValues"
+	{
+		"channel_time"
+		{
+			"value"				"2.5"
+			"special_bonus_unique_oracle_7"				"-2.5"
+		}
+		"damage"
+		{
+			"value"				"2500 4000 6000 8000 15000 22000 50000"
+			"special_bonus_unique_oracle_fortunes_end_damage"				"+75%"
+		}
+		"bolt_speed"				"1200"
+		"minimum_purge_duration"
+		{
+			"value"				"0.75"
+			"special_bonus_unique_oracle_2"				"+0.5"
+		}
+		"maximum_purge_duration"
+		{
+			"value"				"2.75"
+			"special_bonus_unique_oracle_2"				"+0.5"
+		}
+		"radius"
+		{
+			"value"				"350"
+			"affected_by_aoe_increase"				"1"
+			"special_bonus_unique_oracle_3"				"+100"
+		}
+		"damage_per_buff"
+		{
+			"value"				"0"
+			"special_bonus_unique_oracle_damage_per_purge"				"+4000"
+		}
+		"heal_per_debuff"
+		{
+			"value"				"0"
+			"special_bonus_unique_oracle_damage_per_purge"				"+4000"
+		}
+		"purge_constantly"
+		{
+			"special_bonus_unique_oracle_7"				"=1"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+}
+//=================================================================================================================
+	// Oracle: Fate's Edict
+	//=================================================================================================================
+	"oracle_fates_edict"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5638"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Oracle.FatesEdict.Cast"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500 600 700 800 900 1000 1100"
+		"AbilityCastPoint"				"0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"35 30 25 20 17 15 13"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityValues"
+		{
+			"duration"
+			{
+				"value" "3.5 4.0 4.5 5.0 5.5 6.0 6.5"
+			}
+			"magic_damage_resistance_pct_tooltip"
+			{
+				"value" "100"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Oracle: Purifying Flames
+	//=================================================================================================================
+"oracle_purifying_flames"
+{
+	"ID"				"5639"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_FRIENDLY | DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"AbilityUnitTargetFlags"				"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"FightRecapLevel"				"1"
+	"AbilitySound"				"Hero_Oracle.PurifyingFlames.Damage"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastRange"				"850"
+	"AbilityCastPoint"				"0.15"
+	"AbilityManaCost"				"75"
+	"AbilityValues"
+	{
+		"damage"				"1690 3375 5625 8450 16875 33750 67500"
+		"heal_per_second"				"122 244 550 1161 2444 5500 12222"
+		"total_heal_tooltip"				"1100 2200 4950 10450 22000 49500 110000"
+		"duration"				"9.0"
+		"tick_rate"				"1.0"
+		"damage_modifier"
+		{
+			"value"				"1"
+			"special_bonus_unique_oracle_8"				"+25%"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"2.5"
+			"special_bonus_unique_oracle_5"				"-1"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_3"
+}
+//=================================================================================================================
+	// Oracle: False Promise
+	//=================================================================================================================
+"oracle_false_promise"
+{
+	"ID"				"5640"
+	"AbilityType"				"ABILITY_TYPE_ULTIMATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_NO"
+	"AbilitySound"				"Hero_Oracle.FalsePromise.Cast"
+	"MaxLevel"				"6"
+	"LevelsBetweenUpgrades"				"6"
+	"HasScepterUpgrade"				"1"
+	"AbilityDraftUltScepterAbility"				"oracle_rain_of_destiny"
+	"LinkedAbility"				"oracle_rain_of_destiny"
+	"AbilityCastRange"				"700 850 1000 1150 1300 1450"
+	"AbilityCastPoint"				"0.3"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_6"
+	"AbilityManaCost"				"175 225 300 375 450 525"
+	"AbilityValues"
+	{
+		"duration"
+		{
+			"value"				"6 7 8 9 10 11"
+			"special_bonus_unique_oracle"				"+3"
+		}
+		"radius"
+		{
+			"value"				"400"
+			"affected_by_aoe_increase"				"1"
+		}
+		"shard_fade_time"
+		{
+			"value"				"0.15"
+			"RequiresScepter"				"1"
+		}
+		"shard_spell_amp_bonus"
+		{
+			"value"				"30"
+			"RequiresScepter"				"1"
+		}
+		"shard_bat_bonus"
+		{
+			"value"				"0.20"
+			"RequiresScepter"				"1"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"30"
+			"special_bonus_unique_oracle_6"				"-10"
+		}
+		"bonus_armor"
+		{
+			"value"				"0"
+			"special_bonus_unique_oracle_9"				"+10"
+		}
+		"heal_amp_pct"
+		{
+			"value"				"100"
+			"special_bonus_shard"				"+0"
+		}
+	}
+	"AbilityDraftExtraAbilities"
+	{
+		"oracle_rain_of_destiny"				"shard"
+	}
+}
+//=================================================================================================================
+	// Alchemist: Rain of Destiny
+	//=================================================================================================================
+"oracle_rain_of_destiny"
+{
+	"ID"				"932"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"IsGrantedByShard"				"1"
+	"MaxLevel"				"6"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCastRange"				"650"
+	"AbilityCooldown"				"40"
+	"AbilityManaCost"				"150"
+	"AbilityValues"
+	{
+		"radius"
+		{
+			"value"				"650"
+			"affected_by_aoe_increase"				"1"
+		}
+		"duration"				"10"
+		"damage"
+		{
+			"value"				"1200 2786 7000 16364 17231 18133"
+			"CalculateSpellDamageTooltip"				"1"
+		}
+		"tick_rate"				"1.0"
+		"heal_amp"				"25"
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_4"
+}
+}

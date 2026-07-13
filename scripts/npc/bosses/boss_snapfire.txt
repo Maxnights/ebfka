@@ -1,0 +1,186 @@
+"DOTAAbilities"
+{
+    "boss_snapfire_lil_shredder"
+	{
+		"BaseClass" "snapfire_lil_shredder"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Snapfire.ExplosiveShells.Cast"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastRange"				"800"
+		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_3"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5"
+		"AbilityDuration"				"12"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_snapfire.vsndevts"
+			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_shells_projectile.vpcf"
+			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_shells_buff.vpcf"
+			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_slow_debuff.vpcf"
+			"particle"	"particles/units/heroes/hero_sniper/sniper_headshot_slow.vpcf"
+		}
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage"			
+			{
+				"value"								"9 9 9"
+				"special_bonus_unique_snapfire_lil_shredder_damage"	"+100%"
+			}
+			"damage_pct"
+			{
+				"value"	"100"
+			}
+			"buffed_attacks"			
+			{
+				"value"								"18"
+				"special_bonus_unique_snapfire_2"	"+8"
+			}
+			"attack_speed_bonus"					"540 600 660"
+			"attack_range_bonus"					"225 265 300"
+			"buff_duration_tooltip"					"18"
+			"base_attack_time"						"1.0"
+			"armor_reduction_per_attack"			"0.6 0.7 0.8"
+			"armor_duration"						"5.0"
+			"extra_targets"
+			{
+				"special_bonus_unique_snapfire_8"	"=2"
+			}
+		}
+	}
+
+    "boss_snapfire_mortimer_kisses"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "snapfire_mortimer_kisses"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Snapfire.MortimerBlob.Launch"
+		
+		"MaxLevel"						"6"
+		"LevelsBetweenUpgrades"			"6"
+		
+		// Gobble up scepter ability not tied to any spell in regular game, for AD, associating it here.
+		"AbilityDraftUltScepterAbility" "snapfire_gobble_up"
+		"AbilityDraftUltScepterPreAbility" "snapfire_spit_creep"
+		"LinkedAbility"						"snapfire_spit_creep"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_snapfire.vsndevts"
+			"particle"	"particles/status_fx/status_effect_snapfire_magma.vpcf"
+			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_ultimate_impact.vpcf"
+			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_ultimate_linger.vpcf"
+			"particle"	"particles/units/heroes/hero_snapfire/snapfire_lizard_blobs_arced.vpcf"
+			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_burn_debuff.vpcf"
+			"particle"	"particles/units/heroes/hero_snapfire/hero_snapfire_ultimate_calldown.vpcf"
+		}
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"3000"
+		"AbilityCastPoint"				"0.5"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+		"AbilityDuration"				"5.5"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"projectile_count"
+			{
+				"value"		"14"
+				"special_bonus_unique_snapfire_1"	"+6"
+			}
+			"projectile_speed"		"1400"
+			"projectile_width"		
+			{
+				"value"	"130"
+				"affected_by_aoe_increase"	"1"		
+			}
+			"impact_radius"			
+			{
+				"value" "275"
+				"affected_by_aoe_increase"	"1"	
+			}
+			"damage_per_impact"
+			{
+				"value"															"48000 53500 59000"
+				"special_bonus_unique_snapfire_mortimer_kisses_impact_damage"	"+75%" 
+
+			}
+			"duration_tooltip"		"4.5"
+			"projectile_vision"
+			{
+				"value" "500"
+				"affected_by_aoe_increase"	"1"	
+			}
+			"turn_rate"				"80"
+			"burn_interval"			"0.5"
+			"burn_damage"					
+			{
+				"value"															"15200 16700 18200"
+				"special_bonus_unique_snapfire_mortimer_kisses_impact_damage"	"+75%" 
+				"CalculateSpellDamageTooltip"									"1"
+			}
+			"move_slow_pct"
+			{
+				"value"															"30 35 40"
+				"special_bonus_unique_snapfire_4"								"+20"
+			}
+			"burn_ground_duration"	"3.0"
+			"dist_change_speed"		"75"
+			"min_range"				"350"
+			"min_lob_travel_time"	"0.8"
+			"max_lob_travel_time"	"2.0"
+			"delay_after_last_projectile"	"0.5"
+			"burn_linger_duration"	"1.0"
+		}
+	}
+
+	"special_bonus_unique_snapfire_8_boss"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"				"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"
+			{
+				"value" "3"
+				"ad_linked_abilities" "boss_snapfire_lil_shredder"
+			}
+		}
+	}
+}

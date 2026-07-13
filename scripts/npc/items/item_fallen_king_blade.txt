@@ -1,0 +1,211 @@
+"DOTAAbilities"
+{
+    // =========================================================================
+    // Fallen King's Blade - Level 1 (Base)  | Cost: 20,000  | Cumulative: 20,000
+    // =========================================================================
+    "item_fallen_king_blade"
+    {
+        "BaseClass"               "item_lua"
+        "AbilityTextureName"      "fallen_king"
+        "ScriptFile"              "items/item_fallen_king_blade"
+        "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "ItemPurchasable"         "1"
+        "ItemSellable"            "0"
+        "ItemKillable"            "1"
+        "ItemShareability"        "ITEM_NOT_SHAREABLE"
+        "AbilityCastPoint"        "0.0"
+        "ItemCost"                "20000"
+        "AbilityValues"
+        {
+            "bonus_damage"        "500"
+            "lifesteal_bonus"     "1"
+            "bonus_as"            "10"
+            "range_pct"           "0.003"
+            "melee_pct"           "0.005"
+            "range_tooltip"       "0.3"
+            "melee_tooltip"       "0.5"
+            "psiphon_damage"      "400"
+            "ms_duration"         "2"
+        }
+    }
+
+    // =========================================================================
+    // Recipe: Fallen King's Blade -> Level 2  | Recipe: 18,000 | Cumulative: 38,000
+    // =========================================================================
+    "item_recipe_fallen_king_blade_2"
+    {
+        "BaseClass"      "item_recipe_crimson_guard"
+        "ItemCost"       "18000"
+        "ItemShopTags"   ""
+        "ItemRecipe"     "1"
+        "ItemResult"     "item_fallen_king_blade_2"
+        "ItemRequirements"
+        {
+            "01" "item_fallen_king_blade"
+        }
+    }
+
+    // =========================================================================
+    // Fallen King's Blade - Level 2
+    // =========================================================================
+    "item_fallen_king_blade_2"
+    {
+        "BaseClass"               "item_lua"
+        "AbilityTextureName"      "fallen_king"
+        "ScriptFile"              "items/item_fallen_king_blade"
+        "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "ItemIsNeutralActiveDrop" "0"
+        "ItemPurchasable"         "1"
+        "ItemSellable"            "0"
+        "ItemKillable"            "1"
+        "ItemShareability"        "ITEM_NOT_SHAREABLE"
+        "AbilityCastPoint"        "0.0"
+        "AbilityValues"
+        {
+            "bonus_damage"        "1500"
+            "lifesteal_bonus"     "1.5"
+            "bonus_as"            "18"
+            "range_pct"           "0.004"
+            "melee_pct"           "0.008"
+            "range_tooltip"       "0.4"
+            "melee_tooltip"       "0.8"
+            "psiphon_damage"      "1200"
+            "ms_duration"         "2"
+        }
+    }
+
+    // =========================================================================
+    // Recipe: Fallen King's Blade -> Level 3  | Recipe: 19,000 | Cumulative: 57,000
+    // =========================================================================
+    "item_recipe_fallen_king_blade_3"
+    {
+        "BaseClass"      "item_recipe_crimson_guard"
+        "ItemCost"       "19000"
+        "ItemShopTags"   ""
+        "ItemRecipe"     "1"
+        "ItemResult"     "item_fallen_king_blade_3"
+        "ItemRequirements"
+        {
+            "01" "item_fallen_king_blade_2"
+        }
+    }
+
+    // =========================================================================
+    // Fallen King's Blade - Level 3
+    // =========================================================================
+    "item_fallen_king_blade_3"
+    {
+        "BaseClass"               "item_lua"
+        "AbilityTextureName"      "fallen_king"
+        "ScriptFile"              "items/item_fallen_king_blade"
+        "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "ItemIsNeutralActiveDrop" "0"
+        "ItemPurchasable"         "1"
+        "ItemSellable"            "0"
+        "ItemKillable"            "1"
+        "ItemShareability"        "ITEM_NOT_SHAREABLE"
+        "AbilityCastPoint"        "0.0"
+        "AbilityValues"
+        {
+            "bonus_damage"        "3000"
+            "lifesteal_bonus"     "2"
+            "bonus_as"            "25"
+            "range_pct"           "0.005"
+            "melee_pct"           "0.010"
+            "range_tooltip"       "0.5"
+            "melee_tooltip"       "1.0"
+            "psiphon_damage"      "2500"
+            "ms_duration"         "2"
+        }
+    }
+
+    // =========================================================================
+    // Recipe: Fallen King's Blade -> Level 4  | Recipe: 19,000 | Cumulative: 76,000
+    // =========================================================================
+    "item_recipe_fallen_king_blade_4"
+    {
+        "BaseClass"      "item_recipe_crimson_guard"
+        "ItemCost"       "19000"
+        "ItemShopTags"   ""
+        "ItemRecipe"     "1"
+        "ItemResult"     "item_fallen_king_blade_4"
+        "ItemRequirements"
+        {
+            "01" "item_fallen_king_blade_3"
+        }
+    }
+
+    // =========================================================================
+    // Fallen King's Blade - Level 4
+    // =========================================================================
+    "item_fallen_king_blade_4"
+    {
+        "BaseClass"               "item_lua"
+        "AbilityTextureName"      "fallen_king"
+        "ScriptFile"              "items/item_fallen_king_blade"
+        "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "ItemIsNeutralActiveDrop" "0"
+        "ItemPurchasable"         "1"
+        "ItemSellable"            "0"
+        "ItemKillable"            "1"
+        "ItemShareability"        "ITEM_NOT_SHAREABLE"
+        "AbilityCastPoint"        "0.0"
+        "AbilityValues"
+        {
+            "bonus_damage"        "5000"
+            "lifesteal_bonus"     "2.5"
+            "bonus_as"            "33"
+            "range_pct"           "0.007"
+            "melee_pct"           "0.013"
+            "range_tooltip"       "0.7"
+            "melee_tooltip"       "1.3"
+            "psiphon_damage"      "5000"
+            "ms_duration"         "2"
+        }
+    }
+
+    // =========================================================================
+    // Recipe: Fallen King's Blade -> Level 5  | Recipe: 19,000 | Cumulative: 95,000
+    // =========================================================================
+    "item_recipe_fallen_king_blade_5"
+    {
+        "BaseClass"      "item_recipe_crimson_guard"
+        "ItemCost"       "19000"
+        "ItemShopTags"   ""
+        "ItemRecipe"     "1"
+        "ItemResult"     "item_fallen_king_blade_5"
+        "ItemRequirements"
+        {
+            "01" "item_fallen_king_blade_4"
+        }
+    }
+
+    // =========================================================================
+    // Fallen King's Blade - Level 5 (Max)
+    // =========================================================================
+    "item_fallen_king_blade_5"
+    {
+        "BaseClass"               "item_lua"
+        "AbilityTextureName"      "fallen_king"
+        "ScriptFile"              "items/item_fallen_king_blade"
+        "AbilityBehavior"         "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "ItemIsNeutralActiveDrop" "0"
+        "ItemPurchasable"         "1"
+        "ItemSellable"            "0"
+        "ItemKillable"            "1"
+        "ItemShareability"        "ITEM_NOT_SHAREABLE"
+        "AbilityCastPoint"        "0.0"
+        "AbilityValues"
+        {
+            "bonus_damage"        "8000"
+            "lifesteal_bonus"     "3"
+            "bonus_as"            "40"
+            "range_pct"           "0.008"
+            "melee_pct"           "0.015"
+            "range_tooltip"       "0.8"
+            "melee_tooltip"       "1.5"
+            "psiphon_damage"      "8000"
+            "ms_duration"         "2"
+        }
+    }
+}

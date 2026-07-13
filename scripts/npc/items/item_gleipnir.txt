@@ -1,0 +1,300 @@
+"DOTAAbilities"
+{
+	//======================================================================================================
+	//==============gleipnir 2================================================================================
+	//======================================================================================================
+	"item_recipe_gleipnir2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_gungir"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"35"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_gleipnir2"
+		"ItemRequirements"
+		{
+			"01"						"item_gungir;item_mystic_staff_2"
+		}
+	}
+	"item_gleipnir2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySharedCooldown"			"atos"
+		"BaseClass"						"item_gungir"
+		"AbilityTextureName"			"gleipnir/gleipnir_2"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"18"
+		"AbilityCastRange"				"1100"
+		"AbilityCastPoint"				"0.0"
+
+		"AbilityManaCost"				"200"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"damage;attack_speed;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"gleipnir;gliepnir;glaypnir"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+
+		"AbilityValues"
+		{
+			"bonus_aoe"					"75"			// If changing this, change radius_tooltip
+			"bonus_intellect"		"210"
+			"bonus_hp"				"1700"
+			"bonus_mana"				"200"
+			"duration"				"2.0"
+			"radius"
+			{
+				"value"						"275"		// NOTE: effective radius is 400 because the bonus_aoe applies to itself. If changing this, change radius_tooltip
+				"affected_by_aoe_increase"	"1"
+			}
+			"radius_tooltip"
+			{
+				"value"						"350"		// NOTE: radius_tooltip = ( radius + bonus_aoe )
+				"affected_by_aoe_increase"	"1"
+			}
+		}
+	}
+	"item_recipe_gleipnir3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_gungir"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"35"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_gleipnir3"
+		"ItemRequirements"
+		{
+			"01"						"item_gleipnir2;item_mystic_staff_3"
+		}
+	}
+	"item_gleipnir3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySharedCooldown"			"atos"
+		"BaseClass"						"item_gungir"
+		"AbilityTextureName"			"gleipnir/gleipnir_3"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"18"
+		"AbilityCastRange"				"1100"
+		"AbilityCastPoint"				"0.0"
+
+		"AbilityManaCost"				"200"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"damage;attack_speed;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"gleipnir;gliepnir;glaypnir"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+
+		"AbilityValues"
+		{
+			"bonus_aoe" "75"
+			"bonus_hp"				"4925"
+			"bonus_intellect"		"775"
+			"bonus_mana"				"500"
+			"duration"				"2.0"
+			"radius"
+			{
+				"value"						"275"		// NOTE: effective radius is 400 because the bonus_aoe applies to itself. If changing this, change radius_tooltip
+				"affected_by_aoe_increase"	"1"
+			}
+			"radius_tooltip"
+			{
+				"value"						"350"		// NOTE: radius_tooltip = ( radius + bonus_aoe )
+				"affected_by_aoe_increase"	"1"
+			}
+		}
+	}
+	"item_recipe_gleipnir4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_gungir"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"35"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_gleipnir4"
+		"ItemRequirements"
+		{
+			"01"						"item_gleipnir3;item_mystic_staff_4"
+		}
+	}
+	"item_gleipnir4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySharedCooldown"			"atos"
+		"BaseClass"						"item_gungir"
+		"AbilityTextureName"			"gleipnir/gleipnir_4"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"18"
+		"AbilityCastRange"				"1100"
+		"AbilityCastPoint"				"0.0"
+
+		"AbilityManaCost"				"200"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"damage;attack_speed;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"gleipnir;gliepnir;glaypnir"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+
+		"AbilityValues"
+		{
+			"bonus_aoe" "75"
+			"bonus_intellect"		"1476"
+			"bonus_hp"				"14560"
+			"bonus_mana"			"700"
+			"duration"				"2.0"
+			"radius"
+			{
+				"value"						"275"		// NOTE: effective radius is 400 because the bonus_aoe applies to itself. If changing this, change radius_tooltip
+				"affected_by_aoe_increase"	"1"
+			}
+			"radius_tooltip"
+			{
+				"value"						"350"		// NOTE: radius_tooltip = ( radius + bonus_aoe )
+				"affected_by_aoe_increase"	"1"
+			}
+			
+		}
+	}
+	
+	"item_recipe_gleipnir5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_gungir"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"35"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_gleipnir5"
+		"ItemRequirements"
+		{
+			"01"						"item_gleipnir4;item_mystic_staff_5"
+		}
+	}
+	"item_gleipnir5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySharedCooldown"			"atos"
+		"BaseClass"						"item_gungir"
+		"AbilityTextureName"			"gleipnir/gleipnir_5"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"18"
+		"AbilityCastRange"				"1100"
+		"AbilityCastPoint"				"0.0"
+
+		"AbilityManaCost"				"200"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"damage;attack_speed;unique"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"gleipnir;gliepnir;glaypnir"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+
+		"AbilityValues"
+		{
+			"bonus_aoe" "75"
+			"bonus_intellect"		"4150"
+			"bonus_hp"				"49950"
+			"duration"				"2.0"
+			"bonus_mana"			"1000"
+			"radius"
+			{
+				"value"					"275"
+				"affected_by_aoe_increase"	"1"
+			}
+			"radius_tooltip"
+			{
+				"value"					"350"
+				"affected_by_aoe_increase"	"1"
+			}
+		}
+	}
+}

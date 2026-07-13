@@ -1,0 +1,2 @@
+"DOTA_Tooltip_modifier_modifier_round_scaling_aura" "Round Aura"
+		"DOTA_Tooltip_modifier_modifier_round_scaling_aura_Description" "Magic Shield: +70% magic resistance|Iron Skin: +80 armor|Spikes: Reflects 25% damage|Suppression: -50% healing|Dispel: Removes buffs on attack|Mana Drain: Burns 5% mana|Combo: Combination of 3 random auras"

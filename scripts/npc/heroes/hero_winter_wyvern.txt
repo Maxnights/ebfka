@@ -1,0 +1,228 @@
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Winter Wyvern: Arctic Burn
+	//=================================================================================================================
+"winter_wyvern_arctic_burn"
+{
+	"ID"				"5651"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilitySound"				"Hero_WinterWyvern.ArcticBurn.Cast"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_NO"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"HasScepterUpgrade"				"1"
+	"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+	"AbilityCooldown"				"20"
+	"AbilityManaCost"				"125 250 500 750 1000 1250 1750"
+	"AbilityValues"
+	{
+		"duration"				"15"
+		"attack_range_bonus"				"350 400 450 500 550 600 650"
+		"percent_damage"
+		{
+			"value"				"1.3125"
+			"CalculateSpellDamageTooltip"				"0"
+			"DamageTypeTooltip"				"DAMAGE_TYPE_MAGICAL"
+		}
+		"tick_rate"				"0.5"
+		"damage_duration"
+		{
+			"value"				"7.0"
+			"CalculateSpellDamageTooltip"				"0"
+			"LinkedSpecialBonus"				"special_bonus_unique_winter_wyvern_6"
+			"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
+			"special_bonus_unique_winter_wyvern_6"				"+3"
+		}
+		"move_slow"
+		{
+			"value"				"16 24 32 40 48 56 64"
+			"LinkedSpecialBonus"				"special_bonus_unique_winter_wyvern_1"
+			"special_bonus_unique_winter_wyvern_1"				"+15"
+		}
+		"night_vision_bonus"				"400"
+		"projectile_speed_bonus"				"650"
+		"tree_destruction_radius"
+		{
+			"value"				"175"
+			"affected_by_aoe_increase"				"1"
+		}
+		"attack_point"				"0.1"
+		"max_attacks"				"7"
+		"mana_cost_scepter"
+		{
+			"value"				"25 50 100 150 200 250 350"
+			"RequiresScepter"				"1"
+			"special_bonus_scepter"				"20"
+		}
+		"movement_scepter"
+		{
+			"value"				"25"
+			"RequiresScepter"				"1"
+			"special_bonus_scepter"				"25"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+}
+//=================================================================================================================
+	// Winter Wyvern: Splinter Blast
+	//=================================================================================================================
+"winter_wyvern_splinter_blast"
+{
+	"ID"				"5652"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_BOTH"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"FightRecapLevel"				"1"
+	"AbilityCastRange"				"1200"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+	"AbilityCooldown"				"7"
+	"AbilityManaCost"				"105 120 135 150 165 180 195"
+	"AbilityValues"
+	{
+		"projectile_speed"				"1200"
+		"projectile_max_time"				"1.0"
+		"split_radius"
+		{
+			"value"				"1500"
+			"LinkedSpecialBonus"				"special_bonus_unique_winter_wyvern_2"
+			"affected_by_aoe_increase"				"1"
+			"special_bonus_unique_winter_wyvern_2"				"+175"
+		}
+		"bonus_movespeed"				"-30"
+		"movespeed_slow_tooltip"				"30"
+		"duration"				"4.0"
+		"secondary_projectile_speed"				"800"
+		"damage"
+		{
+			"value"				"1120 1610 2245 4080 7965 13120 20820"
+			"special_bonus_unique_winter_wyvern_7"				"+60%"
+		}
+		"slow_duration"				"4.0"
+		"stun_duration"
+		{
+			"value"				"0"
+			"special_bonus_unique_winter_wyvern_4"				"+1"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_2"
+}
+//=================================================================================================================
+	// Winter Wyvern: Cold Embrace
+	//=================================================================================================================
+"winter_wyvern_cold_embrace"
+{
+	"ID"				"5653"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_NO"
+	"FightRecapLevel"				"1"
+	"AbilitySound"				"Hero_Winter_Wyvern.ColdEmbrace"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"HasShardUpgrade"				"1"
+	"AbilityCastRange"				"850 900 950 1000"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+	"AbilityCooldown"				"15"
+	"AbilityManaCost"				"50 60 70 80 90 100 110"
+	"AbilityValues"
+	{
+		"duration"				"4"
+		"heal_additive"
+		{
+			"value"				"530 850 1175 1520 2450 4150 7500"
+			"special_bonus_unique_winter_wyvern_5"				"+50%"
+		}
+		"heal_percentage"				"1.75 2.5 3.25 4 4.75 5.5 6.25"
+		"shard_cooldown_reduction"
+		{
+			"value"				"4.0"
+			"RequiresShard"				"1"
+			"special_bonus_shard"				"4.0"
+		}
+		"shard_splinter_range"
+		{
+			"value"				"1200"
+			"RequiresShard"				"1"
+			"affected_by_aoe_increase"				"1"
+		}
+		"tick_interval"				"0.25"
+		"can_target_buildings"
+		{
+			"special_bonus_facet_winter_wyvern_winterproof"				"=1"
+		}
+		"damage_buff_pct"
+		{
+			"special_bonus_shard"				"=60"
+		}
+		"damage_buff_duration"
+		{
+			"special_bonus_shard"				"=6.0"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_3"
+}
+//=================================================================================================================
+	// Winter Wyvern: Winter's Curse
+	//=================================================================================================================
+"winter_wyvern_winters_curse"
+{
+	"ID"				"5654"
+	"AbilityType"				"ABILITY_TYPE_ULTIMATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetFlags"				"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"FightRecapLevel"				"2"
+	"AbilitySound"				"Hero_WinterWyvern.WintersCurse.Target"
+	"MaxLevel"				"6"
+	"LevelsBetweenUpgrades"				"6"
+	"AbilityCastRange"				"700 750 800"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_4"
+	"AbilityCooldown"				"90 85 80 77 74.1 71.1"
+	"AbilityManaCost"				"250"
+	"AbilityValues"
+	{
+		"radius"
+		{
+			"value"				"700"
+			"affected_by_aoe_increase"				"1"
+		}
+		"damage_reduction"				"0"
+		"damage_amplification"				"0"
+		"bonus_attack_speed"
+		{
+			"value"				"65"
+			"special_bonus_unique_winter_wyvern_3"				"+60"
+		}
+		"duration"
+		{
+			"value"				"4.5 5 5.5 6.0 6.5 7.0"
+			"special_bonus_unique_winter_wyvern_3"				"+55"
+		}
+		"early_out_timer"				"2.5"
+		"bonus_duration_per_hero"				"2"
+		"bonus_duration_per_creep"				"0.5"
+		"max_duration"				"6"
+		"transfer_on_death"
+		{
+			"value"				"0"
+		}
+		"transfer_duration_pct"
+		{
+			"value"				"0"
+		}
+	}
+}
+}

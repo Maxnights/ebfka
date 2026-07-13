@@ -1,0 +1,359 @@
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Tidehunter Whale Eater
+	//=================================================================================================================
+	"tidehunter_leviathans_catch"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_FORCE_NO_INNATE_UI | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+
+		"AbilityValues"
+		{
+			"model_scale"
+			{
+				"value"						"0"
+			}
+			
+			"attack_range"
+			{
+				"value"						"0"
+			}
+
+			"anchor_smash_radius"
+			{
+				"value"						"0"
+			}
+
+			"fish_duration"					"30"
+			"fish_strength_gain"			"0"
+			"fish_attack_range"				"2"
+			"fish_damage_block"				"1"
+			"fish_health_bonus"				"3"
+			"fish_model_scale"				"1.1"
+			"max_fish_spawn_distance"		"200"
+
+			"health_bar_offset_base"		"160"
+			"health_bar_offset_per_level"	"5"
+
+			"permanent_health_gain"
+			{
+				"dynamic_value"			"true"
+			}
+			"permanent_attack_range_gain"
+			{
+				"dynamic_value"			"true"
+			}
+			"permanent_damage_block_gain"
+			{
+				"dynamic_value"			"true"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Tidehunter: Gush
+	//=================================================================================================================
+"tidehunter_gush"
+{
+	"ID"				"5118"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"FightRecapLevel"				"1"
+	"HasScepterUpgrade"				"1"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilitySound"				"Ability.GushCast"
+	"AbilityCastRange"				"700"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+	"AbilityCooldown"				"12"
+	"AbilityDuration"				"4.5"
+	"AbilityManaCost"				"100 105 110 115 120 125 130"
+	"AbilityValues"
+	{
+		"gush_damage"
+		{
+			"value"				"1940 2910 3430 6000 11480 22270 43540"
+			"special_bonus_unique_tidehunter_2"				"+150%"
+		}
+		"projectile_speed"				"2500"
+		"movement_speed"
+		{
+			"value"				"-40 -40 -40 -40"
+			"LinkedSpecialBonus"				"special_bonus_unique_tidehunter_5"
+			"LinkedSpecialBonusOperation"				"SPECIAL_BONUS_SUBTRACT"
+			"special_bonus_unique_tidehunter_5"				"-20"
+		}
+		"negative_armor"
+		{
+			"value"				"3 4 5 6 7 8 9"
+			"LinkedSpecialBonus"				"special_bonus_unique_tidehunter"
+			"special_bonus_unique_tidehunter"				"+4"
+		}
+		"speed_scepter"
+		{
+			"value"				"1500"
+			"RequiresScepter"				"1"
+			"special_bonus_scepter"				"1500"
+		}
+		"aoe_scepter"
+		{
+			"value"				"260"
+			"RequiresScepter"				"1"
+			"special_bonus_scepter"				"260"
+			"affected_by_aoe_increase"				"1"
+		}
+		"cooldown_scepter"
+		{
+			"value"				"7"
+			"RequiresScepter"				"1"
+			"special_bonus_scepter"				"7"
+		}
+		"cast_range_scepter"
+		{
+			"value"				"2200"
+			"RequiresScepter"				"1"
+			"special_bonus_scepter"				"2200"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+}
+//=================================================================================================================
+	// Tidehunter: Kraken Shell
+	//=================================================================================================================
+	"tidehunter_kraken_shell"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_tidehunter/tidehunter_kraken_shell"
+		"AbilityTextureName"			"tidehunter_kraken_shell"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySound"					"Hero_Tidehunter.KrakenShell"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+		"IsBreakable"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"linger_duration"			"0.5"
+			"AbilityCooldown"
+			{
+				"value"						"30"
+			}
+			"should_ravage"
+			{
+				"value"								"0"
+				"special_bonus_unique_tidehunter_4"	"+1"
+			}
+			"damage_reduction"
+			{
+				"value"				"280 700 1400 2800 8400 19600 42000"
+			}
+			"bonus_reduction_per_kill"
+			{
+				"value"	"0"
+				"special_bonus_facet_tidehunter_kraken_swell"  "8"				
+			}
+			"creep_reduction_penalty_pct"					"50.0"
+			"active_pct_effectiveness"						"200.0"		// "double" is in the loc file. if changing this amount, update the ability description
+			"active_move_speed_penalty_pct"					"40"
+			"active_duration"								"4.0"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	"tidehunter_blubber"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"Innate"						"1"
+		"MaxLevel"						"1"
+		"IsBreakable"					"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage_cleanse"
+			{
+				"value"		"4500"
+			}
+			"smash_on_purge"
+			{
+				"special_bonus_unique_tidehunter_smash_on_blubber"		"50"
+			}
+			"damage_reset_interval"	"7.0"
+		
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	//=================================================================================================================
+	// Tidehunter: Anchor Smash
+	//=================================================================================================================
+	"tidehunter_anchor_smash"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_tidehunter/tidehunter_anchor_smash"
+		"AbilityTextureName"			"tidehunter_anchor_smash"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Tidehunter.AnchorSmash"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+		
+		"LinkedAbility"					"tidehunter_dead_in_the_water"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"4.0 3.5 3.0 2.5 2.0 1.5 1.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"70"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"attack_damage"			
+			{
+				"value"										"500 820 1100 2080 4170 6960 11150"
+				"special_bonus_unique_tidehunter_9"			"+25%"
+				"CalculateSpellDamageTooltip"				"0"
+			}
+			"damage_reduction"		
+			{
+				"value"										"-35"
+				"special_bonus_unique_tidehunter_3"			"-10"
+				"CalculateSpellDamageTooltip"				"0"
+				"DamageTypeTooltip"							"DAMAGE_TYPE_NONE"
+			}
+			"reduction_duration"						
+			{
+				"value" 									"6.0"
+				"special_bonus_unique_tidehunter_anchor_smash_radius"	"+100%"
+			}			
+			"radius"										
+			{
+				"value" 									"375"
+				"special_bonus_unique_tidehunter_anchor_smash_radius"	"+100%"
+				"affected_by_aoe_increase"					"1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+	//=================================================================================================================
+	// Tidehunter: Ravage
+	//=================================================================================================================
+"tidehunter_ravage"
+{
+	"AbilityType"				"ABILITY_TYPE_ULTIMATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES_STRONG"
+	"FightRecapLevel"				"2"
+	"AbilitySound"				"Ability.Ravage"
+	"MaxLevel"				"6"
+	"LevelsBetweenUpgrades"				"6"
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"0.3 0.3 0.3"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_4"
+	"AbilityDamage"				"6300 15000 28400 49000 54500 60000"
+	"AbilityManaCost"				"150 225 325 450 600 775"
+	"AbilityDraftExtraAbilities"
+	{
+		"tidehunter_dead_in_the_water"				"shard"
+	}
+
+	"AbilityValues"
+	{
+		"radius"
+		{
+			"affected_by_aoe_increase"				"1"
+			"value"				"1250"
+		}
+		"speed"				"725"
+		"duration"
+		{
+			"value"				"2.4 2.6 2.8 3.0 3.2 3.4"
+			"special_bonus_unique_tidehunter_7"				"+1"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"150.0 150.0 150.0"
+			"special_bonus_unique_tidehunter_ravage_cooldown"				"-15"
+		}
+	}
+	
+}
+"tidehunter_dead_in_the_water"	
+{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5407"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"IsGrantedByShard"				"1"
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"350"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25"
+
+		// Damage.
+		"AbilityDamage"						"1200 2350 4500 7800 15000 31250 61250"
+
+		//-------------------------------------------------------------------------------------------------------------
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"attacks_to_destroy"			"5"
+			"max_movement_speed"			"100"
+			"chain_length"					"350"
+			"duration"						"10"
+			"projectile_speed"				"1000"
+		}
+	}
+}

@@ -1,0 +1,442 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Recipe: TITAN Armor
+	//=================================================================================================================
+	"item_recipe_cuirass_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_assault"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_cuirass_2"
+		"ItemRequirements"
+		{
+			"01"						"item_helm_of_mithril_will;item_assault;item_orb_1"
+		}
+	}
+
+	//=================================================================================================================
+	// TITAN Armor
+	//=================================================================================================================
+	"item_cuirass_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_cuirass"
+		"AbilityTextureName"			"cuirass/cuirass_2"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemCost"						"10232"
+		"ItemShopTags"					"damage;unique;armor"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"armor"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"health_regen"				"30"
+			"health_regen_aura"			"10"
+			"bonus_all"					"40"
+			"bonus_armor"				"4"
+			"bonus_attackspeed"			"50"
+			
+			"aura_attack_speed"			"40"
+			"aura_positive_armor"		"4"
+			"aura_negative_armor"		"-9"
+			"aura_radius"				"1200"
+		}
+	}
+
+	// IMBA
+	//=================================================================================================================
+	// TITAN Armor
+	//=================================================================================================================
+	"item_cuirass_2_imba"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_cuirass_imba"
+		"AbilityTextureName"			"cuirass/cuirass_2"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		"ItemPurchasable" "0"
+		// "ItemCost"						"10232"
+		// "ItemShopTags"					"damage;unique;armor"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"armor"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		// "ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"health_regen"				"30"
+			"health_regen_aura"			"10"
+			"bonus_all"					"10"
+			"bonus_armor"				"4"
+			"bonus_attackspeed"			"20"
+			
+			"aura_attack_speed"			"40"
+			"aura_negative_as_pct" 		"-20"
+			"aura_negative_ms" 			"-20"
+			"bonus_hp_regen_debuff" 	"-20"
+			"aura_positive_armor"		"6"
+			"aura_negative_armor"		"-15"
+			"aura_radius"				"1500"
+		}
+	}
+
+	//=================================================================================================================
+	// Recipe: TITAN Armor
+	//=================================================================================================================
+	"item_recipe_cuirass_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_assault"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2080"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_cuirass_3"
+		"ItemRequirements"
+		{
+			"01"						"item_shivas_guard;item_cuirass_2;item_orb_2"
+		}
+	}
+	//=================================================================================================================
+	// TITAN Armor
+	//=================================================================================================================
+	"item_cuirass_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_cuirass"
+		"AbilityTextureName"			"cuirass/cuirass_3"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"FightRecapLevel"				"1"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		"ItemCost"						"1000"
+		"ItemShopTags"					"int;armor;hard_to_tag;damage"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"shiva's guard;armor"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"health_regen"				"100"
+			"health_regen_aura"			"20"
+			"bonus_all"					"150"
+			"bonus_armor"				"10"
+			"bonus_attackspeed"			"65"
+			
+			"aura_attack_speed"	"50"
+			"aura_positive_armor"			"5"
+			"aura_negative_armor"		"-12"
+			"bonus_attackspeed_debuff"	"-50"
+			"bonus_hp_regen_debuff"		"-30"
+			"aura_radius"					"1200"
+			
+			"blast_damage"				"8000"
+			"blast_movement_speed"		"-40"
+			"blast_debuff_duration"		"4.0"
+			"blast_radius"				"900"
+			"blast_speed"				"350"
+			"spell_amp"					"18"				
+			"resist_debuff_duration"	"16.0"
+		}
+	}
+	//=================================================================================================================
+	// Recipe: Divine Armor
+	//=================================================================================================================
+	"item_recipe_cuirass_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_assault"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_cuirass_4"
+		"ItemRequirements"
+		{
+			"01"						"item_cuirass_3;item_orb_3;item_black_king_bar"
+		}
+	}
+
+	//=================================================================================================================
+	// DIVINE Armor
+	//=================================================================================================================
+	"item_cuirass_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_cuirass"
+		"AbilityTextureName"			"cuirass/cuirass_4"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"FightRecapLevel"				"1"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		"ItemCost"						"1000"
+		"ItemShopTags"					"int;armor;hard_to_tag;damage"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"shiva's guard;armor"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"AbilityCooldown"	"30"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"health_regen"				"350"
+			"health_regen_aura"			"200"
+			"bonus_all"					"450"
+			"bonus_armor"				"11"
+			"bonus_attackspeed"			"150"
+			
+			"aura_attack_speed"	"60"
+			"aura_positive_armor"			"6"
+			"aura_negative_armor"		"-15"
+			"bonus_attackspeed_debuff"	"-75"
+			"bonus_hp_regen_debuff"		"-40"
+			"aura_radius"					"1200"
+			
+			"blast_damage"				"30000"
+			"blast_movement_speed"		"-50"
+			"blast_debuff_duration"		"4.0"
+			"blast_radius"				"900"
+			"blast_speed"				"350"
+			"spell_amp"					"21"
+			"resist_debuff_duration"	"16.0"
+			
+			"duration"					"7"
+			"magic_resist"				"50"
+		}
+	}
+	//=================================================================================================================
+	// bahamut Armor
+	//=================================================================================================================
+	"item_recipe_cuirass_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_assault"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"10000"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_cuirass_5"
+		"ItemRequirements"
+		{
+			"01"						"item_cuirass_4;item_orb_4"
+		}
+	}
+	"item_cuirass_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_cuirass"
+		"AbilityTextureName"			"cuirass/cuirass_5"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"FightRecapLevel"				"1"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		"ItemCost"						"1000"
+		"ItemShopTags"					"int;armor;hard_to_tag;damage"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"shiva's guard;armor"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			
+			"health_regen"				"1500"
+			"health_regen_aura"			"500"
+			"bonus_all"					"1500"
+			"bonus_armor"				"12"
+			"bonus_attackspeed"			"250"
+			
+			"aura_attack_speed"	"70"
+			"aura_positive_armor"			"7"
+			"aura_negative_armor"		"-17"
+			"bonus_attackspeed_debuff"	"-75"
+			"bonus_hp_regen_debuff"		"-50"
+			"aura_radius"					"1200"
+			
+			"blast_damage"				"80000"
+			"blast_movement_speed"		"-50"
+			"blast_debuff_duration"		"4.0"
+			"blast_radius"				"900"
+			"blast_speed"				"350"
+			"spell_amp"					"24"
+			"resist_debuff_duration"	"16.0"
+			
+			"duration"					"8"
+			"magic_resist"				"50"
+			"affects_allies"			"1"
+		}
+	}
+	//=================================================================================================================
+	// bahamut Armor
+	//=================================================================================================================
+	"item_recipe_asura_plate"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_assault"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"25"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		////-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_asura_plate"
+		"ItemRequirements"
+		{
+			"01"						"item_cuirass_5;item_orb_5"
+		}
+	}
+	"item_asura_plate"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_cuirass"
+		"AbilityTextureName"			"cuirass/asura_plate"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"1"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"FightRecapLevel"				"1"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		"ItemCost"						"1000"
+		"ItemShopTags"					"int;armor;hard_to_tag;damage"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"shiva's guard;armor"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			
+			"health_regen"				"5000"
+			"health_regen_aura"			"1500"
+			"bonus_all"					"4000"
+			"bonus_armor"				"20"
+			"bonus_armor_pr"			"5"
+			"bonus_attackspeed"			"100"
+			
+			"aura_attack_speed"	"100"
+			"aura_positive_armor"			"10"
+			"aura_negative_armor"		"-30"
+			"bonus_attackspeed_debuff"	"-100"
+			"bonus_hp_regen_debuff"		"-65"
+			"aura_radius"					"1200"
+			
+			"blast_damage"				"160000"
+			"blast_movement_speed"		"-100"
+			"blast_debuff_duration"		"4.0"
+			"blast_radius"				"900"
+			"blast_speed"				"350"
+			"spell_amp"					"27"
+			"resist_debuff_duration"	"16.0"
+			
+			"duration"					"8"
+			"magic_resist"				"50"
+		}
+	}
+}

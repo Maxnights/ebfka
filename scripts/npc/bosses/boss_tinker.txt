@@ -1,0 +1,263 @@
+"DOTAAbilities"
+{
+    "boss_tinker_laser"
+	{
+		"BaseClass"					"ability_lua"
+		"ScriptFile"				"bosses/boss_tinker/boss_tinker_laser"
+		"AbilityTextureName"		"tinker_laser"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"		"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"			"1"
+		"MaxLevel"					"3"
+		"AbilitySound"				"Hero_Tinker.Laser"
+
+		"AbilityCastRange"			"1200"
+		"AbilityCastPoint"			"0.0"
+		"AbilityCooldown"			"16"
+		"AbilityManaCost"			"0"
+
+		"AbilityValues"
+		{
+			"laser_damage"				"19500 50000 60000"
+			"miss_rate"					"100"
+			"blind_duration"			"3.5 4 4.5"
+			"radius"					"700"
+			"shrink_pct"				"20"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	"boss_tinker_laser_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "tinker_laser"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"HasScepterUpgrade"			"1"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+		"AbilitySound"					"Hero_Tinker.Laser"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50 50 50"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.3"	// Primarily about the damageo
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"miss_rate"							"80"
+			"duration_hero"				
+			{
+				"value"							"4.5"
+				"LinkedSpecialBonus"			"special_bonus_unique_tinker_4"
+			}
+			"duration_creep"				
+			{
+				"value"							"4.5"
+				"LinkedSpecialBonus"			"special_bonus_unique_tinker_4"
+			}	
+			"laser_damage"				
+			{
+				"value"							"19500 50000 120000"
+				"special_bonus_unique_tinker"	"+100%"
+			}	
+			"radius_explosion"
+			{
+				"value"			"250"
+				"special_bonus_unique_tinker_4"	"+250"
+				"affected_by_aoe_increase"	"1"
+			}
+			"splash_pct"						"100"
+			"scepter_bonus_cast_range"				
+			{
+				"value"							"300"
+				"RequiresScepter"				"1"
+			}
+			"scepter_reduction_pct"				
+			{
+				"value"							"1.5"
+				"RequiresScepter"				"1"
+			}						
+		 	"scepter_bounce_radius"				
+			{
+				"value"						"1000"
+				"RequiresScepter"			"1"
+			}			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Tinker: Heat Seeking Missile
+	//=================================================================================================================
+	"boss_tinker_heat_seeking_missile"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"tinker_heat_seeking_missile"
+		// "ScriptFile"					"heroes/hero_tinker/tinker_heat_seeking_missile"
+		"AbilityTextureName"			"tinker_heat_seeking_missile"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE | DOTA_UNIT_TARGET_FLAG_NO_INVIS"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Tinker.Heat-Seeking_Missile"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"						"0 0 0 0"
+		"AbilityCastRange"						"2000"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"						"18"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"						"95 105 115 125 135 145 155"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{ 
+			"damage"							"2000 3000 5000 8000 15000 30000 50000"
+			"radius"							"2000"
+			"targets"
+			{
+				"value"							"7"
+				"special_bonus_unique_tinker_6" "+1"
+			}
+			"speed"								"900"
+			"radius_explosion"					"0"
+			"splash_pct"						"0"
+			"ministun_duration"
+			{
+				"value"							"0"
+				"special_bonus_unique_tinker_3"	"+0.25"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	//=================================================================================================================
+	// Tinker: Rearm
+	//=================================================================================================================
+	"boss_tinker_rearm"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"bosses/boss_tinker/boss_tinker_rearm"
+		"AbilityTextureName"			"tinker_rearm"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"AbilitySound"					"Hero_Tinker.Rearm"
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"6"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+	    "AbilityCastPoint"              "0.0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+	    "AbilityCooldown"               "6.5 6.0 1.5"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+	    "AbilityManaCost"               "0 0 0"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+	    "AbilityValues"
+	    {
+			"channel_tooltip"
+			{
+				"value"					"2.25 1.75 1.0"
+				"special_bonus_unique_tinker_5"	"-25%"
+			}
+			"AbilityChannelTime"
+			{
+				"value"					"2.25 1.0 1.0"
+				"special_bonus_unique_tinker_5"	"-25%"
+			}
+			"debuff_duration"			"12"
+			"duration_debuff"			"15"
+			"debuff_max"				"5"
+	    }
+	}
+	"boss_tinker_rearm_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"bosses/boss_tinker/boss_tinker_rearm_2"
+		"AbilityTextureName"			"tinker_rearm"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"AbilitySound"					"Hero_Tinker.Rearm"
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"6"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+	    "AbilityCastPoint"              "0.0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+	    "AbilityCooldown"               "6.5 6.0 2.4"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+	    "AbilityManaCost"               "10 10 10"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+	    "AbilityValues"
+	    {
+			"channel_tooltip"
+			{
+				"value"					"2.25 1.75 1.20"
+				"special_bonus_unique_tinker_5"	"-25%"
+			}
+			"AbilityChannelTime"
+			{
+				"value"					"2.25 1.0 1.20"
+				"special_bonus_unique_tinker_5"	"-25%"
+			}
+			"debuff_duration"			"12"
+			"duration_debuff"			"15"
+			"debuff_max"				"5"
+	    }
+	}
+}

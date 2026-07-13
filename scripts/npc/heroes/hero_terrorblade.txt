@@ -1,0 +1,369 @@
+"DOTAAbilities"
+{	
+	"terrorblade_attack_speed"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "ability_datadriven"
+	    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "AbilityTextureName"            "terrorblade_reflection"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+		"FightRecapLevel"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.25"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_attack_speed"
+			{
+				"value"			"100 150 200 250 300 350 400"
+				"special_bonus_unique_terrorblade_2" "+160"
+			}			
+			"bonus_evasion"
+			{
+				"value"			"10 15 20 25 30 35 40"
+				"special_bonus_unique_terrorblade_6" "+10"
+			}					
+		}
+		
+		"Modifiers"
+		{
+			"modifier_terrorblade_attack_speed"
+			{	
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"
+		        {
+		        	"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attack_speed"
+		        	"MODIFIER_PROPERTY_EVASION_CONSTANT" "%bonus_evasion"
+		        }
+			}
+		}
+	}
+	//=================================================================================================================
+	// Terrorblade: Reflection
+	//=================================================================================================================
+"terrorblade_reflection"
+{
+	"ID"				"5619"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"FightRecapLevel"				"1"
+	"AbilitySound"				"Hero_Terrorblade.Reflection"
+	"AbilityCastPoint"				"0.3"
+	"AbilityCastRange"				"700"
+	"AbilityValues"
+	{
+		"illusion_duration"
+		{
+			"value"				"5"
+			"special_bonus_unique_terrorblade_2"				"+1"
+		}
+		"illusion_outgoing_damage"
+		{
+			"value"				"-45 -30 -15 0"
+			"special_bonus_unique_terrorblade_6"				"+15"
+		}
+		"illusion_outgoing_tooltip"
+		{
+			"value"				"55 70 85 100"
+			"special_bonus_unique_terrorblade_6"				"+15"
+		}
+		"move_slow"
+		{
+			"value"				"15 20 25 30"
+			"special_bonus_unique_terrorblade_6"				"+15"
+		}
+		"range"
+		{
+			"value"				"500"
+			"affected_by_aoe_increase"				"1"
+		}
+		"AbilityManaCost"
+		{
+			"value"				"35 50"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"28 24 20 16"
+		}
+		"attack_slow"
+		{
+			"value"				"15 20 25 30"
+			"special_bonus_unique_terrorblade_6"				"+15"
+		}
+		"is_global"
+		{
+			"value"				"0"
+		}
+		"requires_vision"
+		{
+			"value"				"0"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+}
+//=================================================================================================================
+	// Terrorblade: Conjure Image
+	//=================================================================================================================
+"terrorblade_conjure_image"
+{
+	"ID"				"5620"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilitySound"				"Hero_Terrorblade.ConjureImage"
+	"AbilityCastPoint"				"0.15"
+	"AbilityValues"
+	{
+		"illusion_duration"
+		{
+			"value"				"34.0"
+			"special_bonus_unique_terrorblade_5"				"+10"
+		}
+		"illusion_outgoing_damage"
+		{
+			"value"				"-70 -60 -50 -40 -30 -20 -10"
+			"special_bonus_unique_terrorblade_4"				"+10"
+		}
+		"illusion_outgoing_tooltip"
+		{
+			"value"				""
+			"special_bonus_unique_terrorblade_4"				"+10"
+		}
+		"illusion_incoming_damage"				"110.0"
+		"illusion_incoming_damage_total_tooltip"				""
+		"strong_illusion"
+		{
+			"value"				"0"
+		}
+		"show_particle_effect"
+		{
+			"value"				"1"
+		}
+		"appear_as_illusion"
+		{
+			"value"				"1"
+		}
+		"hp_cost_perc"
+		{
+			"value"				"0"
+			"special_bonus_facet_terrorblade_soul_fragment"				"=15"
+			"RequiresFacet"				"terrorblade_soul_fragment"
+		}
+		"illusions_spawn_with_full_hp"
+		{
+			"value"				"0"
+			"special_bonus_facet_terrorblade_soul_fragment"				"+1"
+		}
+		"AbilityManaCost"
+		{
+			"value"				"55 85 115 145 175 205 235"
+			"special_bonus_facet_terrorblade_soul_fragment"				"-100%"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"16"
+			"special_bonus_unique_terrorblade_4"				"-2"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_2"
+}
+//=================================================================================================================
+	// Terrorblade: Metamorphosis
+	//=================================================================================================================
+"terrorblade_metamorphosis"
+{
+	"ID"				"5621"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_NO"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilitySound"				"Hero_Terrorblade.Metamorphosis"
+	"HasScepterUpgrade"				"1"
+	"AbilityDraftScepterAbility"				"terrorblade_terror_wave"
+	"LinkedAbility"				"terrorblade_demon_zeal"
+	"AbilityCastPoint"				"0.0"
+	"AbilityManaCost"				"100 150 200 250 300 350 400"
+	"AbilityValues"
+	{
+		"duration"
+		{
+			"value"				"50"
+			"special_bonus_unique_terrorblade_3"				"+30"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"70.0"
+			"special_bonus_unique_terrorblade_metamorphosis_cooldown"				"-10"
+		}
+		"transformation_time"				"0.35"
+		"base_attack_time"				"1.3"
+		"bonus_range"				"350 400 450 500 550 600 650"
+		"tooltip_attack_range"				"500 550 600 650 700 750 800"
+		"bonus_damage"
+		{
+			"value"				"900 1750 3250 6000 11000 18000 30000"
+			"special_bonus_unique_terrorblade_3"				"+50%"
+		}
+		"speed_loss"				"0"
+		"metamorph_aura_tooltip"
+		{
+			"value"				"1200"
+			"affected_by_aoe_increase"				"1"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_3"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_PHYSICAL"
+	"AbilityDraftExtraAbilities"
+	{
+		"terrorblade_terror_wave"				"scepter"
+	}
+}
+//=================================================================================================================
+	// Terrorblade: Terror Wave ( scepter ability )
+	//=================================================================================================================
+"terrorblade_terror_wave"
+{
+	"ID"				"425"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"MaxLevel"				"1"
+	"FightRecapLevel"				"1"
+	"IsGrantedByScepter"				"1"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_3"
+	"AbilityCooldown"				"30"
+	"AbilityManaCost"				"75"
+	"AbilityValues"
+	{
+		"fear_duration"				"4.0"
+		"scepter_radius"
+		{
+			"value"				"1600"
+			"affected_by_aoe_increase"				"1"
+		}
+		"damage"				"20000"
+		"scepter_speed"				"1000"
+		"scepter_spawn_delay"				"0.6"
+		"scepter_meta_duration"				"15"
+	}
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+}
+//=================================================================================================================
+	// Terrorblade: Demon Zeal ( shard ability )
+	//=================================================================================================================
+	"terrorblade_demon_zeal"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"699"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN  | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByShard"			"1"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastGestureSlot"		"DEFAULT"
+
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"14"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"berserk_bonus_attack_speed"				"200"
+			"berserk_bonus_movement_speed"				"100"
+			"duration"		"7"
+			"hp_regen"		"4000"
+			"radius"	
+			{
+				"value"	"1200"
+				"affected_by_aoe_increase"	"1"
+			}
+			"health_cost_pct"
+			{
+				"value"					"20"
+				"DamageTypeTooltip"		"DAMAGE_TYPE_PURE"
+			}
+			"reflection_pct"			"50"
+		}
+	}
+
+	//=================================================================================================================
+	// Terrorblade: Sunder
+	//=================================================================================================================
+"terrorblade_sunder"
+{
+	"ID"				"5622"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_BOTH"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_CUSTOM"
+	"AbilityUnitTargetFlags"				"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityType"				"ABILITY_TYPE_ULTIMATE"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"FightRecapLevel"				"2"
+	"AbilitySound"				"Hero_Terrorblade.Sunder.Target"
+	"AbilityDraftUltShardAbility"				"terrorblade_demon_zeal"
+	"AbilityCooldown"				"120.0 105 95 80.0 65 50"
+	"AbilityCastRange"				"475"
+	"AbilityCastPoint"				"0.35"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_4"
+	"AbilityManaCost"				"150 250 350 450 550 650"
+	"AbilityValues"
+	{
+		"hit_point_minimum_pct"
+		{
+			"value"				"25 30 35 40 45 50"
+			"special_bonus_unique_terrorblade_sunder_hp_threshold"				"-25"
+		}
+		"ignore_minimum_pct_for_enemies"
+		{
+			"value"				"0"
+			"special_bonus_facet_terrorblade_condemned"				"+1"
+		}
+		"ignore_minimum_pct_for_enemies_tooltip"
+		{
+			"value"				"1"
+			"special_bonus_facet_terrorblade_condemned"				"=0"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"110.0 75.0 40.0"
+			"special_bonus_unique_terrorblade"				"-30"
+		}
+	}
+	"AbilityDraftExtraAbilities"
+	{
+		"terrorblade_demon_zeal"				"shard"
+	}
+}
+}

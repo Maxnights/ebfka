@@ -1,0 +1,180 @@
+"DOTAUnits"
+{
+	"Version"		"1"
+
+	"ad_precache_jakiro_double_trouble"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_jakiro.vsndevts"
+			"particle"				"particles/units/heroes/hero_jakiro/jakiro_base_attack.vpcf"
+			"particle"				"particles/units/heroes/hero_jakiro/jakiro_base_attack_dual.vpcf"
+			"particle"				"particles/units/heroes/hero_jakiro/jakiro_base_attack_fire.vpcf"
+			"particle"				"particles/units/heroes/hero_jakiro/jakiro_liquid_ice_projectile.vpcf"
+		}
+	}
+
+	"ad_precache_keeper_of_the_light_recall"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_keeper_of_the_light.vsndevts"
+			"particle"				"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_recall.vpcf"
+			"particle"				"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_recall_cast.vpcf"
+		}
+	}
+
+	"ad_precache_keeper_of_the_light_radiant_bind"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_keeper_of_the_light.vsndevts"
+			"particle"				"particles/units/heroes/hero_keeper_of_the_light/keeper_radiant_bind_cast.vpcf"
+			"particle"				"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_radiant_bind_debuff.vpcf"
+		}
+	}
+
+	"ad_precache_life_stealer_corpse_eater"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"particle"				"particles/units/heroes/hero_life_stealer/life_stealer_health_steal.vpcf"
+		}
+	}
+
+	"ad_precache_lina_slow_burn"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"particle"				"particles/units/heroes/hero_lina/lina_overheat_explosion.vpcf"
+			"particle"				"particles/units/heroes/hero_jakiro/jakiro_liquid_fire_debuff.vpcf"
+		}
+	}
+
+	"ad_precache_medusa_venomed_volley"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
+			"particle"				"particles/units/heroes/hero_medusa/medusa_venom_arrow.vpcf"
+		}
+	}
+
+	"ad_precache_shadow_shaman_voodoo_hands"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_shadowshaman.vsndevts"
+			"model"					"models/props_gameplay/chicken.vmdl"
+			"model"					"models/heroes/shadowshaman/shadowshaman_totem.vmdl"
+		}
+	}
+
+	"ad_precache_shredder_twisted_chakram"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_shredder.vsndevts"
+			"particle"				"particles/econ/items/shredder/hero_shredder_icefx/shredder_chakram_ice.vpcf"
+			"particle"				"particles/econ/items/shredder/hero_shredder_icefx/shredder_chakram_return_ice.vpcf"
+		}
+	}
+
+	"ad_precache_tusk_drinking_buddies"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts"
+			"particle"				"particles/units/heroes/hero_tusk/tusk_drinking_buddies.vpcf"
+		}
+	}
+
+	"ad_precache_tusk_tag_team"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts"
+			"particle"				"particles/status_fx/status_effect_tusk_tag_team_debuff.vpcf"
+			"particle"				"particles/units/heroes/hero_tusk/tusk_tag_team.vpcf"
+			"particle"				"particles/units/heroes/hero_tusk/tusk_tag_team_debuff.vpcf"
+		}
+	}
+
+	"ad_precache_vengefulspirit_soul_strike"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+            "particle"              "particles/units/heroes/hero_vengeful/vengeful_projection_attack.vpcf"
+		}
+	}
+
+	"ad_precache_vengefulspirit_retribution"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+            "particle"              "particles/units/heroes/hero_vengeful/vengeful_projection_attack.vpcf"
+		}
+	}
+
+	"ad_precache_monkey_king_mischief"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_monkey_king.vsndevts"
+            "particle"              "particles/units/heroes/hero_monkey_king/monkey_king_disguise.vpcf"
+			"model"					"models/props_gameplay/banana_prop_closed.vmdl"
+			"model"					"models/props_gameplay/banana_prop_closed_mk.vmdl"
+			"model"					"models/props_gameplay/banana_prop_open.vmdl"
+		}
+	}
+
+	"ad_precache_sandking_caustic_finale"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_sandking.vsndevts"
+            "particle"              "particles/units/heroes/hero_sandking/sandking_caustic_finale_explode.vpcf"
+			"particle"				"particles/units/heroes/hero_sandking/sandking_caustic_finale_debuff.vpcf"
+			"particle"				"particles/units/heroes/hero_sandking/sandking_caustic_finale_active.vpcf"
+		}
+	}
+
+	"ad_precache_medusa_mana_shield"
+	{
+		"BaseClass"			"npc_dota_creature"
+		"IsSummoned"		"1"
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
+            "particle"              "particles/units/heroes/hero_medusa/medusa_mana_shield.vpcf"
+		}
+	}
+}

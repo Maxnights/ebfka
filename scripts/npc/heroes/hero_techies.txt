@@ -1,0 +1,351 @@
+"DOTAAbilities"
+{
+    //=================================================================================================================
+	// Techies Mutually Assured Destruction
+	//=================================================================================================================
+	"techies_mutually_assured_destruction"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_FORCE_NO_INNATE_UI | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_FORCE_KEYBIND"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastAnimation"		"ACT_DOTA_GENERIC_CHANNEL_1"
+		"Innate"						"1"
+		"MaxLevel"						"1"
+		"HasShardUpgrade"				"1"
+		"AbilityCastPoint"				"1.0"
+
+		"AbilityValues"
+		{
+
+			"bonus_mana_as_mana_regen"		
+			{
+				"value"				"0.08"
+				"hero_levelup"		"+0.02"
+			}
+			"radius"						
+			{
+				"value"						"400"
+				"affected_by_aoe_increase"	"1"
+			}
+			"base_damage"					"5000"
+			"max_mana_pct_as_damage"		
+			{
+				"value"						"300"
+				"special_bonus_shard"		"+10"
+			}	
+			"current_mana_regen"	
+			{
+				"dynamic_value"				"true"
+			}
+			"current_damage"
+			{
+				"dynamic_value"				"true"
+			}	
+			"explosion_delay"				"1.0"
+
+			"AbilityCooldown"
+			{
+				"value"						"0"
+				"special_bonus_shard"		"+30"
+			}
+			"AbilityCastRange"
+			{
+				"value"						"0"
+				"special_bonus_shard"		"450"
+			}
+		}
+	}
+
+"techies_squees_scope"
+{
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"IsBreakable"				"1"
+	"AbilityValues"
+	{
+		"attack_range_tooltip"				"1"
+	}
+	"MaxLevel"				"1"
+	"IsGrantedByShard"				"1"
+	"AbilityTextureName"				"techies_stasis_trap"
+}
+//=================================================================================================================
+    // Techies: Land Mines
+    //=================================================================================================================
+"techies_land_mines"
+{
+	"ID"				"5599"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityType"				"ABILITY_TYPE_ULTIMATE"
+	"MaxLevel"				"6"
+	"LevelsBetweenUpgrades"				"6"
+	"LinkedAbility"				"techies_minefield_sign"
+	"AbilityCastRange"				"150"
+	"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+	"AbilityCooldown"				"0"
+	"AbilityCharges"				"15"
+	"AbilityManaCost"				"110 240 370 600 830 1060"
+	"AbilityValues"
+	{
+		"radius"
+		{
+			"value"				"500"
+			"affected_by_aoe_increase"				"1"
+		}
+		"proximity_threshold"				"1.0"
+		"damage"
+		{
+			"value"				"7000 22000 30000 40000 50000 60000"
+		}
+		"building_damage_pct"				"30"
+		"activation_delay"
+		{
+			"value"				"1"
+			"special_bonus_unique_techies_4"				"-0.9"
+		}
+		"cast_range_scepter_bonus"
+		{
+			"value"				"300"
+			"RequiresScepter"				"1"
+			"special_bonus_scepter"				"300"
+		}
+		"AbilityChargeRestoreTime"
+		{
+			"value"				"15"
+			"special_bonus_unique_techies_3"				"-3"
+		}
+		"outer_damage"				"50"
+		"min_distance"				"300"
+		"placement_radius"				"150"
+		"mres_reduction"				"15 22 24 26 29 35"
+		"burn_duration"				"5"
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+}
+//=================================================================================================================
+    // Techies: Suicide Squad, Attack!
+    //=================================================================================================================
+"techies_suicide"
+{
+	"ID"				"5601"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"FightRecapLevel"				"1"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastRange"				"1000"
+	"AbilityManaCost"				"100 125 150 175 200 225 250"
+	"AbilityValues"
+	{
+		"radius"
+		{
+			"value"				"700"
+			"affected_by_aoe_increase"				"1"
+		}
+		"damage"
+		{
+			"value"				"2250 3500 6750 13250 26750 58500 127000"
+			"special_bonus_unique_techies"				"+75%"
+		}
+		"stun_duration"				"1.4"
+		"AbilityCastPoint"				"1.0 1.0 1.0 1.0 0.75 0.5 0.25"
+		"hp_cost"
+		{
+			"value"				"50 50 50 50 35 20 5"
+			"DamageTypeTooltip"				"DAMAGE_TYPE_PURE"
+			"CalculateSpellDamageTooltip"				"0"
+		}
+		"hp_dmg"
+		{
+			"value"				"0"
+			"special_bonus_facet_techies_spleens_secret_sauce"				"=15"
+			"DamageTypeTooltip"				"DAMAGE_TYPE_PURE"
+			"CalculateSpellDamageTooltip"				"0"
+		}
+		"duration"				"0.75"
+		"AbilityCooldown"
+		{
+			"value"				"25"
+			"special_bonus_unique_techies_5"				"-15"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_3"
+	"AbilityCastPoint"				"1.0"
+}
+    //=================================================================================================================
+"techies_sticky_bomb"
+{
+	"ID"				"879"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"FightRecapLevel"				"1"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_6"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastRange"				"1000"
+	"AbilityCastPoint"				"0.1"
+	"AbilityCooldown"				"12 10 8 6 5 4 3"
+	"AbilityManaCost"				"100 115 130 145 160 175 190"
+	"AbilityModifierSupportValue"				"0.25"
+	"AbilityValues"
+	{
+		"duration"				"1.2"
+		"countdown"				"2"
+		"radius"
+		{
+			"value"				"800"
+			"special_bonus_unique_techies_2"				"+125"
+			"affected_by_aoe_increase"				"1"
+		}
+		"damage"
+		{
+			"value"				"900 2160 5180 12500 30000 71650 172000"
+			"special_bonus_unique_techies_2"				"+160"
+		}
+		"slow"				"25 35 45 55 65 75 85"
+		"secondary_slow"				"15 25 35 45 55 65 75"
+		"secondary_slow_duration"				"3"
+		"explosion_radius"
+		{
+			"value"				"300"
+			"special_bonus_unique_techies_2"				"+125"
+			"affected_by_aoe_increase"				"1"
+		}
+		"speed"				"500.0"
+		"acceleration"				"2000"
+		"pre_chase_time"				"0.1"
+		"max_chase_time"				"4"
+	}
+}
+//=================================================================================================================
+    // Techies: Reactive Taser
+    //=================================================================================================================
+"techies_reactive_tazer"
+{
+	"ID"				"886"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"FightRecapLevel"				"1"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_2"
+	"HasShardUpgrade"				"1"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastPoint"				"0.1"
+	"AbilityCastRange"				"500"
+	"AbilityCooldown"				"28 24 20 16 13.7 11.4 9.1"
+	"AbilityManaCost"				"60"
+	"AbilityModifierSupportValue"				"0.25"
+	"AbilityValues"
+	{
+		"duration"
+		{
+			"value"				"6"
+			"special_bonus_unique_techies_tazer_duration"				"+25%"
+		}
+		"disarm_duration"
+		{
+			"value"				"3.3"
+			"special_bonus_unique_techies_tazer_duration"				"+25%"
+		}
+		"bonus_ms"				"18 22 26 30 34 38 42"
+		"stun_radius"				"400"
+		"shard_damage"
+		{
+			"value"				"900 1980 4350 9600 21100 46400 102000"
+			"RequiresShard"				"1"
+			"DamageTypeTooltip"				"DAMAGE_TYPE_MAGICAL"
+		}
+		"explosion_radius"
+		{
+			"value"				"400"
+			"affected_by_aoe_increase"				"1"
+		}
+		"damage"
+		{
+			"value"				"60 110 160 210"
+			"DamageTypeTooltip"				"DAMAGE_TYPE_MAGICAL"
+		}
+	}
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+}
+//=================================================================================================================
+    // Techies Reactive Tazer Stop
+    //=================================================================================================================
+    "techies_reactive_tazer_stop"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "ID" "1147" // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "MaxLevel" "7"
+        "LevelsBetweenUpgrades" "3"
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint" "0.0 0.0 0.0 0.0"
+        "AbilityCastAnimation" "ACT_INVALID"
+        "AbilityCooldown" "0.5"
+    }
+"techies_minefield_sign"
+{
+	"ID"				"5644"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_NONE"
+	"MaxLevel"				"6"
+	"HasScepterUpgrade"				"1"
+	"AbilityCastRange"				"10"
+	"AbilityCastPoint"				"1.25"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_5"
+	"AbilityManaCost"				"0"
+	"AbilityValues"
+	{
+		"aura_radius"
+		{
+			"value"				"500"
+			"special_bonus_scepter"				"+500"
+			"affected_by_aoe_increase"				"1"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"60.0"
+		}
+		"lifetime"
+		{
+			"value"				"60"
+			"special_bonus_scepter"				"+180"
+		}
+		"minefield_duration"				"20"
+		"trigger_radius"
+		{
+			"value"				"3000"
+			"affected_by_aoe_increase"				"1"
+		}
+		"scepter_move_damage"
+		{
+			"value"				"1500 4500 10000 22000 33000 44000"
+			"RequiresScepter"				"1"
+		}
+		"scepter_move_amt"
+		{
+			"value"				"10"
+			"RequiresScepter"				"1"
+		}
+		"bonus_mine_damage_pct"				"15"
+	}
+	"IsGrantedByScepter"				"1"
+	"AbilityCooldown"				"60.0"
+}
+}

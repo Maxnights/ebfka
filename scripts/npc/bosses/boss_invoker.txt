@@ -1,0 +1,303 @@
+"DOTAAbilities"
+{
+    "boss_invoker_emp"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"	 "invoker_emp"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"						"1"
+		"HotKeyOverride"				"C"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilitySound"					"Hero_Invoker.EMP.Charge"
+		"HasShardUpgrade"				"1"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"950"
+		"AbilityCastPoint"				"0.05"
+		"AbilityCastAnimation"			"ACT_INVALID"
+
+		"AbilityCooldown"				"30"
+		"AbilityManaCost"				"125"
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"delay"
+			{
+				"value"								"2.9"
+				"levelkey"							"wexlevel"
+			}
+			"area_of_effect"		
+			{
+				"value"								"800"
+				"levelkey"							"wexlevel"
+				"affected_by_aoe_increase"			"1"
+			}
+			"mana_burned"
+			{
+				"value"								"1100 1200 1300"
+				"levelkey"							"wexlevel"
+				"special_bonus_unique_invoker_10"	"+50%"		
+			}
+			"damage_per_mana_pct"
+			{
+				"value"								"18000 20000 24000"
+				"levelkey"							"wexlevel"
+				"special_bonus_shard"				"+50%"	
+			}					
+			"shard_drag_speed"
+			{
+				"value"					"175"
+				"RequiresShard"			"1"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Invoker: Alacrity
+	//=================================================================================================================
+	"boss_invoker_alacrity"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"	 "invoker_alacrity"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"MaxLevel"						"1"
+		"HotKeyOverride"				"Z"
+		"AbilitySound"					"Hero_Invoker.Alacrity"
+
+		// Unit Targeting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"650"
+		"AbilityCastPoint"				"0.05"
+		"AbilityCastAnimation"			"ACT_INVALID"
+
+		"AbilityCooldown"				"17"
+		"AbilityManaCost"				"100"
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_attack_speed"
+			{
+				"value"								"300 350 400"
+				"levelkey"							"wexlevel"
+				"special_bonus_unique_invoker_5"	"+75%"
+			}
+			"bonus_damage"
+			{
+				"value"								"10250 14500 23100"
+				"levelkey"							"exortlevel"
+				"special_bonus_unique_invoker_5"	"+50%"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"duration"					"9"
+		}
+	}
+
+	//=================================================================================================================
+	// Invoker: Chaos Meteor
+	//=================================================================================================================
+	"boss_invoker_chaos_meteor"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"	 "invoker_chaos_meteor"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"MaxLevel"						"1"
+		"HotKeyOverride"				"D"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Invoker.ChaosMeteor.Impact"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.05"
+		"AbilityCastAnimation"			"ACT_INVALID"
+		"AbilityManaCost"				"200"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// Mainly about damage
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCooldown"
+			{
+				"value"					"30"
+				"special_bonus_shard"	"-15"
+			}
+			"land_time"					"1.3"
+			"area_of_effect"			"575"
+			"travel_distance"
+			{
+				"value"					"1575 1630 1695"
+				"levelkey"				"wexlevel"
+			}
+			"travel_speed"				"600"
+			"damage_interval"
+			{
+				"value"					"0.5"
+				"CalculateSpellDamageTooltip"	"0"
+				"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
+			}
+			"vision_distance"			"500"
+			"end_vision_duration"		"3.0"
+			"main_damage"
+			{
+				"value"					"24000 33000 40000"
+				"levelkey"				"exortlevel"
+				"special_bonus_unique_invoker_6"	"+100%"
+			}
+			"burn_duration"				"5.0"
+			"burn_dps"
+			{
+				"value"								"4600 6400 7200"
+				"levelkey"							"exortlevel"
+				"CalculateSpellDamageTooltip"		"1"
+				"special_bonus_unique_invoker_6"	"+150%"
+				"DamageTypeTooltip"					"DAMAGE_TYPE_MAGICAL"
+			}
+			"meteor_count"
+			{
+				"value"					"4"
+				"special_bonus_unique_invoker_additional_chaos_meteors"	"+6"
+			}
+		}
+	}
+
+    "boss_invoker_sun_strike_ad"
+    {
+        // General
+        "BaseClass" "invoker_sun_strike_ad"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "MaxLevel"                      "3"
+        "HotKeyOverride"                "T"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Invoker.SunStrike.Charge"
+        "HasScepterUpgrade"             "1"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "0"
+        "AbilityCastPoint"              "0.05"
+        "AbilityCastAnimation"          "ACT_INVALID"
+
+        "AbilityCooldown"               "20"
+        "AbilityManaCost"               "0"
+            
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "delay"                     "1.7"
+            
+            "area_of_effect"            
+            {
+                    "value"     "175"
+                    "affected_by_aoe_increase"  "1"
+            }
+            "damage"                    "250000 250000 250000"
+            "vision_distance"           "400"
+            "vision_duration"           "4.0"
+            "cataclysm_count"
+            {
+                "value"                 "0"
+                "special_bonus_scepter" "+2"
+                "RequiresScepter"       "1"
+            }
+            "cataclysm_cooldown"
+            {
+                "value"                 "50"
+                "RequiresScepter"       "1"
+            }
+            "cataclysm_min_range"
+            {
+                "value"                 "160"
+                "RequiresScepter"       "1"
+            }
+            "cataclysm_max_range"
+            {
+                "value"                 "200"
+                "RequiresScepter"       "1"
+            }
+        }
+    }
+
+	"boss_invoker_deafening_blast"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "invoker_deafening_blast"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"1"
+		"HotKeyOverride"				"B"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Invoker.DeafeningBlast"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.05"
+		"AbilityCastAnimation"			"ACT_INVALID"
+
+		"AbilityCooldown"				"40"
+		"AbilityManaCost"				"1"
+		"AbilityModifierSupportValue"	"0.5"	// Applies 2 modifiers
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"travel_distance"			"1000"
+			"travel_speed"				"1100"
+			"radius_start"				"175"
+			"radius_end"				"225"
+			"end_vision_duration"		"1.75"
+			"damage"
+			{
+				"value"					"45000 95000 150000"
+				"levelkey"				"exortlevel"
+			}
+			"knockback_duration"
+			{
+				"value"					"1.6 1.8 2.0"
+				"levelkey"				"quaslevel"
+			}
+			"disarm_duration"
+			{
+				"value"					"3.5 4.25 5.0"
+				"levelkey"				"wexlevel"
+			}
+			"radial_count"
+			{
+				"value"					"1"
+				"special_bonus_unique_invoker_2"	"+11"
+			}
+		}
+	}
+}

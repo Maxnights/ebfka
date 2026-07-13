@@ -1,0 +1,388 @@
+"DOTAAbilities"
+{
+
+//=================================================================================================================
+	// Abaddon: Death Coil (mist coil)
+	//=================================================================================================================
+	"boss_abaddon_death_coil"
+	{
+		"BaseClass" "abaddon_death_coil"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES_ENEMIES_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Abaddon.DeathCoil.Cast"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"625"
+		"AbilityCastPoint"				"0.25"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"self_damage"			
+			{
+				"value"					"40"
+				"DamageTypeTooltip"		"DAMAGE_TYPE_PURE"
+				"CalculateSpellDamageTooltip"		"0"
+			}
+			"self_damage_enemy_target"
+			{
+				"value"										"40"
+				"special_bonus_facet_abaddon_mists_of_fate"	"=70"
+				"DamageTypeTooltip"							"DAMAGE_TYPE_PURE"
+				"CalculateSpellDamageTooltip"				"0"
+			}
+			"missile_speed"			"1300"
+			"target_damage"
+			{
+				"value"			"3000 3000 3000"
+				"special_bonus_unique_abaddon_2"	"+35"
+			}
+			"heal_amount"
+			{
+				"value"			"3000 4000 8000"
+				"special_bonus_unique_abaddon_2"	"+35"
+			}			
+			
+			"effect_radius"
+			{
+				"value"				"0"
+				"special_bonus_unique_abaddon_4"	"+350"
+				"affected_by_aoe_increase"	"1"
+			}
+			
+			"perform_attack"
+			{
+				"value"										"0"
+				"special_bonus_facet_abaddon_mists_of_fate"	"+1"
+			}
+
+			"damage_percentage_on_perform_attack"
+			{
+				"value"										"0"
+				"special_bonus_facet_abaddon_mists_of_fate"	"=40 =60 =80 =100"
+			}
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	"boss_abaddon_borrowed_time"
+	{
+		"BaseClass" "abaddon_borrowed_time"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Abaddon.BorrowedTime"
+
+		"HasScepterUpgrade"			"1"
+		"IsBreakable"					"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCastGestureSlot"		"ABSOLUTE"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0 0 0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCooldown"				
+			{
+				"value"								"40"
+			}
+			"hp_threshold"							"38000000"
+			"duration"
+			{
+				"value"		"4.0 5.0 7.0"
+				"special_bonus_scepter"	"+3"
+			}
+			"ally_threshold_scepter"
+			{
+				"special_bonus_scepter"				"1000"
+			}
+			"redirect_range_scepter"
+			{
+				"special_bonus_scepter"				"1200"
+				"affected_by_aoe_increase"	"1"
+			}
+			"immolate_damage"
+			{
+				"special_bonus_unique_abaddon_immolation"	"+100"
+			}
+			"immolate_aoe"
+			{
+				"special_bonus_unique_abaddon_immolation"	"+400"
+				"affected_by_aoe_increase"	"1"
+			}
+			"immolate_tick"							".25"
+		}
+	}
+
+    "boss_queenofpain_sonic_wave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "queenofpain_sonic_wave"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_POINT"				   
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"FightRecapLevel"				"2"
+		"HasScepterUpgrade"			"1"
+		"AbilitySound"					"Hero_QueenOfPain.SonicWave"
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"6"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0.452 0.452 0.452"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"starting_aoe"		"100"
+			"distance"			"1500"
+			"final_aoe"			"900"
+			"speed"				"1100"
+			"damage"			
+			{
+				"value"											"20000 25000 35000"
+				"special_bonus_unique_queen_of_pain_7"			"+150%"
+			}
+			"knockback_distance"	"350"
+			"knockback_duration" "1.4"
+			"AbilityCooldown"
+			{	
+				"value"											"12"
+			}
+		}
+	}
+
+    "boss_queenofpain_scream_of_pain"
+	{
+		"BaseClass" "queenofpain_scream_of_pain"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilitySound"					"Hero_QueenOfPain.ScreamOfPain"
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"7"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"area_of_effect"									"700"
+			"projectile_speed"									"1100"
+			"damage"										
+			{
+				"value"											"4000 8000 12000"
+				"special_bonus_unique_queen_of_pain_2" 			"+150%"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+	}
+
+    "boss_queenofpain_shadow_strike"
+	{
+        "BaseClass" "queenofpain_shadow_strike"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_QueenOfPain.ShadowStrike"
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"750"
+		"AbilityCastPoint"				"0.4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"4"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+	
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"strike_damage"			
+			{
+				"value"									"565 1125 8000"
+				"special_bonus_scepter"					"+100%"
+			}
+			"duration_damage"							"375 750 4000"
+			"movement_slow"								"-20 -35 -50"
+			"projectile_speed"							"900"
+			"damage_interval"		
+			{
+				"value"									"1.5"
+				"special_bonus_unique_queen_of_pain_4"	"-0.7"
+			}
+			"duration_heal"
+			{
+				"value"												"356 675 1065"
+				"special_bonus_unique_queen_of_pain_strike_heal"	"+25%"
+			}
+			"generate_scream"
+			{
+				"value"									"0"
+				"special_bonus_scepter"					"+1"
+			}
+			"aoe_radius"
+			{
+				"value"									"0"
+				"special_bonus_scepter"					"+800"
+			}
+			"duration"									"15"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Queen of Pain: Blink
+	//=================================================================================================================
+	"boss_queenofpain_blink"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "queenofpain_blink"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+		"AbilitySound"					"Hero_QueenOfPain.Blink_in"
+
+        "HasShardUpgrade"               "1"
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0.33 0.33 0.33 0.33"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5 4 3"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"min_blink_range"				"200"
+			"shard_damage"			
+			{
+				"RequiresShard"				"1"
+				"value"						"1400 1750 2050 2725 3875 5810 9125"
+			}
+			"shard_duration"
+			{
+				"RequiresShard"				"1"
+				"value"						"1.75"
+			}	
+			"shard_aoe"
+			{
+				"RequiresShard"				"1"
+				"value"						"300"
+			}									
+		}
+	}
+
+	"boss_qop_summon_eidolon"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"					"ability_lua"
+		"ScriptFile"				"bosses/boss_qop/boss_qop_summon_eidolon"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityTextureName"		"enigma_demonic_conversion"
+		"AbilityCastAnimation"		"ACT_DOTA_VICTORY"
+
+		"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_YES"
+
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds/ability_summon_undead.vsndevts"
+			"particle"				"particles/generic_aoe_persistent_circle_1/generic_aoe_persist_summon_1.vpcf"
+			"particle"				"particles/econ/generic/generic_aoe_explosion_sphere_1/generic_aoe_explosion_sphere_1.vpcf"
+		}
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"			"0"
+		"AbilityCastPoint"			"0.0"
+		"AbilityChannelTime"		"0.5"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"			"15.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"			"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"number_of_eidolon"		"4"
+			"unit_limit"			"4"
+			"spawn_radius"			"1150"
+		}
+	}
+}

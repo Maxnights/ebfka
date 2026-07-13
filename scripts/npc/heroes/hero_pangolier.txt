@@ -1,0 +1,348 @@
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Pangolier: Swashbuckle
+	//=================================================================================================================
+"pangolier_swashbuckle"
+{
+	"ID"				"6344"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_PHYSICAL"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastPoint"				"0.0"
+	"AbilityCastRange"				"850"
+	"AbilityManaCost"				"75 80 85 90 95 100 105"
+	"AbilityValues"
+	{
+		"AbilityCooldown"
+		{
+			"value"				"8 7.5 7 6.5 6 5.5 5"
+			"special_bonus_unique_pangolier_4"				"-3"
+		}
+		"dash_range"				"850"
+		"range"
+		{
+			"value"				"1200"
+			"LinkedSpecialBonus"				"special_bonus_unique_pangolier"
+			"special_bonus_unique_pangolier"				"+200"
+		}
+		"damage"
+		{
+			"value"				"800 1500 3000 6000 10000 16000 25000"
+			"special_bonus_unique_pangolier_3"				"+100%"
+			"CalculateSpellDamageTooltip"				"1"
+		}
+		"dash_speed"				"2500"
+		"attack_interval"				"0.05"
+		"start_radius"
+		{
+			"value"				"450"
+			"affected_by_aoe_increase"				"1"
+		}
+		"end_radius"
+		{
+			"value"				"450"
+			"affected_by_aoe_increase"				"1"
+		}
+		"strikes"
+		{
+			"value"				"8"
+			"LinkedSpecialBonus"				"special_bonus_unique_pangolier_7"
+		}
+		"attack_damage"
+		{
+			"value"				"0"
+			"special_bonus_unique_pangolier_3"				"+20"
+		}
+		"procs_onhit_effects"				"1"
+		"slow_duration"				"0.6"
+		"slow_percent"				"100"
+		"damage_penalty"				"25"
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+}
+//=================================================================================================================
+	// Pangolier: Shield Crash
+	//=================================================================================================================
+	"pangolier_shield_crash"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_pangolier/pangolier_shield_crash"
+		"AbilityTextureName"			"pangolier_shield_crash"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+        "HasScepterUpgrade"				"1"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75 85 95 105 115 125 135"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage"
+			{
+				"value"														"1750 3000 6000 10500 18500 32000 55000"
+				"CalculateSpellDamageTooltip"								"1"
+			}
+			"base_shield"	"0"
+			"hero_shield"
+			{
+				"value"														"1000 2000 4000 8000 16000 32000 64000"
+				"special_bonus_unique_pangolier_shield_crash_herostacks"	"+100%"
+
+			}
+			"creep_shield"
+			{
+				"value"														"250 500 750 1500 2500 4500 8000"
+				"special_bonus_unique_pangolier_shield_crash_herostacks"	"+100%"
+
+			}
+			"duration"														"5"
+			"radius"				
+			{
+				"value"			"500"
+				"special_bonus_unique_pangolier_shield_crash_radius"		"+125"
+				"affected_by_aoe_increase"	"1"		
+			}
+			"jump_duration"			"0.4"
+			"jump_duration_gyroshell"	"0.75"
+			"jump_height"			"250"
+			"jump_height_gyroshell"	"350"
+			"jump_horizontal_distance"	"225"
+			
+			"slow"	"25 30 35 40 45 50 55"
+			"slow_duration"	"3"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Pangolier: Heartpiercer
+	//=================================================================================================================
+"pangolier_heartpiercer"
+{
+	"ID"				"6346"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_3"
+	"IsBreakable"				"1"
+}
+//=================================================================================================================
+	// Pangolier: Lucky Shot
+	//=================================================================================================================
+"pangolier_lucky_shot"
+{
+	"ID"				"7307"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityValues"
+	{
+		"chance_pct"				"18 19 20 21 23 25 30"
+		"duration"				"4"
+		"attack_slow"				"40 80 120 160 200 240 280"
+		"armor"
+		{
+			"value"				"2 3 4 5 6 8 12"
+			"special_bonus_unique_pangolier_luckyshot_armor"				"+3"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_3"
+	"IsBreakable"				"1"
+}
+//=================================================================================================================
+	// Pangolier: Gyroshell (Rolling Thunder)
+	//=================================================================================================================
+"pangolier_gyroshell"
+{
+	"ID"				"6343"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_NO"
+	"AbilityType"				"ABILITY_TYPE_ULTIMATE"
+	"FightRecapLevel"				"1"
+	"MaxLevel"				"6"
+	"LevelsBetweenUpgrades"				"6"
+	"AbilityDraftUltShardAbility"				"pangolier_rollup"
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"1.2"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_4"
+	"AbilityManaCost"				"200 300 400 500 600 700"
+	"AbilityDamage"				"9600 23500 55200 102240 113350 122400"
+	"precache"
+	{
+		"model"				"models/heroes/pangolier/pangolier_gyroshell.vmdl"
+		"model"				"models/heroes/pangolier/pangolier_gyroshell2.vmdl"
+	}
+	"AbilityValues"
+	{
+		"AbilityCooldown"
+		{
+			"value"				"90 85 80 75 70 65"
+			"special_bonus_unique_pangolier_5"				"-16"
+		}
+		"cast_time_tooltip"				"1.2"
+		"tick_interval"				"0.05"
+		"forward_move_speed"
+		{
+			"value"				"700"
+			"special_bonus_facet_pangolier_thunderbolt"				"+115"
+		}
+		"turn_rate_boosted"
+		{
+			"value"				"165"
+			"special_bonus_facet_pangolier_thunderbolt"				"+40%"
+		}
+		"turn_rate"
+		{
+			"value"				"120"
+			"special_bonus_facet_pangolier_thunderbolt"				"+40%"
+		}
+		"radius"
+		{
+			"value"				"400"
+			"affected_by_aoe_increase"				"1"
+		}
+		"hit_radius"
+		{
+			"value"				"150"
+			"affected_by_aoe_increase"				"1"
+		}
+		"bounce_duration"				"0.4"
+		"stun_duration"				"1.2"
+		"knockback_radius"
+		{
+			"value"				"150"
+			"affected_by_aoe_increase"				"1"
+		}
+		"duration"
+		{
+			"value"				"10.0"
+			"LinkedSpecialBonus"				"special_bonus_unique_pangolier_6"
+			"special_bonus_unique_pangolier_6"				"+2"
+			"special_bonus_facet_pangolier_thunderbolt"				"-1"
+		}
+		"jump_recover_time"				"0.25"
+		"shield_crash_cooldown"				"2"
+		"damage_pct"				"80"
+		"move_speed_ramp_up_time"				"1.0"
+		"magic_resistance"				"80"
+	}
+	"AbilityDraftExtraAbilities"
+	{
+		"pangolier_rollup"				"shard"
+	}
+}
+//=================================================================================================================
+	// Pangolier: Gyroshell Stop
+	//=================================================================================================================
+	"pangolier_gyroshell_stop"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"6459"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+		"AbilityCastAnimation"			"ACT_INVALID"
+	}
+
+
+	//=================================================================================================================
+	// Pangolier: Rollup ( shard ability )
+	//=================================================================================================================
+"pangolier_rollup"
+{
+	"ID"				"8027"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET |  DOTA_ABILITY_BEHAVIOR_HIDDEN  | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_NO"
+	"MaxLevel"				"1"
+	"FightRecapLevel"				"1"
+	"IsGrantedByShard"				"1"
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"0.1"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_4"
+	"AbilityCooldown"				"30"
+	"AbilityManaCost"				"50"
+	"precache"
+	{
+		"model"				"models/heroes/pangolier/pangolier_gyroshell.vmdl"
+		"model"				"models/heroes/pangolier/pangolier_gyroshell2.vmdl"
+	}
+	"AbilityValues"
+	{
+		"cast_time_tooltip"				"0.5"
+		"tick_interval"				"0.05"
+		"forward_move_speed"				"600"
+		"turn_rate_boosted"				"275"
+		"turn_rate"				"275"
+		"radius"
+		{
+			"value"				"400"
+			"affected_by_aoe_increase"				"1"
+		}
+		"hit_radius"
+		{
+			"value"				"150"
+			"affected_by_aoe_increase"				"1"
+		}
+		"bounce_duration"				"0.4"
+		"stun_duration"				"1.0 1.25 1.5"
+		"knockback_radius"
+		{
+			"value"				"150"
+			"affected_by_aoe_increase"				"1"
+		}
+		"duration"				"2.75"
+		"jump_recover_time"				"0.25"
+		"rollup_bounce_duration"				"0.75"
+		"magic_resistance"				"80"
+	}
+}
+//=================================================================================================================
+	// Pangolier: Gyroshell Stop
+	//=================================================================================================================
+	"pangolier_rollup_stop"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"8029"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+		"AbilityCastAnimation"			"ACT_INVALID"
+	}
+}

@@ -1,0 +1,421 @@
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Warlock: Innate Eldritch Summoning
+	//=================================================================================================================
+"warlock_eldritch_summoning"
+{
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"MaxLevel"				"4"
+	"HasShardUpgrade"				"1"
+	"Innate"				"1"
+	"DependentOnAbility"				"warlock_rain_of_chaos"
+	"AbilityValues"
+	{
+		"minor_imp_duration"				"15"
+		"imp_level"
+		{
+			"value"				"1 2 3 4"
+			"special_bonus_shard"				"+1"
+		}
+		"golem_can_summon"				"0"
+		"tooltip_imp_health"				"10000 14000 18000 24000 30000"
+		"tooltip_imp_explode"
+		{
+			"values"				"5000 7000 9000 12000 15000"
+			"special_bonus_facet_facet_intel_buff"				"10000 14000 18000 24000 30000"
+		}
+		"tooltip_imp_explode_radius"
+		{
+			"value"				"400"
+			"affected_by_aoe_increase"				"1"
+		}
+		"imp_health"
+		{
+			"value"				"5"
+			"hero_levelup"				"+15"
+			"special_bonus_shard"				"+80"
+		}
+		"imp_explode"
+		{
+			"value"				"20"
+			"hero_levelup"				"+20"
+			"levelup_interval"				"3"
+			"special_bonus_shard"				"+45"
+		}
+		"imp_speed"
+		{
+			"value"				"297"
+			"hero_levelup"				"+3"
+		}
+	}
+	"AbilityTextureName"				"warlock_imp_explode"
+}
+//=================================================================================================================
+	// Ability: Warlock's Fatal Bonds
+	//=================================================================================================================
+"warlock_fatal_bonds"
+{
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"FightRecapLevel"				"1"
+	"AbilitySound"				"Hero_Warlock.FatalBonds"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"HasShardUpgrade"				"1"
+	"AbilityCastAnimation"				"ACT_DOTA_FATAL_BONDS"
+	"AbilityCastRange"				"1000"
+	"AbilityCastGestureSlot"				"DEFAULT"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCooldown"				"18"
+	"AbilityDamage"				"0 0 0 0"
+	"AbilityManaCost"				"110 120 130 140 150 160 170"
+	"AbilityModifierSupportValue"				"0.0"
+	"AbilityValues"
+	{
+		"count"
+		{
+			"value"				"3"
+			"LinkedSpecialBonus"				"special_bonus_unique_warlock_9"
+			"special_bonus_unique_warlock_fatal_bonds_count"				"+4"
+		}
+		"damage_share_percentage"
+		{
+			"value"				"20 24 28 32 36 44 52"
+			"LinkedSpecialBonus"				"special_bonus_unique_warlock_5"
+			"special_bonus_unique_warlock_5"				"+4"
+		}
+		"duration"				"25"
+		"search_aoe"
+		{
+			"value"				"700"
+			"affected_by_aoe_increase"				"1"
+		}
+		"imp_duration"				"15"
+		"imp_level"
+		{
+			"value"				"1 2 3 4 5 6 7"
+			"special_bonus_shard"				"+1"
+		}
+	}
+}
+//=================================================================================================================
+	// Ability: Warlock's Shadow Word
+	//=================================================================================================================
+"warlock_shadow_word"
+{
+	"ID"				"5163"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_BOTH"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"FightRecapLevel"				"1"
+	"AbilitySound"				"Hero_Warlock.ShadowWordCastGood"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastPoint"				"0.4"
+	"AbilityManaCost"				"120 130 140 150 160 170 180"
+	"AbilityCastRange"				"600 700 800 900 1000 1100 1200"
+	"AbilityModifierSupportValue"				"0.0"
+	"AbilityValues"
+	{
+		"damage"
+		{
+			"value"				"265 495 780 1125 2150 4155 8135"
+			"special_bonus_unique_warlock_7"				"+50%"
+		}
+		"duration"
+		{
+			"value"				"10.0"
+			"special_bonus_unique_warlock_8"				"+2"
+		}
+		"tick_interval"				"1.0"
+		"shard_aoe"
+		{
+			"value"				"450"
+			"RequiresShard"				"1"
+		}
+		"shard_movement_speed_pct"
+		{
+			"value"				"0"
+			"RequiresShard"				"1"
+			"special_bonus_shard"				"0"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"14"
+			"special_bonus_unique_warlock_3"				"-4"
+		}
+		"spell_aoe"
+		{
+			"value"				"225"
+			"special_bonus_unique_warlock_7"				"+150"
+			"affected_by_aoe_increase"				"1"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_2"
+}
+//=================================================================================================================
+	// Ability: Warlock's Upheaval
+	//=================================================================================================================
+"warlock_upheaval"
+{
+	"ID"				"5164"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"AbilitySound"				"Hero_Warlock.Upheaval"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"HasShardUpgrade"				"1"
+	"AbilityCastPoint"				"0.4"
+	"AbilityChannelTime"				"10 12 14 16 18 20 22"
+	"AbilityDamage"				"0 0 0 0"
+	"AbilityManaCost"				"70 80 90 100 110 120 130"
+	"AbilityCastRange"				"900"
+	"AbilityValues"
+	{
+		"aoe"
+		{
+			"value"				"500 550 600 650 700 750 800"
+			"special_bonus_unique_warlock_upheaval_aoe"				"+75"
+			"affected_by_aoe_increase"				"1"
+		}
+		"slow_per_second"				"10 15 20 25 30 35 40"
+		"duration"				"3.0"
+		"max_slow"				"55 70 85 100 100 100 100"
+		"aspd_per_second"
+		{
+			"special_bonus_unique_warlock_10"				"8"
+		}
+		"base_damage"
+		{
+			"special_bonus_unique_warlock_3"				"=450"
+		}
+		"damage_per_second"
+		{
+			"value"				"500 1400 1650 2200 3100 4150 5500"
+			"CalculateSpellDamageTooltip"				"1"
+		}
+		"max_damage"
+		{
+			"value"				"390 555 765 1355 2605 4255 6715"
+			"CalculateSpellDamageTooltip"				"1"
+			"special_bonus_unique_warlock_3"				"+40"
+		}
+		"damage_tick_interval"
+		{
+			"value"				"1"
+			"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
+		}
+		"AbilityCooldown"				"35"
+		"imps_interval"				"2"
+		"minor_imp_duration"				"15"
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_3"
+}
+//=================================================================================================================
+	// Warlock Black Grimoire Variant
+	//=================================================================================================================
+	"warlock_black_grimoire"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"MaxLevel"						"1"
+		"AbilityValues"
+		{	
+			// purely for tooltips on variant selection, actual KV's are on the item
+			"tooltip_xp"				"200"
+			"tooltip_seconds"			"420"
+		}
+	}
+	
+	//=================================================================================================================
+	// Ability: Warlock's Rain of Chaos / Chaotic Offering
+	//=================================================================================================================
+"warlock_rain_of_chaos"
+{
+	"ID"				"5165"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityType"				"ABILITY_TYPE_ULTIMATE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES_STRONG"
+	"FightRecapLevel"				"2"
+	"MaxLevel"				"6"
+	"LevelsBetweenUpgrades"				"6"
+	"HasScepterUpgrade"				"1"
+	"AbilitySound"				"Hero_Warlock.RainOfChaos"
+	"AbilityCastPoint"				"0.5 0.5 0.5"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_4"
+	"AbilityCooldown"				"60"
+	"AbilityManaCost"				"250 375 500 625 750 875"
+	"AbilityCastRange"				"1000"
+	"AbilityModifierSupportValue"				"0.5"
+	"AbilityValues"
+	{
+		"golem_duration"				"60"
+		"stun_duration"				"1.0"
+		"aoe"
+		{
+			"value"				"600"
+			"affected_by_aoe_increase"				"1"
+		}
+		"golem_hp"
+		{
+			"value"				"10000 20000 40000 80000 160000 320000"
+		}
+		"golem_dmg"				"2000 6000 18000 21000 25000 30000"
+		"golem_armor"				"10 15 20 40 60 80"
+		"golem_movement_speed"				"320 340 360 380 400 420"
+		"golem_health_regen"				"100 200 400 800 1600 3200"
+		"golem_gold_bounty"				"0"
+		"stun_delay"				"0.5"
+		"number_of_golems_scepter"
+		{
+			"special_bonus_scepter"				"2"
+		}
+		"golem_hp_scepter"
+		{
+			"value"				"50000 100000 150000 200000 300000 350000"
+			"special_bonus_facet_facet_intel_buff"				"30000 60000 120000 250000 460000"
+			"RequiresScepter"				"1"
+			"special_bonus_scepter"				"1500 2250 3000"
+		}
+		"golem_dmg_scepter"
+		{
+			"value"				"1500 4500 13500 15750 18750 22500"
+			"RequiresScepter"				"1"
+			"special_bonus_scepter"				"80 120 160"
+		}
+		"golem_gold_bounty_scepter"
+		{
+			"value"				"0"
+			"RequiresScepter"				"1"
+			"special_bonus_scepter"				"100 150 200"
+		}
+		"bonus_magic_resistance"
+		{
+			"value"				"0"
+			"special_bonus_unique_warlock_1"				"+100"
+		}
+		"bonus_armor"
+		{
+			"value"				"0"
+			"special_bonus_unique_warlock_2"				"+40"
+		}
+		"tooltip_golem_armor"
+		{
+			"value"				"10 15 20 40 60 80"
+			"special_bonus_unique_warlock_2"				"+40"
+		}
+		"bonus_slow_resistance"				"60"
+		"tooltip_manahealthboost"
+		{
+			"value"				"0"
+			"special_bonus_facet_warlock_golem"				"+100"
+		}
+		"bonus_damage_resist"
+		{
+			"special_bonus_unique_warlock_1"				"+25"
+		}
+		"golem_on_death"
+		{
+			"special_bonus_unique_warlock_4"				"1"
+		}
+	}
+}
+//=================================================================================================================
+	// Ability: Warlock's Golem Flaming Fists
+	//=================================================================================================================
+"warlock_golem_flaming_fists"
+{
+	"ID"				"5166"
+	"AbilityType"				"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"MaxLevel"				"3"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_PURE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityValues"
+	{
+		"damage"
+		{
+			"value"				"800 1710 3475 4690 5245 5760"
+		}
+		"radius"
+		{
+			"value"				"300 300 300"
+			"affected_by_aoe_increase"				"1"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+	"IsBreakable"				"1"
+}
+//=================================================================================================================
+	// Ability: Warlock's Golem Permanent Immolation
+	//=================================================================================================================
+"warlock_golem_permanent_immolation"
+{
+	"ID"				"5167"
+	"AbilityType"				"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"MaxLevel"				"3"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityValues"
+	{
+		"aura_radius"
+		{
+			"value"				"300"
+			"affected_by_aoe_increase"				"1"
+		}
+		"aura_damage"				"380 930 2330 5235 5870 6520"
+		"health_bonus_pct"				"0"
+		"share_damage"				"0"
+		"tick_interval"				"0.5"
+		"manahealthboost"
+		{
+			"value"				"0"
+			"special_bonus_facet_warlock_golem"				"+100"
+		}
+		"manaboost_scale_mult"				".0"
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_2"
+	"IsBreakable"				"1"
+}"warlock_imp_explode"
+{
+	"ID"				"1200"
+	"AbilityType"				"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"MaxLevel"				"1"
+	"AbilityValues"
+	{
+		"explosion_delay"				".2"
+		"explosion_radius"
+		{
+			"value"				"400"
+			"affected_by_aoe_increase"				"1"
+		}
+		"explosion_dmg"				"255 540 1100 1760 2975 5550 10000 18000"
+		"explosion_nonhero_reduce"				"50"
+		"bonus_hp"				"200 600 1800 5400 12500 20000 32500 50000"
+		"bonus_dmg"				"100 250 500 1000 1500 2500 4000 7500"
+		"bonus_movespeed"				"0 15 30 45 60"
+	}
+	"Innate"				"1"
+}
+}

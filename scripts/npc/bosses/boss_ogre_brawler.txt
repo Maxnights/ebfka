@@ -1,0 +1,168 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Boss Ogre Brawler: Multicast Passive
+	//=================================================================================================================
+	"boss_ogre_brawler_multicast"
+	{
+		"BaseClass"					"ability_lua"
+		"ScriptFile"				"bosses/boss_ogre_brawler/boss_ogre_brawler_multicast"
+		"AbilityTextureName"		"ogre_magi_multicast"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_ogre_magi/ogre_magi_multicast.vpcf"
+		}
+
+		"AbilityValues"
+		{
+			"multicast_2_times"		"50"
+			"multicast_3_times"		"20"
+			"multicast_4_times"		"7"
+			"multicast_5_times"		"2"
+			"multicast_delay"		"0.6"
+		}
+	}
+
+	//=================================================================================================================
+	// Boss Ogre Brawler: Multicast Slam
+	//=================================================================================================================
+	"boss_ogre_brawler_multicast_slam"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"bosses/boss_ogre_brawler/boss_ogre_brawler_multicast_slam"
+		"AbilityTextureName"			"ogre_magi_fireblast"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastPoint"				"0.5"
+		"AbilityCooldown"				"12.0"
+		"AbilityManaCost"				"0"
+
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts"
+			"particle"		"particles/creatures/ogre/ogre_melee_smash.vpcf"
+			"particle"		"particles/units/heroes/hero_ogre_magi/ogre_magi_ignite.vpcf"
+		}
+
+		"AbilityValues"
+		{
+			"base_radius"		"300"
+			"radius_per_wave"	"220"
+			"min_waves"			"2"
+			"max_waves"			"5"
+			"damage"			"58000"
+			"slow_pct"			"40"
+			"slow_duration"		"2.5"
+			"wave_delay"		"0.45"
+		}
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Boss Ogre Brawler: Fire Roulette
+	//=================================================================================================================
+	"boss_ogre_brawler_fire_roulette"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"bosses/boss_ogre_brawler/boss_ogre_brawler_fire_roulette"
+		"AbilityTextureName"			"ogre_magi_ignite"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"15.0"
+		"AbilityManaCost"				"0"
+
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts"
+			"particle"		"particles/units/heroes/hero_lina/lina_spell_dragon_slave.vpcf"
+			"particle"		"particles/units/heroes/hero_lina/lina_spell_dragon_slave_hit.vpcf"
+			"particle"		"particles/units/heroes/hero_batrider/batrider_sticky_napalm_burn.vpcf"
+			"particle"		"particles/hero/lina/from_the_ash.vpcf"
+		}
+
+		"AbilityValues"
+		{
+			"num_balls"				"8"
+			"projectile_speed"		"1200"
+			"projectile_distance"	"2000"
+			"damage"				"42000"
+			"burn_duration"			"5"
+			"burn_damage_per_sec"	"20000"
+			"burn_radius"			"350"
+			"max_bounces"			"2"
+		}
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Boss Ogre Brawler: Goblin Toss
+	//=================================================================================================================
+	"boss_ogre_brawler_goblin_toss"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"bosses/boss_ogre_brawler/boss_ogre_brawler_goblin_toss"
+		"AbilityTextureName"			"ogre_magi_bloodlust"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastPoint"				"0.4"
+		"AbilityCooldown"				"18.0"
+		"AbilityManaCost"				"0"
+
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"
+			"particle"		"particles/units/heroes/hero_techies/techies_land_mine_detonate.vpcf"
+			"particle"		"particles/status_fx/status_effect_poison_stack.vpcf"
+		}
+
+		"AbilityValues"
+		{
+			"num_goblins"			"1"
+			"explosion_radius"		"350"
+			"explosion_damage"		"40000"
+			"debuff_duration"		"4"
+			"debuff_slow_pct"		"40"
+			"debuff_attack_slow"	"80"
+		}
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Boss Ogre Brawler: Lucky Smash
+	//=================================================================================================================
+	"boss_ogre_brawler_lucky_smash"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"bosses/boss_ogre_brawler/boss_ogre_brawler_lucky_smash"
+		"AbilityTextureName"			"ogre_magi_multicast"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"20.0"
+		"AbilityManaCost"				"0"
+
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts"
+			"particle"		"particles/dark_moon/darkmoon_creep_warning_pulse.vpcf"
+			"particle"		"particles/creatures/ogre/ogre_melee_smash.vpcf"
+			"particle"		"particles/generic_gameplay/generic_stunned.vpcf"
+		}
+
+		"AbilityValues"
+		{
+			"warning_duration"	"2"
+			"smash_radius"		"400"
+			"damage"			"70000"
+			"stun_duration"		"2"
+		}
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+	}
+}

@@ -1,0 +1,1 @@
+pcall(require,"encrypt")require("client/modifier")require("client/client")

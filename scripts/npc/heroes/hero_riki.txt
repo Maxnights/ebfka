@@ -1,0 +1,332 @@
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Riki: Sleeping Dart ( scepter ability )
+	//=================================================================================================================
+	"riki_poison_dart"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByShard"              "1"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"6"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75 110 150 190 225 265 300"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"		"3"
+			"damage"
+			{
+				"value"					"1500 300 6000 12000 24000 48000 96000"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"movement_slow"		"30"
+			"debuff_duration"		"4"
+			"projectile_speed"		"1600"
+			"wake_damage_limit"		"1000 2000 4000 8000 16000 32000 64000"
+		}
+	}
+	
+	//=================================================================================================================
+	// Riki: Smoke Screen
+	//=================================================================================================================
+	"riki_smoke_screen"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_riki/riki_smoke_screen"
+		"AbilityTextureName"			"riki_smoke_screen"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Hero_Riki.Smoke_Screen"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+		"HasShardUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"550"
+		"AbilityCastPoint"				"0.2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"65 80 95 110 125 140 155"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCooldown"
+			{
+				"value"							"17 16 15 14 13 12 11"
+				"special_bonus_unique_riki_3"	"-3"
+			}				
+			"AbilityDuration"
+			{
+				"value"							"6"
+			}
+			"radius"
+			{
+				"value"							"425 475 525 575 625 675 725"
+				"special_bonus_unique_riki_7"	"+75"
+				"affected_by_aoe_increase"	"1"
+			}
+			"miss_rate"							"75"
+			"block_targeting"
+			{
+				"value"							"0"
+				"special_bonus_shard"			"1"
+			}
+			"armor_reduction"
+			{
+				"value"							"0"
+				"special_bonus_shard"			"7"
+			}
+		}
+		
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Riki: Blink Strike
+	//=================================================================================================================
+	"riki_blink_strike"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_riki/riki_blink_strike"
+		"AbilityTextureName"			"riki_blink_strike"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilitySound"					"Hero_Riki.Blink_Strike"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600 650 700 750 800 850 900"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.1"
+		"AbilityCharges"				"2"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"						"50 65 80 95 110 125 140"
+		
+		// Special
+		"AbilityValues"
+		{
+			"bonus_damage"
+			{
+				"value"							"750 1400 2000 3500 6500 12000 25000"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"AbilityChargeRestoreTime"
+			{
+				"value"							"10"
+				"special_bonus_unique_riki_9"	"-4"				
+			}
+			"slow"								"0.4 0.55 0.7 0.85 1.0 1.15 1.3"
+		}
+		
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	//=================================================================================================================
+	// Riki: Backstab
+	//=================================================================================================================
+	"riki_backstab"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_riki/riki_backstab"
+		"AbilityTextureName"			"riki_backstab"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+		"AbilityDraftUltShardAbility"		"riki_poison_dart"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage_multiplier"				
+			{
+				"value"							"1.2 1.5 1.8 2.1 2.4 2.7 3.0"
+				"special_bonus_unique_riki_1"	"+0.4"
+				"CalculateSpellDamageTooltip"	"0"
+				"DamageTypeTooltip"			"DAMAGE_TYPE_NONE"
+			}
+			"backstab_angle"				"105 105 105"
+			"fade_delay"					"4 3.5 3 2.5 2 1.5 1"
+			"bonus_movespeed"				
+			{
+				"value"							"0"
+				"special_bonus_unique_riki_8"	"+25"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+"riki_innate_backstab"
+{
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+	"MaxLevel"				"7"
+	"Innate"				"1"
+	"DependentOnAbility"				"riki_backstab"
+	"AbilityValues"
+	{
+		"damage_multiplier"
+		{
+			"value"				"0.4 0.8 1.2 1.6 2.0 2.4 2.8"
+			"special_bonus_unique_riki_1"				"+0.3"
+			"CalculateSpellDamageTooltip"				"0"
+			"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
+			"hero_levelup"				"+0.05"
+		}
+		"backstab_angle"				"105 105 105 105"
+		"bonus_xp_kill"
+		{
+			"value"				"0"
+			"special_bonus_facet_riki_contract_killer"				"25 150 250 350"
+		}
+		"bonus_xp_assist"
+		{
+			"value"				"0"
+			"special_bonus_facet_riki_contract_killer"				"25 100 100 100"
+		}
+		"ally_multiplier"				"25"
+		"bonus_xp_assist_other"
+		{
+			"value"				"0"
+			"special_bonus_facet_riki_contract_killer"				"25 75 125 175"
+		}
+	}
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_PHYSICAL"
+}
+//=================================================================================================================
+	// Riki: Tricks of the Trade
+	//=================================================================================================================
+	"riki_tricks_of_the_trade"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_riki/riki_tricks_of_the_trade"
+		"AbilityTextureName"			"riki_tricks_of_the_trade"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"						"6"
+		"LevelsBetweenUpgrades"			"6"
+		"HasScepterUpgrade"				"1"
+		"AbilitySound"					"Hero_Riki.TricksOfTheTrade.Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+
+		// Ability Data
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"55 85 110 140 165 195 220"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCooldown"
+			{
+				"value"							"12"
+				"special_bonus_unique_riki_6"	"-30%"
+			}
+			"duration"
+			{
+				"value"							"2.0"
+				"special_bonus_scepter"			"+1"
+			}				
+			"radius"
+			{
+				"value"							"450"
+				"special_bonus_unique_riki_4"	"+350"
+				"affected_by_aoe_increase"	"1"
+			}
+			"attack_rate"
+			{
+				"value"							"0.5"
+				"special_bonus_unique_riki_6"	"-30%"
+			}						
+			"damage_pct"						"100"
+			"agility_pct"
+			{
+				"value" 						"100 110 120 130 140 150"
+				"special_bonus_unique_riki_2"	"+50"
+				"CalculateAttributeTooltip"		"1"
+			}
+			"AbilityCastRange"
+			{
+				"value"							"400"
+				"special_bonus_scepter"			"+300"
+				"RequiresScepter"				"1"
+			}
+			"dispel"
+			{
+				"value"							"0"
+				"special_bonus_unique_riki_5"	"+1"
+			}
+			"creep_agility_multiplier"
+			{
+				"value"			"1"
+				"special_bonus_facet_riki_exterminator"	"=4.5"
+			}
+		}
+	}
+}

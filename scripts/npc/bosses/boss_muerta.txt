@@ -1,0 +1,200 @@
+"DOTAAbilities"
+{
+	"muerta_dead_shot"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "muerta_dead_shot"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_TREE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Muerta.DeadShot.Cast"
+		
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+ 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint"				"0.15"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 120 140 160 180 200 220"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCastRange"			
+			{
+				"value"											"1000"
+				"special_bonus_unique_muerta_dead_shot_range"	"+250"
+			}
+			"damage"
+			{
+				"value"											"1750 3250 7000 11000 20000 35000 65000"
+				"special_bonus_unique_muerta_dead_shot_damage"	"+150%"
+			}
+			"speed"												"2000"
+			"radius"											"100"
+			"ricochet_radius_start"								"115"
+			"ricochet_radius_end"								"115"
+			"ricochet_distance_multiplier"						"1.5"
+			"ricochet_fear_duration"							"1.25"
+			"impact_slow_percent"								"-100"
+			"impact_slow_duration"								"0.5"
+		}
+	}
+
+	//=================================================================================================================
+	// MUERTA: The Calling
+	//=================================================================================================================
+	"boss_muerta_the_calling"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "muerta_the_calling"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CAN_SELF_CAST"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Muerta.Revenants.Cast"
+
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"580"
+		"AbilityCastPoint"				"0.1"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150 175 200"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage"													"7500 13500 25000"
+			"duration"													"10"
+			"hit_radius"												"120"
+			"dead_zone_distance"										"340"
+			"num_revenants"
+			{
+				"value"													"4"
+				"special_bonus_unique_muerta_the_calling_num_revenants"	"+2"
+			}
+			"speed_initial"												"0.2"
+			"speed_max"													"1.0"
+			"acceleration"												"0.75"
+			"rotation_initial"											"0"
+			"debug_draw"												"0"
+			"aura_movespeed_slow"										"-30"
+			"aura_attackspeed_slow"										"-70 -80 -90"
+			"silence_duration"											"3.5"
+			"rotation_direction"										"-1"
+			"show_warning"												"1"
+		}
+	}
+	
+	//=================================================================================================================
+	// MUERTA: Gunslinger
+	//=================================================================================================================
+	"boss_muerta_gunslinger"
+	{
+		// General
+		"BaseClass" "muerta_gunslinger"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		//"AbilitySound"					"Hero_PhantomAssassin.CoupDeGrace"
+
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+		
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"double_shot_chance"
+			{
+				"value"					"100"
+				"special_bonus_unique_muerta_gunslinger_double_shot_chance"	"+10"
+			}
+			"target_search_bonus_range"	"750"
+		}
+	}
+
+	//=================================================================================================================
+	// MUERTA: Pierce the Veil
+	//=================================================================================================================
+	"boss_muerta_pierce_the_veil"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "muerta_pierce_the_veil"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Muerta.PierceTheVeil.Cast"
+		"AbilityCastPoint"				"0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+		
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"6"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 100 100"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"					"12"
+			"transform_duration"		"0.20"
+			"base_damage_pct"			"150"
+			"modelscale"				"30"
+			"bonus_damage"				"12000 15000 20000"
+			"spell_lifesteal"
+			{
+				"value"				"50"
+				"RequiresShard"		"1"
+			}
+			"spell_amp_steal"
+			{
+				"value"				"10"
+				"RequiresShard"		"1"
+			}
+			"spell_amp_steal_range"
+			{
+				"value"				"925"
+				"RequiresShard"		"1"
+			}
+		}
+	}
+}

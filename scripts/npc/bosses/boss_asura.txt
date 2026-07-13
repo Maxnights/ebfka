@@ -1,0 +1,183 @@
+"DOTAAbilities"
+{
+    "guardian_hell_passive"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "ability_lua"
+        "ScriptFile" "bosses/boss_asura/guardian_hell_passive"
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitDamageType" "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType" "SPELL_IMMUNITY_ENEMIES_YES"
+        "FightRecapLevel" "1"
+        "AbilityTextureName" "hell_guardian_passive"
+        "MaxLevel" "1"
+    }
+
+    "asura_darkness"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        // "BaseClass" "ability_datadriven"
+        "BaseClass"						"ability_lua"
+		"ScriptFile"					"bosses/boss_asura/mini_chrono"
+        
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+        "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+        
+        "AbilityTextureName"			"night_stalker_hunter_in_the_night"
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+
+            "soundfile"	"soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts"
+			"particle"	"particles/econ/items/invoker/invoker_apex/invoker_sun_strike_immortal1.vpcf"
+			"particle"	"particles/econ/items/invoker/invoker_apex/invoker_sun_strike_team_immortal1.vpcf"
+        }
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange" "9999999"
+        "AbilityCastMinimumRange" "50"
+        "AOERadius" "99999999"
+        "AbilityCastAnimation" "ACT_DOTA_SPAWN" // Activity
+        "AnimationPlaybackRate" "1.0" // Animation speed multiplier
+        "AnimationIgnoresModelScale" "1"
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown" "20.0"
+        "AbilityCastPoint" "1.0"
+
+        
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"					"150"
+			"duration"					"3"											
+		}
+    }
+
+    "guardian_hell_flaming_fist"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "ability_datadriven"
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+        "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityTextureName" "hell_guardian_flaming_fist"
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_ember_spirit.vsndevts"
+            "particle" "particles/units/heroes/hero_ember_spirit/ember_spirit_sleight_of_fist_cast.vpcf"
+            "particle" "particles/units/heroes/hero_ember_spirit/ember_spirit_sleight_of_fist_targetted_marker.vpcf"
+            "particle" "particles/units/heroes/hero_ember_spirit/ember_spirit_sleightoffist_tgt.vpcf"
+            "particle" "particles/units/heroes/hero_ember_spirit/ember_spirit_sleightoffist_trail.vpcf"
+        }
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange" "1500"
+        "AbilityCastMinimumRange" "50"
+        "AOERadius" "1000"
+        "AbilityCastAnimation" "ACT_DOTA_SPAWN" // Activity
+        "AnimationPlaybackRate" "1.0" // Animation speed multiplier
+        "AnimationIgnoresModelScale" "1"
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown" "5.0"
+        "AbilityCastPoint" "1.0"
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost" "200"
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        // Modifiers
+        //-------------------------------------------------------------------------------------------------------------
+        "OnSpellStart"
+        {
+            "FireSound"
+            {
+                "Target" "CASTER"
+                "EffectName" "Hero_EmberSpirit.SleightOfFist.Cast"
+            }
+            "ApplyModifier"
+            {
+                "Target" "CASTER"
+                "ModifierName" "modifier_sleight_of_fist_caster_datadriven"
+            }
+            "RunScript"
+            {
+                "ScriptFile" "lua_boss/boss_36_guardian.lua"
+                "Function" "flaming_fist"
+                "Target" "POINT"
+            }
+        }
+        "Modifiers"
+        {
+            "modifier_sleight_of_fist_caster_datadriven"
+            {
+                "IsPurgable" "0"
+                "States"
+                {
+                    "MODIFIER_STATE_INVULNERABLE" "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_NO_HEALTH_BAR" "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_NO_UNIT_COLLISION" "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_ROOTED" "MODIFIER_STATE_VALUE_ENABLED"
+                }
+            }
+        }
+    }
+    "guardian_hell_hell_on_earth"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "ability_datadriven"
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "SpellImmunityType" "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityUnitDamageType" "DAMAGE_TYPE_MAGICAL"
+        "AbilityTextureName" "hell_guardian_hell_on_earth"
+        "precache"
+        {
+            "particle" "particles/units/heroes/hero_oracle/oracle_fortune_purge_root_ring_glow_rev.vpcf"
+            "particle" "particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_shadowraze.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_nevermore.vsndevts"
+        }
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange" "1500"
+        "AbilityManaCost" "50"
+        "AbilityCastAnimation" "ACT_DOTA_DIE" // Activity
+        "AnimationPlaybackRate" "0.5" // Animation speed multiplier
+        "AnimationIgnoresModelScale" "1"
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown" "7.5"
+        "AbilityCastPoint" "0.8"
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        
+        "AbilityValues"
+        {
+            "damage" "250000"
+        }
+        // Modifiers
+        //-------------------------------------------------------------------------------------------------------------
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile" "lua_boss/boss_36_guardian.lua"
+                "Function" "hell_on_earth"
+            }
+        }
+    }
+    "betrayer"
+    {
+        "BaseClass"						"ability_lua"
+		"ScriptFile"					"bosses/boss_asura/betrayer"
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCastRange" "9999999"
+        "AbilityCooldown" "99999.0"
+    }
+}

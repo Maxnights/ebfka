@@ -1,0 +1,305 @@
+"DOTAAbilities"
+{
+    // =========================================================================
+    // Mage Rage - Level 1 (Base)  | Cost: 20,000  | Cumulative: 20,000
+    // =========================================================================
+    "item_mage_rage1"
+	{
+		"BaseClass"						"item_lua"
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilityTextureName"	        "mage_rage1"
+		"ScriptFile"					"items/item_mage_rage"
+		"AbilityCastRange"				"700"
+		"ItemDroppable"					"1"
+		"ItemKillable"					"1"
+        "ItemPurchasable"               "1"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemSellable"					"1"
+        "ItemCost"                      "20000"
+		"ItemDisassemblable"			"0"
+		"ItemBaseLevel"                 "1"
+		"AbilityValues"
+		{
+			"bonus_int"					"100 325 600 1100 2000"
+			"int_mult"					"300 600 900 1200 1500"
+			"tick"						"1"
+			"count"						"3 4 5 6 7"
+			"radius"					"700"
+			"enchanced_interval"		"0.5"
+			"hp_pct"					"0.20 0.30 0.40 0.50 0.75"
+			"overload_max_stacks"		"6 6 5 5 5"
+			"overload_burst_pct"		"1.5 2.0 2.5 3.0 4.0"
+			"overload_duration"			"10"
+		}
+		"precache"
+		{
+			"particle"		"particles/units/heroes/hero_pugna/pugna_ward_attack.vpcf"
+			"particle"		"particles/units/heroes/hero_pugna/pugna_ward_attack_light.vpcf"
+			"particle"		"particles/units/heroes/hero_pugna/pugna_ward_attack_medium.vpcf"
+			"particle"		"particles/units/heroes/hero_pugna/pugna_ward_attack_heavy.vpcf"
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts"
+		}
+	}
+
+    // =========================================================================
+    // Recipe: Mage Rage -> Level 2  | Recipe: 17,000 | Cumulative: 37,000
+    // =========================================================================
+    "item_recipe_mage_rage2"
+    {
+        "BaseClass"      "item_recipe_crimson_guard"
+        "ItemCost"       "17000"
+        "ItemShopTags"   ""
+        "ItemRecipe"     "1"
+        "ItemResult"     "item_mage_rage2"
+        "ItemRequirements"
+        {
+            "01" "item_mage_rage1"
+        }
+    }
+
+    // =========================================================================
+    // Mage Rage - Level 2  | Cumulative: 37,000
+    // =========================================================================
+    "item_mage_rage2"
+    {
+        "BaseClass"                     "item_lua"
+        "Model"                         "models/props_gameplay/treasure_chest001.vmdl"
+        "Effect"                        "particles/generic_gameplay/dropped_aegis.vpcf"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+        "AbilityTextureName"            "mage_rage1"
+        "ScriptFile"                    "items/item_mage_rage"
+        "AbilityCastRange"              "700"
+        "ItemIsNeutralActiveDrop"       "0"
+        "ItemDroppable"                 "1"
+        "ItemKillable"                  "1"
+        "ItemPurchasable"               "1"
+        "ItemShareability"              "ITEM_NOT_SHAREABLE"
+        "ItemSellable"                  "1"
+        "ItemCost"                      "37000"
+        "ItemDisassemblable"            "0"
+        "ItemBaseLevel"                 "2"
+        "AbilityValues"
+        {
+            "bonus_int"                 "100 325 600 1100 2000"
+            "int_mult"                  "300 600 900 1200 1500"
+            "tick"                      "1"
+            "count"                     "3 4 5 6 7"
+            "radius"                    "700"
+            "enchanced_interval"        "0.5"
+            "hp_pct"                    "0.20 0.30 0.40 0.50 0.75"
+            "overload_max_stacks"       "6 6 5 5 5"
+            "overload_burst_pct"        "1.5 2.0 2.5 3.0 4.0"
+            "overload_duration"         "10"
+        }
+        "precache"
+        {
+            "particle"      "particles/units/heroes/hero_pugna/pugna_ward_attack.vpcf"
+            "particle"      "particles/units/heroes/hero_pugna/pugna_ward_attack_light.vpcf"
+            "particle"      "particles/units/heroes/hero_pugna/pugna_ward_attack_medium.vpcf"
+            "particle"      "particles/units/heroes/hero_pugna/pugna_ward_attack_heavy.vpcf"
+            "soundfile"     "soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts"
+        }
+    }
+
+    // =========================================================================
+    // Recipe: Mage Rage -> Level 3  | Recipe: 18,000 | Cumulative: 55,000
+    // =========================================================================
+    "item_recipe_mage_rage3"
+    {
+        "BaseClass"      "item_recipe_crimson_guard"
+        "ItemCost"       "18000"
+        "ItemShopTags"   ""
+        "ItemRecipe"     "1"
+        "ItemResult"     "item_mage_rage3"
+        "ItemRequirements"
+        {
+            "01" "item_mage_rage2"
+        }
+    }
+
+    // =========================================================================
+    // Mage Rage - Level 3  | Cumulative: 55,000
+    // =========================================================================
+    "item_mage_rage3"
+    {
+        "BaseClass"                     "item_lua"
+        "Model"                         "models/props_gameplay/treasure_chest001.vmdl"
+        "Effect"                        "particles/generic_gameplay/dropped_aegis.vpcf"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+        "AbilityTextureName"            "mage_rage1"
+        "ScriptFile"                    "items/item_mage_rage"
+        "AbilityCastRange"              "700"
+        "ItemIsNeutralActiveDrop"       "0"
+        "ItemDroppable"                 "1"
+        "ItemKillable"                  "1"
+        "ItemPurchasable"               "1"
+        "ItemShareability"              "ITEM_NOT_SHAREABLE"
+        "ItemSellable"                  "1"
+        "ItemCost"                      "55000"
+        "ItemDisassemblable"            "0"
+        "ItemBaseLevel"                 "3"
+        "AbilityValues"
+        {
+            "bonus_int"                 "100 325 600 1100 2000"
+            "int_mult"                  "300 600 900 1200 1500"
+            "tick"                      "1"
+            "count"                     "3 4 5 6 7"
+            "radius"                    "700"
+            "enchanced_interval"        "0.5"
+            "hp_pct"                    "0.20 0.30 0.40 0.50 0.75"
+            "overload_max_stacks"       "6 6 5 5 5"
+            "overload_burst_pct"        "1.5 2.0 2.5 3.0 4.0"
+            "overload_duration"         "10"
+        }
+        "precache"
+        {
+            "particle"      "particles/units/heroes/hero_pugna/pugna_ward_attack.vpcf"
+            "particle"      "particles/units/heroes/hero_pugna/pugna_ward_attack_light.vpcf"
+            "particle"      "particles/units/heroes/hero_pugna/pugna_ward_attack_medium.vpcf"
+            "particle"      "particles/units/heroes/hero_pugna/pugna_ward_attack_heavy.vpcf"
+            "soundfile"     "soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts"
+        }
+    }
+
+    // =========================================================================
+    // Recipe: Mage Rage -> Level 4  | Recipe: 17,000 | Cumulative: 72,000
+    // =========================================================================
+    "item_recipe_mage_rage4"
+    {
+        "BaseClass"      "item_recipe_crimson_guard"
+        "ItemCost"       "17000"
+        "ItemShopTags"   ""
+        "ItemRecipe"     "1"
+        "ItemResult"     "item_mage_rage4"
+        "ItemRequirements"
+        {
+            "01" "item_mage_rage3"
+        }
+    }
+
+    // =========================================================================
+    // Mage Rage - Level 4  | Cumulative: 72,000
+    // =========================================================================
+    "item_mage_rage4"
+    {
+        "BaseClass"                     "item_lua"
+        "Model"                         "models/props_gameplay/treasure_chest001.vmdl"
+        "Effect"                        "particles/generic_gameplay/dropped_aegis.vpcf"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+        "AbilityTextureName"            "mage_rage1"
+        "ScriptFile"                    "items/item_mage_rage"
+        "AbilityCastRange"              "700"
+        "ItemIsNeutralActiveDrop"       "0"
+        "ItemDroppable"                 "1"
+        "ItemKillable"                  "1"
+        "ItemPurchasable"               "1"
+        "ItemShareability"              "ITEM_NOT_SHAREABLE"
+        "ItemSellable"                  "1"
+        "ItemCost"                      "72000"
+        "ItemDisassemblable"            "0"
+        "ItemBaseLevel"                 "4"
+        "AbilityValues"
+        {
+            "bonus_int"                 "100 325 600 1100 2000"
+            "int_mult"                  "300 600 900 1200 1500"
+            "tick"                      "1"
+            "count"                     "3 4 5 6 7"
+            "radius"                    "700"
+            "enchanced_interval"        "0.5"
+            "hp_pct"                    "0.20 0.30 0.40 0.50 0.75"
+            "overload_max_stacks"       "6 6 5 5 5"
+            "overload_burst_pct"        "1.5 2.0 2.5 3.0 4.0"
+            "overload_duration"         "10"
+        }
+        "precache"
+        {
+            "particle"      "particles/units/heroes/hero_pugna/pugna_ward_attack.vpcf"
+            "particle"      "particles/units/heroes/hero_pugna/pugna_ward_attack_light.vpcf"
+            "particle"      "particles/units/heroes/hero_pugna/pugna_ward_attack_medium.vpcf"
+            "particle"      "particles/units/heroes/hero_pugna/pugna_ward_attack_heavy.vpcf"
+            "soundfile"     "soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts"
+        }
+    }
+
+    // =========================================================================
+    // Recipe: Mage Rage -> Level 5  | Recipe: 18,000 | Cumulative: 90,000
+    // =========================================================================
+    "item_recipe_mage_rage5"
+    {
+        "BaseClass"      "item_recipe_crimson_guard"
+        "ItemCost"       "18000"
+        "ItemShopTags"   ""
+        "ItemRecipe"     "1"
+        "ItemResult"     "item_mage_rage5"
+        "ItemRequirements"
+        {
+            "01" "item_mage_rage4"
+        }
+    }
+
+    // =========================================================================
+    // Mage Rage - Level 5 (Max)  | Cumulative: 90,000
+    // =========================================================================
+    "item_mage_rage5"
+    {
+        "BaseClass"                     "item_lua"
+        "Model"                         "models/props_gameplay/treasure_chest001.vmdl"
+        "Effect"                        "particles/generic_gameplay/dropped_aegis.vpcf"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+        "AbilityTextureName"            "mage_rage1"
+        "ScriptFile"                    "items/item_mage_rage"
+        "AbilityCastRange"              "700"
+        "ItemIsNeutralActiveDrop"       "0"
+        "ItemDroppable"                 "1"
+        "ItemKillable"                  "1"
+        "ItemPurchasable"               "1"
+        "ItemShareability"              "ITEM_NOT_SHAREABLE"
+        "ItemSellable"                  "1"
+        "ItemCost"                      "90000"
+        "ItemDisassemblable"            "0"
+        "ItemBaseLevel"                 "5"
+        "AbilityValues"
+        {
+            "bonus_int"                 "100 325 600 1100 2000"
+            "int_mult"                  "300 600 900 1200 1500"
+            "tick"                      "1"
+            "count"                     "3 4 5 6 7"
+            "radius"                    "700"
+            "enchanced_interval"        "0.5"
+            "hp_pct"                    "0.20 0.30 0.40 0.50 0.75"
+            "overload_max_stacks"       "6 6 5 5 5"
+            "overload_burst_pct"        "1.5 2.0 2.5 3.0 4.0"
+            "overload_duration"         "10"
+        }
+        "precache"
+        {
+            "particle"      "particles/units/heroes/hero_pugna/pugna_ward_attack.vpcf"
+            "particle"      "particles/units/heroes/hero_pugna/pugna_ward_attack_light.vpcf"
+            "particle"      "particles/units/heroes/hero_pugna/pugna_ward_attack_medium.vpcf"
+            "particle"      "particles/units/heroes/hero_pugna/pugna_ward_attack_heavy.vpcf"
+            "soundfile"     "soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts"
+        }
+    }
+}

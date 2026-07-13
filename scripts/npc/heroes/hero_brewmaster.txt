@@ -1,0 +1,670 @@
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Brewmaster: Thunder Clap
+	//=================================================================================================================
+"brewmaster_thunder_clap"
+{
+	"ID"				"5400"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"AbilitySound"				"Hero_Brewmaster.ThunderClap"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastPoint"				"0.35"
+	"AbilityManaCost"				"90 110 130 150 170 190 210"
+	"AbilityValues"
+	{
+		"radius"
+		{
+			"value"				"400"
+			"special_bonus_unique_brewmaster_7"				"+100%"
+			"affected_by_aoe_increase"				"1"
+		}
+		"damage"
+		{
+			"value"				"1270 2770 4605 6795 13170 25670 50320"
+			"special_bonus_unique_brewmaster_7"				"+100%"
+			"special_bonus_unique_brewmaster_thunder_clap_damage"				"+160"
+		}
+		"movement_slow"				"25 35 45 55 60 65 70"
+		"attack_speed_slow"				"25 35 45 55 60 65 70"
+		"duration"
+		{
+			"value"				"4.0"
+			"LinkedSpecialBonus"				"special_bonus_unique_brewmaster_3"
+			"special_bonus_unique_brewmaster_7"				"+1.5"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"12"
+			"special_bonus_unique_brewmaster_thunderclap_cd"				"-3"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+	"AnimationPlaybackRate"				"1.25"
+}
+	//=================================================================================================================
+"brewmaster_cinder_brew"
+{
+	"ID"				"7310"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"FightRecapLevel"				"1"
+	"AbilitySound"				"Hero_Brewmaster.DrunkenHaze.Cast"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCooldown"				"12"
+	"AbilityManaCost"				"50 80 110 140 170 200 230"
+	"AbilityValues"
+	{
+		"duration"
+		{
+			"value"				"8"
+			"LinkedSpecialBonus"				"special_bonus_unique_brewmaster_5"
+			"LinkedSpecialBonusOperation"				"SPECIAL_BONUS_MULTIPLY"
+			"special_bonus_unique_brewmaster_5"				"+40%"
+		}
+		"total_ignite_damage"
+		{
+			"value"				"1130 2630 4465 6655 13030 25530 50180"
+			"LinkedSpecialBonus"				"special_bonus_unique_brewmaster_5"
+			"LinkedSpecialBonusOperation"				"SPECIAL_BONUS_MULTIPLY"
+			"special_bonus_unique_brewmaster_5"				"+40%"
+		}
+		"movement_slow"				"24 28 32 36 38 40 42"
+		"radius"
+		{
+			"value"				"400"
+			"affected_by_aoe_increase"				"1"
+		}
+		"extra_duration"				"3"
+		"projectile_speed"
+		{
+			"value"				"1600"
+			"special_bonus_facet_brewmaster_roll_out_the_barrel"				"=950"
+			"RequiresFacet"				"brewmaster_roll_out_the_barrel"
+		}
+		"projectile_width"
+		{
+			"value"				"250"
+			"special_bonus_facet_brewmaster_roll_out_the_barrel"				"+100"
+			"affected_by_aoe_increase"				"1"
+		}
+		"barrel_width"
+		{
+			"value"				"0"
+			"special_bonus_facet_brewmaster_roll_out_the_barrel"				"=75"
+			"affected_by_aoe_increase"				"1"
+		}
+		"barrel_impact_damage"
+		{
+			"value"				"0"
+			"special_bonus_facet_brewmaster_roll_out_the_barrel"				"1270 2770 4605 6795 13170 25670 50320"
+			"RequiresFacet"				"brewmaster_roll_out_the_barrel"
+			"DamageTypeTooltip"				"DAMAGE_TYPE_PHYSICAL"
+		}
+		"AbilityCastRange"
+		{
+			"value"				"850"
+			"special_bonus_facet_brewmaster_roll_out_the_barrel"				"=950"
+			"RequiresFacet"				"brewmaster_roll_out_the_barrel"
+		}
+		"min_movement"
+		{
+			"value"				"0"
+			"special_bonus_facet_brewmaster_drunken_master"				"-15"
+			"RequiresFacet"				"ardent_spirits"
+		}
+		"max_movement"
+		{
+			"value"				"0"
+			"special_bonus_facet_brewmaster_drunken_master"				"50"
+			"RequiresFacet"				"ardent_spirits"
+		}
+		"fear_duration"
+		{
+			"special_bonus_unique_brewmaster_4"				"1.5"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_2"
+}
+//=================================================================================================================
+	// Brewmaster: Drunken Brawler
+	//=================================================================================================================
+"brewmaster_drunken_brawler"
+{
+	"ID"				"5402"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilitySound"				"Hero_Brewmaster.Brawler.Crit"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_3"
+	"AbilityCastGestureSlot"				"DEFAULT"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"HasShardUpgrade"				"1"
+	"AbilityCooldown"				"0"
+	"AbilityManaCost"				"0"
+	"AbilityValues"
+	{
+		"dodge_chance"
+		{
+			"value"				"15 20 25 30 35 40 45"
+			"special_bonus_unique_brewmaster_drunken_brawler_stance_bonus"				"+50%"
+		}
+		"bonus_move_speed"
+		{
+			"value"				"4 6 8 10 12 14 16"
+			"special_bonus_unique_brewmaster_drunken_brawler_stance_bonus"				"+50%"
+		}
+		"crit_chance"				"20"
+		"active_multiplier"
+		{
+			"value"				"3.5"
+			"special_bonus_unique_brewmaster_8"				"+1"
+		}
+		"crit_multiplier"
+		{
+			"value"				"290 320 350 380 410 440 470"
+			"special_bonus_unique_brewmaster_drunken_brawler_stance_bonus"				"+50%"
+		}
+		"attack_speed"
+		{
+			"value"				"100 150 200 250 300 350 400"
+			"special_bonus_unique_brewmaster_drunken_brawler_stance_bonus"				"+50%"
+		}
+		"magic_resist"
+		{
+			"value"				"5 10 15 20 25 30 35"
+			"special_bonus_unique_brewmaster_drunken_brawler_stance_bonus"				"+50%"
+		}
+		"armor"				"2 4 6 8 10 12 14"
+		"movespeed"				"10 15 20 25 30 35 40"
+		"slow_duration"				"2"
+		"bonus_status_resist"				"5 10 15 20 25 30 35"
+		"bonus_armor"
+		{
+			"value"				"3 5 7 9"
+			"special_bonus_unique_brewmaster_drunken_brawler_stance_bonus"				"+50%"
+		}
+		"stance_multiplier_tooltip"
+		{
+			"special_bonus_unique_brewmaster_drunken_brawler_stance_bonus"				"1.5"
+		}
+		"brewed_up_duration"
+		{
+			"value"				"5"
+			"special_bonus_unique_brewmaster_brewed_up_duration"				"+2"
+		}
+		"brewed_up_duration_extend"
+		{
+			"value"				"2"
+			"special_bonus_unique_brewmaster_brewed_up_duration"				"+1"
+		}
+		"brewed_up_bonus"				"150"
+		"hangover_time"				"9"
+	}
+	"AbilityDraftExtraAbilities"
+	{
+		"brewmaster_primal_companion"				"scepter"
+	}
+}
+//=================================================================================================================
+	// Brewmaster: Ultimate Hangover
+	//=================================================================================================================
+	"brewmaster_belligerent"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_NONE"	
+		"MaxLevel"						"1"
+		"Innate"						"1"
+
+		"AbilityValues"
+		{
+			"damage_pct"				"25"
+			"damage_duration_split"		""
+			"damage_duration_respawn"	""
+			
+		}		
+	}
+
+	//=================================================================================================================
+	// Brewmaster: Primal Split
+	//=================================================================================================================
+"brewmaster_primal_split"
+{
+	"ID"				"5403"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityType"				"ABILITY_TYPE_ULTIMATE"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_NO"
+	"FightRecapLevel"				"2"
+	"AbilitySound"				"Hero_Brewmaster.PrimalSplit.Spawn"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_4"
+	"MaxLevel"				"6"
+	"LevelsBetweenUpgrades"				"6"
+	"HasShardUpgrade"				"1"
+	"LinkedShardAbility"				"brewmaster_void_astral_pulse"
+	"AbilityCastPoint"				"0.55"
+	"AbilityManaCost"				"125 175 225 275 325 375"
+	"AbilityValues"
+	{
+		"duration"
+		{
+			"value"				"20"
+			"special_bonus_shard"				"+12"
+		}
+		"split_duration"				"0.6"
+		"tooltip_earth_brewling_hp"
+		{
+			"value"				"12000 32000 90000 210000 500000 620000"
+			"special_bonus_unique_brewmaster"				"+100000"
+		}
+		"tooltip_storm_brewling_hp"
+		{
+			"value"				"6300 18060 45550 107650 281545 319955"
+			"special_bonus_unique_brewmaster"				"+100000"
+		}
+		"tooltip_fire_brewling_hp"
+		{
+			"value"				"7875 22575 56950 134560 351930 399950"
+			"special_bonus_unique_brewmaster"				"+100000"
+		}
+		"tooltip_void_brewling_hp"
+		{
+			"value"				"9450 27090 68325 161475 422315 479935"
+			"special_bonus_unique_brewmaster"				"+100000"
+		}
+		"bonus_brewling_hp"
+		{
+			"value"				"0"
+			"special_bonus_unique_brewmaster"				"+100000"
+		}
+		"bonus_damage"
+		{
+			"value"				"0"
+			"special_bonus_unique_brewmaster_2"				"+6000"
+		}
+		"tooltip_earth_brewling_damage"
+		{
+			"value"				"35 70 105 140"
+			"special_bonus_unique_brewmaster_2"				"+14"
+		}
+		"tooltip_storm_brewling_damage"
+		{
+			"value"				"30 50 70 90"
+			"special_bonus_unique_brewmaster_2"				"+14"
+		}
+		"tooltip_fire_brewling_damage"
+		{
+			"value"				"70 120 170 220"
+			"special_bonus_unique_brewmaster_2"				"+14"
+		}
+		"current_hp_agi"
+		{
+			"value"				"0"
+		}
+		"current_dmg_agi"
+		{
+			"value"				"0"
+		}
+		"primal_split_cancel"
+		{
+			"value"				"0"
+			"special_bonus_scepter"				"+1"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"50"
+			"special_bonus_unique_brewmaster_primal_split_cooldown"				"-15"
+		}
+		"hp_per_attribute"
+		{
+			"value"				"0"
+			"special_bonus_scepter"				"0"
+		}
+		"dmg_per_attribute"
+		{
+			"value"				"0"
+			"special_bonus_scepter"				"0"
+		}
+		"attribute_share_pct"
+		{
+			"value"				"0"
+			"special_bonus_scepter"				"0"
+		}
+		"give_brawler_passive"				"1"
+		"scepter_bonus_levels"				"1"
+	}
+	"HasScepterUpgrade"				"1"
+	"RestrictValuesToMaxLevel"				"1"
+}
+//=================================================================================================================
+	// Brewmaster: Primal Split Cancel
+	//=================================================================================================================
+	"brewmaster_primal_split_cancel"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"537"							// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByScepter"			"1"
+		"HasScepterUpgrade"				"1"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"		
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+		}
+	}
+	
+	"brewmaster_primal_companion"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"942"							// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Brewmaster.PrimalSplit.Spawn"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		"MaxLevel"						"1"
+		"IsGrantedByScepter"			"1"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"		
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"cooldown_on_death"						"70"
+			"cooldown_on_take_damage"				"3"
+			"disable_distance"						"1600"
+			"cooldown_penalty_pct"					"100"
+			"movement_slow_when_out_of_range"		"50"
+		}
+	}
+
+
+	//=================================================================================================================
+	// Brewmaster Void: Astral Pulse
+	//=================================================================================================================
+"brewmaster_void_astral_pulse"
+{
+	"ID"				"693"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"AbilityCastRange"				"500"
+	"MaxLevel"				"7"
+	"AbilityCooldown"				"12"
+	"AbilityCastPoint"				"0.15"
+	"AbilityValues"
+	{
+		"radius"
+		{
+			"value"				"500"
+		}
+		"duration"
+		{
+			"value"				"2.5"
+		}
+		"slow"
+		{
+			"value"				"20 23.5 27 30 33.5 37 40"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_2"
+}
+//=================================================================================================================
+	// Brewmaster Earth: Hurl Boulder
+	//=================================================================================================================
+"brewmaster_earth_hurl_boulder"
+{
+	"ID"				"5404"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES_STRONG"
+	"AbilitySound"				"Brewmaster_Earth.Boulder.Cast"
+	"AbilityCastRange"				"800 800 800 800"
+	"MaxLevel"				"7"
+	"AbilityCooldown"				"5"
+	"AbilityCastPoint"				"0.25"
+	"AbilityManaCost"				"0"
+	"AbilityValues"
+	{
+		"damage"
+		{
+			"value"				"1000 6715 21720 38640 43325 58075"
+		}
+		"duration"
+		{
+			"value"				"2.0 2.0 2.0 2.0"
+		}
+		"speed"
+		{
+			"value"				"800"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_2"
+}
+//=================================================================================================================
+	// Brewmaster Earth: Spell Immunity
+	//=================================================================================================================
+"brewmaster_earth_spell_immunity"
+{
+	"ID"				"5405"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_2"
+	"AbilitySpecial"
+	{
+	}
+	"AbilityValues"
+	{
+		"magic_resist"				"60"
+		"status_resist"				"80"
+		"slow_resist"				"80"
+	}
+}
+//=================================================================================================================
+	// Brewmaster Earth: Pulverize
+	//=================================================================================================================
+"brewmaster_earth_pulverize"
+{
+	"ID"				"5406"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"MaxLevel"				"7"
+	"AbilityValues"
+	{
+		"bonus_building_damage"
+		{
+			"value"				"90 120 150 180 210 240 270"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_3"
+	"IsBreakable"				"1"
+}
+//=================================================================================================================
+	// Brewmaster Storm: Dispel Magic
+	//=================================================================================================================
+"brewmaster_storm_dispel_magic"
+{
+	"ID"				"5408"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilitySound"				"Brewmaster_Storm.DispelMagic"
+	"MaxLevel"				"7"
+	"AbilityCastRange"				"500 500 500 500"
+	"AbilityCooldown"				"4"
+	"AbilityCastPoint"				"0.4"
+	"AbilityManaCost"				"75 75 75 75"
+	"AbilityValues"
+	{
+		"damage"
+		{
+			"value"				"5000"
+		}
+		"radius"
+		{
+			"value"				"600"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+}
+//=================================================================================================================
+	// Brewmaster Storm: Cyclone
+	//=================================================================================================================
+"brewmaster_storm_cyclone"
+{
+	"ID"				"5409"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"MaxLevel"				"7"
+	"AbilityCastRange"				"600 600 600 600"
+	"AbilityCooldown"				"8.0"
+	"AbilityCastPoint"				"0.4"
+	"AbilityManaCost"				"150 150 150 150"
+	"AbilityValues"
+	{
+		"duration_hero"				"6.0"
+		"duration_unit"				"20.0"
+		"landing_damage"				"75 75 75 100"
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_5"
+}
+//=================================================================================================================
+	// Brewmaster Storm: Wind Walk
+	//=================================================================================================================
+"brewmaster_storm_wind_walk"
+{
+	"ID"				"5410"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_NO"
+	"AbilitySound"				"Brewmaster_Storm.WindWalk"
+	"MaxLevel"				"7"
+	"AbilityCooldown"				"5"
+	"AbilityManaCost"				"75 75 75 75"
+	"AbilityValues"
+	{
+		"bonus_damage"
+		{
+			"value"				"4670 13575 35250 58750 65000 71250"
+		}
+		"bonus_movement_speeed"
+		{
+			"value"				"50"
+		}
+		"duration"
+		{
+			"value"				"20.0"
+		}
+		"fade_time"
+		{
+			"value"				"0.6"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_3"
+}
+//=================================================================================================================
+	// Brewmaster Fire: Permanent Immolation
+	//=================================================================================================================
+"brewmaster_fire_permanent_immolation"
+{
+	"ID"				"5411"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_NO"
+	"MaxLevel"				"7"
+	"AbilityValues"
+	{
+		"damage"
+		{
+			"value"				"530 1380 3630 8365 9405 10480"
+		}
+		"radius"
+		{
+			"value"				"220 220 220"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+	"IsBreakable"				"1"
+}	
+"brewmaster_void_astral_pull"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"1117"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+ 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint"				"0.10"
+		"AbilityCastGestureSlot"		"DEFAULT"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"8.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCastRange"			"150"
+			"damage"					"1000 6715 21720 38640 43325 48075"
+			"pull_distance"				"300 500 700"
+			"pull_duration"				"0.5"
+		}
+	}
+}

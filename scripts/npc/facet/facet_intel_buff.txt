@@ -1,0 +1,26 @@
+"DOTAAbilities"
+{
+    "facet_intel_buff"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "BaseClass"						"ability_lua"
+        "ScriptFile"				    "facet/facet_intel_buff.lua"
+
+        "AbilityValues"
+		{
+			"attack_range_tooltip"		"1"
+		}
+	}
+	"medusa_magic_to_barrier"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN  | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "BaseClass"						"ability_lua"
+        "ScriptFile"				    "facet/medusa_magic_to_barrier.lua"
+
+        "AbilityValues"
+		{
+			"max_magic_barrier"		"250000"
+			"barrier_conversion" 	"100"
+		}
+	}
+}

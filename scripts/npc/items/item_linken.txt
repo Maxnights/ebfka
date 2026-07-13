@@ -1,0 +1,252 @@
+"DOTAAbilities"
+{
+    
+    "item_sphere2"
+    {
+        "BaseClass"						"item_sphere"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+        
+
+        "AbilityCastRange"              "700"
+        "AbilityCooldown"               "15"
+
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "5000"
+		"ItemPurchasable"               "1"
+        "ItemShopTags"                  "regen_health;regen_mana;str;agi;int;hard_to_tag"
+        "ItemQuality"                   "epic"
+        "ItemAliases"                   "ls;linken's sphere"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        "ActiveDescriptionLine"         "2"
+        "ShouldBeSuggested"             "1"
+
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "bonus_all_stats"       "16"
+            "bonus_health_regen"    "6"
+            "bonus_mana_regen"      "4.25"
+            "block_cooldown"        "15.0"
+            "upgrade_absorb_duration"       "10.0"
+            "damage_absorb"     "300"
+        }
+    }
+    "item_recipe_sphere3"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "item_recipe_crimson_guard"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "5000"
+        "ItemShopTags" ""
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe" "1"
+        "ItemResult" "item_sphere3"
+        "ItemRequirements"
+        {
+            "01" "item_sphere2"
+        }
+    }
+    "item_sphere3"
+    {
+        "BaseClass"						"item_sphere"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+        
+        "AbilityCastRange"              "700"
+        "AbilityCooldown"               "14"
+
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "10000"
+		"ItemPurchasable"               "1"
+        "ItemShopTags"                  "regen_health;regen_mana;str;agi;int;hard_to_tag"
+        "ItemQuality"                   "epic"
+        "ItemAliases"                   "ls;linken's sphere"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        "ActiveDescriptionLine"         "2"
+        "ShouldBeSuggested"             "1"
+
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "bonus_all_stats"       "16"
+            "bonus_health_regen"    "6"
+            "bonus_mana_regen"      "4.25"
+            "block_cooldown"        "14.0"
+            "upgrade_absorb_duration"       "10.0"
+            "damage_absorb"     "300"
+        }
+    }
+
+    "item_recipe_sphere4"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "item_recipe_crimson_guard"
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "15000"
+        "ItemShopTags" ""
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe" "1"
+        "ItemResult" "item_sphere4"
+        "ItemRequirements"
+        {
+            "01" "item_sphere3"
+        }
+    }
+    "item_sphere4"
+    {
+        "BaseClass"						"item_sphere"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+        
+        "AbilityCastRange"              "700"
+        "AbilityCooldown"               "13"
+
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "15000"
+		"ItemPurchasable"               "1"
+        "ItemShopTags"                  "regen_health;regen_mana;str;agi;int;hard_to_tag"
+        "ItemQuality"                   "epic"
+        "ItemAliases"                   "ls;linken's sphere"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        "ActiveDescriptionLine"         "2"
+        "ShouldBeSuggested"             "1"
+
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "bonus_all_stats"       "16"
+            "bonus_health_regen"    "6"
+            "bonus_mana_regen"      "4.25"
+            "block_cooldown"        "13.0"
+            "upgrade_absorb_duration"       "10.0"
+            "damage_absorb"     "300"
+        }
+    }
+
+    "item_recipe_sphere5"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "item_recipe_crimson_guard"
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "20000"
+        "ItemShopTags" ""
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe" "1"
+        "ItemResult" "item_sphere5"
+        "ItemRequirements"
+        {
+            "01" "item_sphere4"
+        }
+    }
+    "item_sphere5"
+    {
+        "BaseClass"						"item_sphere"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+        
+        "AbilityCastRange"              "700"
+        "AbilityCooldown"               "12"
+
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "20000"
+		"ItemPurchasable"               "1"
+        "ItemShopTags"                  "regen_health;regen_mana;str;agi;int;hard_to_tag"
+        "ItemQuality"                   "epic"
+        "ItemAliases"                   "ls;linken's sphere"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        "ActiveDescriptionLine"         "2"
+        "ShouldBeSuggested"             "1"
+
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "bonus_all_stats"       "16"
+            "bonus_health_regen"    "6"
+            "bonus_mana_regen"      "4.25"
+            "block_cooldown"        "12.0"
+            "upgrade_absorb_duration"       "10.0"
+            "damage_absorb"     "300"
+        }
+    }
+
+    "item_recipe_sphere6"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "item_recipe_crimson_guard"
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "25000"
+        "ItemShopTags" ""
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe" "1"
+        "ItemResult" "item_sphere6"
+        "ItemRequirements"
+        {
+            "01" "item_sphere5"
+        }
+    }
+    "item_sphere6"
+    {
+        "BaseClass"						"item_sphere"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+        
+        "AbilityCastRange"              "700"
+        "AbilityCooldown"               "11"
+
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "25000"
+		"ItemPurchasable"               "1"
+        "ItemShopTags"                  "regen_health;regen_mana;str;agi;int;hard_to_tag"
+        "ItemQuality"                   "epic"
+        "ItemAliases"                   "ls;linken's sphere"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        "ActiveDescriptionLine"         "2"
+        "ShouldBeSuggested"             "1"
+
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "bonus_all_stats"       "16"
+            "bonus_health_regen"    "6"
+            "bonus_mana_regen"      "4.25"
+            "block_cooldown"        "11.0"
+            "upgrade_absorb_duration"       "10.0"
+            "damage_absorb"     "300"
+        }
+    }
+
+}

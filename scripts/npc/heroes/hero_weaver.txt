@@ -1,0 +1,229 @@
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Weaver: The Swarm
+	//=================================================================================================================
+"weaver_the_swarm"
+{
+	"ID"				"5289"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_PHYSICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_NO"
+	"AbilitySound"				"Hero_Weaver.Swarm.Cast"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+	"AbilityCastRange"				"3000"
+	"AbilityCooldown"				"18"
+	"AbilityManaCost"				"110 165 220 275 330 385 440"
+	"AbilityModifierSupportValue"				"0.2"
+	"AbilityValues"
+	{
+		"damage"				"1000 2100 3600 5800 8000 11000 18000"
+		"attack_rate"				"0.3"
+		"count"				"12 13 14 15 16 17 18"
+		"armor_reduction"
+		{
+			"value"				"1"
+			"special_bonus_unique_weaver_3"				"+0.25"
+		}
+		"duration"				"20"
+		"destroy_attacks"
+		{
+			"value"				"6 7 8 9 10 11 12"
+			"special_bonus_unique_weaver_4"				"+4"
+		}
+		"radius"
+		{
+			"value"				"100"
+			"affected_by_aoe_increase"				"1"
+		}
+		"speed"				"850"
+		"spawn_radius"
+		{
+			"value"				"300"
+			"affected_by_aoe_increase"				"1"
+		}
+		"shard_cooldown_reduction"
+		{
+			"value"				"2"
+			"RequiresShard"				"1"
+			"special_bonus_shard"				"2"
+		}
+		"experience_gain"
+		{
+			"value"				"0 0 0 0"
+			"special_bonus_facet_weaver_hivemind"				"=5 =8 =11 =14 =17 =20 =23"
+			"RequiresFacet"				"weaver_hivemind"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+}
+//=================================================================================================================
+	// Weaver: Shukuchi
+	//=================================================================================================================
+"weaver_shukuchi"
+{
+	"ID"				"5290"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_NO"
+	"AbilitySound"				"Hero_Weaver.Shukuchi"
+	"MaxLevel"				"7"
+	"HasShardUpgrade"				"1"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastPoint"				"0 0 0 0"
+	"AbilityManaCost"				"60 90 120 150 180 210 240"
+	"AbilityValues"
+	{
+		"damage"
+		{
+			"value"				"1410 2020 2630 3710 6180 10815 15240"
+			"special_bonus_unique_weaver_1"				"+200%"
+		}
+		"speed"
+		{
+			"value"				"200 230 260 290 320 350 380"
+		}
+		"radius"
+		{
+			"value"				"175"
+			"affected_by_aoe_increase"				"1"
+		}
+		"fade_time"				"0"
+		"duration"				"4.0"
+		"AbilityCooldown"
+		{
+			"value"				"12 10 8 6 5.0 4.0 3.0"
+			"special_bonus_unique_weaver_6"				"-50%"
+		}
+		"geminate_attack_mark_duration"
+		{
+			"value"				"0"
+			"special_bonus_shard"				"+12.0"
+		}
+		"min_movespeed_override"
+		{
+			"value"				"0"
+			"special_bonus_facet_weaver_skitterstep"				"+600"
+			"RequiresFacet"				"weaver_skitterstep"
+			"special_bonus_unique_weaver_shukuchi_movespeed"				"+50"
+		}
+		"shukuchi_attack_mark_radius"
+		{
+			"value"				"0"
+			"affected_by_aoe_increase"				"1"
+			"special_bonus_shard"				"+1200"
+		}
+		"shukuchi_attack_delay"
+		{
+			"value"				"0"
+			"special_bonus_shard"				"+0.2"
+		}
+		"slow_duration"
+		{
+			"value"				"0"
+			"special_bonus_facet_weaver_skitterstep"				"+0.2"
+		}
+		"slow_percent"
+		{
+			"value"				"0"
+			"special_bonus_facet_weaver_skitterstep"				"+100"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_2"
+}
+//=================================================================================================================
+	// Ability: Weaver's Geminate Attack
+	//=================================================================================================================
+"weaver_geminate_attack"
+{
+	"ID"				"5291"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_PHYSICAL"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+	"AbilityUnitTargetFlags"				"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"HasShardUpgrade"				"1"
+	"AbilityCastRange"				"425"
+	"AbilityCooldown"				""
+	"AbilityValues"
+	{
+		"delay"
+		{
+			"value"				"0.25"
+		}
+		"extra_attack"
+		{
+			"value"				"1"
+			"special_bonus_unique_weaver_5"				"+3"
+		}
+		"bonus_damage"
+		{
+			"value"				"270 540 910 1380 2760 5540 11150"
+			"special_bonus_unique_weaver_2"				"+50%"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"2.5"
+			"special_bonus_shard"				"-1.5"
+			"RequiresShard"				"1"
+		}
+		"shard_beetle_search_range"
+		{
+			"value"				"1200"
+			"affected_by_aoe_increase"				"1"
+			"RequiresShard"				"1"
+			"special_bonus_shard"				"1200"
+		}
+		"shukuchi_attack_mark_radius"				"1200"
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_3"
+	"IsBreakable"				"1"
+}
+//=================================================================================================================
+	// Ability: Weaver's Time Lapse
+	//=================================================================================================================
+"weaver_time_lapse"
+{
+	"ID"				"5292"
+	"AbilityType"				"ABILITY_TYPE_ULTIMATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO"
+	"AbilityUnitTargetFlags"				"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+	"AbilityCastRange"				"500"
+	"AbilitySound"				"Hero_Weaver.TimeLapse"
+	"MaxLevel"				"6"
+	"LevelsBetweenUpgrades"				"6"
+	"FightRecapLevel"				"2"
+	"HasScepterUpgrade"				"1"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_4"
+	"AbilityCooldown"				"45 40 35 30 25 20"
+	"AbilityManaCost"				"0"
+	"AbilityValues"
+	{
+		"cooldown_scepter"
+		{
+			"value"				"25 22 19 16 13 10"
+			"RequiresScepter"				"1"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"70 55 40"
+			"special_bonus_scepter"				"-10"
+		}
+		"targets_allies"
+		{
+			"value"				"0"
+			"special_bonus_scepter"				"+1"
+		}
+	}
+}
+}

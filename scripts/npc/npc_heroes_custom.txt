@@ -1,0 +1,1423 @@
+"DOTAHeroes"
+{
+	"npc_dota_hero_base"
+	{
+		"override_hero"			"npc_dota_hero_base"
+		
+		"StatusHealth"		"2000"
+		"StatusMana"		"375"
+	}
+	"npc_dota_hero_beastmaster"
+	{
+		"override_hero"			"npc_dota_hero_beastmaster"
+		
+		
+		"Ability10"		"special_bonus_attack_damage_1500"
+		"Ability11"		"special_bonus_mp_regen_8"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_brewmaster"
+	{
+		"override_hero"			"npc_dota_hero_brewmaster"
+		
+		"Ability10"					"special_bonus_attack_damage_1250"
+		"Ability15"					"special_bonus_attack_speed_400"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_bristleback"
+	{
+		"override_hero"			"npc_dota_hero_bristleback"
+		
+		"Ability10"				"special_bonus_attack_damage_750"
+		"Ability11"				"special_bonus_mp_regen_8"
+		"Ability14"				"special_bonus_hp_4000"
+		"Ability16"				"special_bonus_spell_lifesteal_12"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_batrider"
+	{
+		"override_hero"			"npc_dota_hero_batrider"
+		
+		"Ability12"				"special_bonus_movement_speed_20"
+	}
+	"npc_dota_hero_void_spirit"
+	{
+		"override_hero"			"npc_dota_hero_void_spirit"
+		
+		"Ability10"					"special_bonus_mp_regen_10"
+		"Ability11"					"special_bonus_unique_void_spirit_aether_remnant_damage"
+		"Ability14"					"special_bonus_spell_amplify_25"
+		"Ability16"					"special_bonus_unique_void_spirit_8"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_windranger"
+	{
+		"override_hero"			"npc_dota_hero_windrunner"
+		
+		"Ability10"		"special_bonus_unique_windranger_powershot_slow"
+		"Ability11"		"special_bonus_unique_windranger_9"
+		"Ability12"		"special_bonus_unique_windranger_4"
+		"Ability13"		"special_bonus_unique_windranger_3"
+		// "Ability14"		"special_bonus_unique_windranger_6"
+		// "Ability15"		"special_bonus_unique_windranger_8"
+		"Ability15" 	"special_bonus_12_crit_3"
+		"Ability16"		"special_bonus_unique_windranger_windrun_undispellable"
+		"Ability17"		"special_bonus_unique_windranger_2"
+	}
+	"npc_dota_hero_clinkz"
+	{
+		"override_hero"			"npc_dota_hero_clinkz"
+		"Ability12"				"special_bonus_unique_clinkz_8"
+		"Ability14"				"special_bonus_all_stats_500"
+	}
+	"npc_dota_hero_doom_bringer"
+	{
+		"override_hero"			"npc_dota_hero_doom_bringer"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_ember_spirit"
+	{
+		"override_hero"			"npc_dota_hero_ember_spirit"
+		"Ability10"				"special_bonus_attack_damage_1250"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_gyrocopter"
+	{
+		"override_hero"			"npc_dota_hero_gyrocopter"
+		"Ability11"				"special_bonus_attack_speed_400"
+		"Ability13" 			"special_bonus_unique_gyrocopter_2"
+		"Ability14" 			"special_bonus_agility_2000"
+	}
+	"npc_dota_hero_faceless_void"
+	{
+		"override_hero"			"npc_dota_hero_faceless_void"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_invoker"
+	{
+		"override_hero"			"npc_dota_hero_invoker"
+		
+		"Ability25"				"special_bonus_attributes"
+	}
+	//=================================================================================================================
+	// HERO: outworld
+	//=================================================================================================================
+	"npc_dota_hero_obsidian_destroyer"
+	{
+		"override_hero"			"npc_dota_hero_obsidian_destroyer"
+		
+		"Ability10"		"special_bonus_hp_2000"
+		"Ability13"		"special_bonus_movement_speed_30"
+		"Ability14"		"special_bonus_strength_800"
+	}
+	//=================================================================================================================
+	// HERO: Razor
+	//=================================================================================================================
+	"npc_dota_hero_silencer"
+	{
+		"override_hero"			"npc_dota_hero_silencer"
+		"Ability17"				"special_bonus_intelligence_6000"
+	}
+	"npc_dota_hero_skywrath_mage"
+	{
+		"override_hero"					"npc_dota_hero_skywrath_mage"
+		
+		"Ability10"						"special_bonus_hp_6500"
+		"Ability11"						"special_bonus_intelligence_400"
+	}
+	"npc_dota_hero_techies"
+	{
+		"override_hero"					"npc_dota_hero_techies"
+		"Ability13"						"special_bonus_mp_regen_875"
+		"Ability16"						"special_bonus_attack_damage_3000"
+	}
+	"npc_dota_hero_visage"
+	{
+		"override_hero"					"npc_dota_hero_visage"
+	}
+	"npc_dota_hero_slark"
+	{
+		"override_hero"					"npc_dota_hero_slark"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_sniper"
+	{
+		"override_hero"			"npc_dota_hero_sniper"
+
+		"Ability6"				"imba_sniper_assassinate"
+		"Ability10"				"special_bonus_imba_sniper_6" // Assassination's cast point increases. When executed, it launches three projectiles towards the target. 
+		"Ability13"				"special_bonus_imba_sniper_2" //Infamous Assassinate knockback talent
+
+		"Ability11"				"special_bonus_attack_damage_1250"
+		"Ability14"				"special_bonus_all_stats_500"
+		"Ability12"				"special_bonus_attack_speed_400"				
+	}
+	"npc_dota_hero_spectre"
+	{
+		"override_hero"			"npc_dota_hero_spectre"
+		
+		// "Ability1"				"boss_custom_impale"
+		"Ability2"				"spectre_desolate"
+		"Ability3"				"spectre_dispersion"
+		"Ability4"				"spectre_reality"
+		"Ability5"				"spectre_haunt_single"
+		"Ability6"				"spectre_haunt"
+		
+		"Ability11" "special_bonus_hp_regen_40"
+		"Ability14"				"special_bonus_hp_7000"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_templar_assassin"
+	{
+		"override_hero"			"npc_dota_hero_templar_assassin"
+	}
+	"npc_dota_hero_terrorblade"
+	{
+		"Ability1"				"terrorblade_attack_speed"
+		"override_hero"			"npc_dota_hero_terrorblade"
+		
+		"Ability12"		"special_bonus_hp_6500"
+		"Ability14"		"special_bonus_all_stats_1000"
+		"Ability16" 	"special_bonus_12_crit_3"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_troll_warlord"
+	{
+		"override_hero"			"npc_dota_hero_troll_warlord"
+	
+		"Ability10"		"special_bonus_unique_troll_warlord_whirling_axes_debuff_duration"
+		"Ability11"		"special_bonus_unique_troll_warlord_2"
+		"Ability12"		"special_bonus_unique_troll_warlord_5"
+		"Ability13"		"special_bonus_unique_troll_warlord_3"
+		"Ability14"		"special_bonus_unique_troll_warlord_battle_trance_movespeed"
+		"Ability15"		"special_bonus_unique_troll_warlord"
+		"Ability16"		"special_bonus_attack_damage_3000"
+		"Ability17"		"special_bonus_unique_troll_warlord_4"
+		
+		"MagicalResistance"				"40"
+	}
+	//=================================================================================================================
+	// HERO: skywrath
+	//=================================================================================================================
+	"npc_dota_hero_undying"
+	{
+		"override_hero"			"npc_dota_hero_undying"
+		
+		"MagicalResistance"				"40"
+	} 
+	"npc_dota_hero_ursa"
+	{
+		"override_hero"			"npc_dota_hero_ursa"
+		
+		"Ability11"				"special_bonus_mp_regen_10"
+		"Ability12"				"special_bonus_agility_300"
+		"Ability13"				"special_bonus_hp_7000"
+		"Ability16" 			"special_bonus_12_crit_2"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_legion_commander"
+	{
+		"override_hero"			"npc_dota_hero_legion_commander"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_hoodwink"
+	{
+		"override_hero"			"npc_dota_hero_hoodwink"
+	}
+	"npc_dota_hero_mirana"
+	{
+		"override_hero"				"npc_dota_hero_mirana"
+		"Ability15"					"special_bonus_attack_base_damage_3500"
+		
+	}
+	"npc_dota_hero_winter_wyvern"
+	{
+		"override_hero"				"npc_dota_hero_winter_wyvern"
+		
+		
+		"Ability10"		"special_bonus_unique_winter_wyvern_5"
+		"Ability11"		"special_bonus_attack_damage_1500"
+		"Ability12"		"special_bonus_unique_winter_wyvern_6"
+		"Ability13"		"special_bonus_unique_winter_wyvern_2"
+		"Ability14"		"special_bonus_unique_winter_wyvern_1"
+		"Ability15"		"special_bonus_unique_winter_wyvern_7"
+		"Ability16"		"special_bonus_unique_winter_wyvern_3"
+		"Ability17"		"special_bonus_unique_winter_wyvern_4"
+	}
+	"npc_dota_hero_dark_willow"
+	{
+		"override_hero"			"npc_dota_hero_dark_willow"
+		
+		"Ability10"				"special_bonus_unique_dark_willow_6"
+		"Ability11"				"special_bonus_attack_speed_150"
+		"Ability12"				"special_bonus_unique_dark_willow_4"
+		"Ability13"				"special_bonus_unique_dark_willow_7"
+		"Ability14"				"special_bonus_unique_dark_willow_1"
+		"Ability15"				"special_bonus_unique_dark_willow_3"
+		"Ability16"				"special_bonus_unique_dark_willow_5"
+		"Ability17"				"special_bonus_unique_dark_willow_bedlam_targets"
+	}
+	"npc_dota_hero_zuus"
+	{
+		"override_hero"					"npc_dota_hero_zuus"
+
+		"Facets"
+		{
+			"zuus_livewire"	
+			{
+				"Icon"				"range"
+				"Color"				"Blue"
+				"GradientID"		"1"
+			}			
+			"zuus_divine_rampage" 
+			{
+				"Icon"				"nuke"
+				"Color"				"Gray"
+				"GradientID"		"3"
+			}
+			"facet_intel_buff"
+			{
+				"Icon"				"damage"
+				"Color"				"Gray"
+				"GradientID"		"3"
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"facet_intel_buff"
+					}
+				}
+			}
+		}
+		
+		"Ability11"						"special_bonus_hp_7000"
+	}
+	"npc_dota_hero_tinker"
+	{
+		"override_hero"			"npc_dota_hero_tinker"
+		"Ability5"				"generic_hidden"
+		"Ability6"				"tinker_rearm"
+		
+
+		"Facets"
+		{
+			"tinker_precision_arsenal"
+			{
+				"Icon"				"nuke"
+				"Color"				"Blue"
+				"GradientID"		"1"
+
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"		"tinker_heat_seeking_missile"
+						"ReplaceAbility"	"tinker_march_of_the_machines"
+						"AutoLevelAbility" 	"false"
+					}
+				}
+			}
+		}
+	}
+	"npc_dota_hero_tiny"
+	{
+		"override_hero"			"npc_dota_hero_tiny"
+		
+		"Ability11"					"special_bonus_strength_500"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_axe"
+	{
+		"override_hero"				"npc_dota_hero_axe"
+		"MagicalResistance"				"40"
+		
+		// "ManaType"					"Rage"
+		// "StatusMana"				"100"
+		// "HasSpecializations"		"1"
+		// "Specializations"
+		// {
+		// 	"Specialization1"		"specialization_axe_juggernaut"
+		// 	"Specialization2"		"specialization_axe_berserker"
+		// 	"Specialization3"		"specialization_axe_skald"
+		// }
+	}
+	"npc_dota_hero_kunkka"
+	{
+		"override_hero"			"npc_dota_hero_kunkka"
+		
+		
+		"Ability1"				"kunkka_torrent"
+		"Ability2"				"kunkka_tidebringer"
+		"Ability3"				"kunkka_tidal_wave"
+		"Ability4"				"kunkka_x_marks_the_spot"
+		"Ability5"				"kunkka_torrent_storm"
+		"Ability6"				"kunkka_ghostship"
+		"Ability7"				"kunkka_return"
+		
+		"Ability10"				"special_bonus_unique_kunkka_tidal_wave_damage"
+		"Ability11"				"special_bonus_unique_kunkka_tidebringer_slow"
+		"Ability12"				"special_bonus_unique_kunkka_7"
+		"Ability13"				"special_bonus_unique_kunkka_tidebringer_damage"
+		"Ability14"				"special_bonus_unique_kunkka_ghostship_duration"
+		"Ability15"				"special_bonus_unique_kunkka_4"
+		"Ability16"				"special_bonus_unique_kunkka_3"
+		"Ability17"				"special_bonus_unique_kunkka_rum"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_lifestealer"
+	{
+		"override_hero"			"npc_dota_hero_life_stealer"
+		"Ability1"		"life_stealer_rage"
+		"Ability2"		"life_stealer_open_wounds"
+		"Ability3"		"life_stealer_ghoul_frenzy"
+		"Ability4"		"life_stealer_feast"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"life_stealer_infest"
+		"Ability7"		"life_stealer_consume"
+		"Ability10"				"special_bonus_unique_lifestealer_rage_armor"
+		"Ability12"				"special_bonus_unique_lifestealer_feast_damage"
+		"Ability13"				"special_bonus_strength_450"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_lycan"
+	{
+		"override_hero"			"npc_dota_hero_lycan"
+		
+		"Ability10"				"special_bonus_unique_lycan_6"
+		"Ability11"				"special_bonus_unique_lycan_3"
+		"Ability12"				"special_bonus_unique_lycan_7"
+		"Ability13"				"special_bonus_unique_lycan_8"
+		"Ability14"				"special_bonus_unique_lycan_1"
+		"Ability15"				"special_bonus_unique_lycan_4"
+		"Ability17"				"special_bonus_unique_lycan_2"
+		"Ability16"				"special_bonus_unique_lycan_5"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_wisp"
+	{
+		"override_hero"			"npc_dota_hero_wisp"
+		"Ability6"				"wisp_sacrifice"
+		
+		"Ability10"				"special_bonus_hp_regen_250"
+	}
+	"npc_dota_hero_crystal_maiden"
+	{
+		"override_hero"			"npc_dota_hero_crystal_maiden"
+
+		"Ability6"				"imba_crystal_maiden_freezing_field"
+
+		"Ability10"				"special_bonus_hp_5000"
+		"Ability11"				"special_bonus_intelligence_120"
+		"Ability14"				"special_bonus_attack_speed_400"
+		"Ability15"					"special_bonus_imba_crystal_maiden_8" //+50% Freezing Field explosion rate
+	}
+	"npc_dota_hero_bloodseeker"
+	{
+		"override_hero"			"npc_dota_hero_bloodseeker"
+		"Ability2"					"imba_bloodseeker_blood_bath"
+
+		// "Ability13"					"special_bonus_imba_unique_bloodseeker_2"
+		"Ability10"		"special_bonus_unique_bloodseeker_6"
+		"Ability11"					"special_bonus_imba_bloodseeker_5" //Blood Rite is cast in three overlapping circles
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_broodmother"
+	{
+		"override_hero"			"npc_dota_hero_broodmother"
+		
+		"Ability15"				"special_bonus_agility_5000"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_viper"
+	{
+		"override_hero"			"npc_dota_hero_viper"
+		
+		"Ability10"		"special_bonus_attack_speed_200"
+		"Ability13"		"special_bonus_all_stats_500"
+	}
+	"npc_dota_hero_juggernaut"
+	{
+		"override_hero"			"npc_dota_hero_juggernaut"
+
+		"Ability3" 		"imba_juggernaut_blade_dance"
+		
+		"Ability10"		"special_bonus_all_stats_100"
+		"Ability16"		"special_bonus_hp_130000"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_lone_druid"
+	{
+		"override_hero"			"npc_dota_hero_lone_druid"
+		
+		"Ability10"				"special_bonus_hp_8000"
+	}
+	"npc_dota_hero_luna"
+	{
+		"override_hero"			"npc_dota_hero_luna"
+	}
+	"npc_dota_hero_necrolyte"
+	{
+		"override_hero"			"npc_dota_hero_necrolyte"
+		
+		"Ability15"				"special_bonus_intelligence_1000"
+		"Ability16"				"special_bonus_movement_speed_40"
+		"Ability11"				"special_bonus_strength_240"
+	}
+	"npc_dota_hero_death_prophet"
+	{
+		"override_hero"			"npc_dota_hero_death_prophet"
+		
+		"Ability10"				"special_bonus_attack_damage_750"
+		"Ability11"				"special_bonus_magic_resistance_12"
+		"Ability12"				"special_bonus_hp_8000"
+	}
+	"npc_dota_hero_disruptor"
+	{
+		"override_hero"			"npc_dota_hero_disruptor"
+		// "Ability2" "disruptor_glimpse"
+		
+		"Ability10"				"special_bonus_intelligence_750"
+		"Ability11"				"special_bonus_magic_resistance_12"
+		"Ability15"				"special_bonus_unique_disruptor_consecutive_strike_damage"
+	}
+	"npc_dota_hero_leshrac"
+	{
+		"override_hero"			"npc_dota_hero_leshrac"
+		
+		"Ability10"				"special_bonus_mp_regen_10"
+		"Ability14"				"special_bonus_strength_400"
+	}
+	"npc_dota_hero_lich"
+	{
+		"override_hero"			"npc_dota_hero_lich"
+	}
+	"npc_dota_hero_sand_king"
+	{
+		"override_hero"			"npc_dota_hero_sand_king"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_primal_beast"
+	{
+		"override_hero"			"npc_dota_hero_primal_beast"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_phoenix"
+	{
+		"override_hero"			"npc_dota_hero_phoenix"
+		
+		"Ability13"				"special_bonus_hp_7000"
+	}
+	"npc_dota_hero_omniknight"
+	{
+		"override_hero"			"npc_dota_hero_omniknight"
+		"Ability11"			"special_bonus_attack_damage_750"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_spirit_breaker"
+	{
+		"override_hero"			"npc_dota_hero_spirit_breaker"
+		
+		"Ability10"						"special_bonus_unique_spirit_breaker_nether_strike_cd"
+		"Ability11"						"special_bonus_armor_12"
+		"Ability13"						"special_bonus_attack_damage_3000"
+		"Ability17"						"special_bonus_hp_24000"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_dawnbreaker"
+	{
+		"override_hero"			"npc_dota_hero_dawnbreaker"
+		
+		"Ability10"		"special_bonus_attack_damage_1250"
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_rattletrap"
+	{
+		"override_hero"			"npc_dota_hero_rattletrap"
+		
+		"Ability10"		"special_bonus_unique_clockwerk_7"
+		"Ability11"		"special_bonus_unique_clockwerk_9"
+		"Ability12"		"special_bonus_unique_clockwerk_5"
+		"Ability13"		"special_bonus_unique_clockwerk_3"
+		"Ability14"		"special_bonus_all_stats_500"
+		"Ability15"		"special_bonus_unique_clockwerk_flare_damage"
+		"Ability16"		"special_bonus_unique_clockwerk_6"
+		"Ability17"		"special_bonus_unique_clockwerk"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_jakiro"
+	{
+		"override_hero"			"npc_dota_hero_jakiro"
+		// "Ability11"			"special_bonus_spell_amplify_40"
+		"Ability11"		"special_bonus_unique_jakiro_dualbreath_cooldown"
+		"Ability13"			"special_bonus_hp_6500"
+		"Ability17"		"special_bonus_unique_jakiro_3"
+
+		"Facets"
+		{
+			"jakiro_fire"
+			{
+				"Icon"				"nuke"
+				"Color"				"Red"
+				"GradientID"		"0"
+
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"jakiro_liquid_fire"
+						"AbilityIndex"	"2"
+						"AutoLevelAbility"	"false"
+					}
+				}
+			}
+
+			"jakiro_ice"
+			{
+				"Icon"				"snowflake"
+				"Color"				"Blue"
+				"GradientID"		"1"
+
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"jakiro_liquid_ice"
+						"AbilityIndex"	"2"
+						"AutoLevelAbility"	"false"
+					}
+				}
+			}
+		}
+	}
+	"npc_dota_hero_keeper_of_the_light"
+	{
+		"override_hero"			"npc_dota_hero_keeper_of_the_light"
+		
+	}
+	"npc_dota_hero_chaos_knight"
+	{
+		"override_hero"			"npc_dota_hero_chaos_knight"
+		"Ability15"				"special_bonus_strength_400"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_ogre_magi"
+	{
+		"override_hero"			"npc_dota_hero_ogre_magi"
+		"Ability12"				 "special_bonus_unique_ogre_magi_3"
+		"Ability14"				"special_bonus_strength_800"
+		"Ability16"				"special_bonus_attack_damage_3000"
+		
+		"MagicalResistance"			"40"
+		"StatusMana"				"420"
+	}
+	"npc_dota_hero_underlord"
+	{
+		"override_hero"			"npc_dota_hero_abyssal_underlord"	
+		"Ability10"				"special_bonus_armor_12"
+		
+		"MagicalResistance"				"40"
+	}
+	
+	"npc_dota_hero_mars"
+	{
+		"override_hero"			"npc_dota_hero_mars"	
+		
+		"Ability10"		"special_bonus_unique_mars_spear_bonus_damage"
+		"Ability11"		"special_bonus_unique_mars_bulwark_damage_reduction"
+		"Ability12"		"special_bonus_unique_mars_rebuke_cooldown"
+		"Ability13"		"special_bonus_unique_mars_rebuke_on_bulwark"
+		"Ability14"		"special_bonus_unique_mars_spear_on_attack"
+		"Ability15"		"special_bonus_unique_mars_spear_stun_duration"
+		"Ability16"		"special_bonus_unique_mars_gods_rebuke_extra_crit"
+		"Ability17"		"special_bonus_unique_mars_arena_of_blood_hp_regen"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_marci"
+	{
+		"override_hero"			"npc_dota_hero_marci"
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_magnataur"
+	{
+		"override_hero"			"npc_dota_hero_magnataur"	
+
+		"Ability1"					"imba_magnataur_shockwave"
+		"Ability2"					"imba_magnataur_empower"
+		"Ability10"					"special_bonus_imba_magnataur_8"
+		"Ability12"				"special_bonus_unique_magnus_reverse_polarity_stats"
+		"Ability14" "special_bonus_imba_magnataur_1"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_antimage"
+	{
+		"override_hero"			"npc_dota_hero_antimage"
+		"Ability4"				"antimage_mana_overload"
+		"Ability5"				"generic_hidden"
+		"Ability10"				"special_bonus_strength_450"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_pugna"
+	{
+		"override_hero"			"npc_dota_hero_pugna"
+		"Ability11"				"special_bonus_hp_2000"
+		
+		
+		"Ability10"				"special_bonus_unique_pugna_2"
+		"Ability11"				"special_bonus_unique_pugna_nether_ward_rate"
+		"Ability12"				"special_bonus_unique_pugna_4"
+		"Ability13"				"special_bonus_unique_pugna_6"
+		"Ability14"				"special_bonus_unique_pugna_1"
+		"Ability15"				"special_bonus_unique_pugna_5"
+		"Ability16"				"special_bonus_unique_pugna_life_drain_duration"
+		"Ability17"				"special_bonus_unique_pugna_aoe_decrepify"
+		
+	}
+	"npc_dota_hero_queenofpain"
+	{
+		"override_hero"			"npc_dota_hero_queenofpain"
+
+		"Ability5"				"imba_queenofpain_delightful_torment"
+
+		"Ability10"				"special_bonus_attack_damage_1000"
+		// "Ability20" 			""
+	}
+	"npc_dota_hero_shadow_demon"
+	{
+		"override_hero"			"npc_dota_hero_shadow_demon"
+		"Ability11"				"special_bonus_strength_240"
+	}
+	"npc_dota_hero_shadow_shaman"
+	{
+		"override_hero"			"npc_dota_hero_shadow_shaman"
+		
+	}
+	"npc_dota_hero_lion"
+	{
+		"override_hero"			"npc_dota_hero_lion"
+		
+		"Ability6"				"lion_finger_of_death_ebf"
+		"Ability11"				"special_bonus_attack_damage_1500"
+		"Ability13"				"special_bonus_unique_lion_11"
+		"Ability14"				"special_bonus_all_stats_500"
+	}
+	"npc_dota_hero_enigma"
+	{
+		"override_hero"			"npc_dota_hero_enigma"
+
+		"Ability3"					"imba_enigma_midnight_pulse"
+		"Ability6"					"imba_enigma_black_hole"
+
+		"Facets"
+		{
+			"enigma_gravity"
+			{
+				"Icon"				"slow"
+				"Color"				"Gray"
+				"GradientID"		"3"
+				"Deprecated"		"true"
+
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"enigma_event_horizon"
+					}
+				}
+			}
+			
+			"enigma_fragment"
+			{
+				"Icon"				"summons"
+				"Color"				"Purple"
+				"GradientID"		"0"
+				"Deprecated"		"true"
+
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"dummy_ability_test"
+					}
+				}
+			}
+		}
+
+		// "Ability11"					"special_bonus_imba_enigma_7" // 1.0 sec Magic immunity on spell cast
+		"Ability17"					"special_bonus_imba_enigma_4" // Black Hole cast on death
+
+		"Ability12"				"special_bonus_hp_24000"
+	}
+	"npc_dota_hero_drow_ranger"
+	{
+		"override_hero"			"npc_dota_hero_drow_ranger"
+		"Ability12"				"special_bonus_all_stats_500"
+		
+		"HasSpecializations"		"1"
+		"Specializations"
+		{
+			"Specialization1"		"specialization_drow_ranger_frostshot"
+			"Specialization2"		"specialization_drow_ranger_huntress"
+			"Specialization3"		"specialization_drow_ranger_whirlwind"
+		}
+	}
+	"npc_dota_hero_dragon_knight"
+	{
+		"override_hero"			"npc_dota_hero_dragon_knight"
+		
+		"Ability10"				"special_bonus_attack_damage_1250"
+		"Ability13"				"special_bonus_hp_8000"
+		"Ability15"				"special_bonus_strength_400"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_skeleton_king"
+	{
+		"override_hero"			"npc_dota_hero_skeleton_king"
+		
+		"Ability10"				"special_bonus_movement_speed_20"
+		"Ability11"				"special_bonus_attack_damage_3000"
+		"Ability14"				"special_bonus_cleave_25"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_ancient_apparition"
+	{
+		"override_hero"			"npc_dota_hero_ancient_apparition"
+	} 
+	"npc_dota_hero_centaur"
+	{
+		"override_hero"			"npc_dota_hero_centaur"
+
+		"Ability3" "centaur_return_ebf"
+		
+		"Ability10"				"special_bonus_hp_regen_250"
+		"Ability12"				"special_bonus_strength_400"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_alchemist"
+	{
+		"override_hero"			"npc_dota_hero_alchemist"
+		
+		"Ability12"				"special_bonus_hp_7000"
+		"Ability13"				"special_bonus_attack_damage_1000"
+		"Ability14"				"special_bonus_all_stats_1000"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_lina"
+	{
+		"override_hero"			"npc_dota_hero_lina"
+
+		"Ability2" 				"imba_lina_light_strike_array"
+		"Ability13"				"special_bonus_imba_lina_4" // After a Light Strike Array hits the ground, magma erupts and damages nearby enemy units
+		
+		"Ability10"				"special_bonus_attack_damage_1250"
+		"Ability12"				"special_bonus_hp_8000"
+	}
+	"npc_dota_hero_naga_siren"
+	{
+		"override_hero"			"npc_dota_hero_naga_siren"
+		
+		"Ability13"				"special_bonus_strength_300"
+		"Ability17"				"special_bonus_agility_5000"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_pangolier"
+	{
+		"override_hero"			"npc_dota_hero_pangolier"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_phantom_assassin"
+	{
+		"override_hero"			"npc_dota_hero_phantom_assassin"
+		
+		"MagicalResistance"				"40"
+
+				"Facets"
+		{
+			"phantom_assassin_methodical" 
+			{
+				"Icon"				"skull"
+				"Color"				"Gray"
+				"GradientID"		"0"
+			}
+
+			"phantom_assassin_sweet_release"
+			{
+				"Icon"				"phantom_ass_dagger"
+				"Color"				"Red"
+				"GradientID"		"1"
+			}
+			"phantom_assassin_concealed_one" 
+			{
+				"Icon"				"mana"
+				"Color"				"Blue"
+				"GradientID"		"2"
+			}
+		}
+	}
+	"npc_dota_hero_phantom_lancer"
+	{
+		"override_hero"			"npc_dota_hero_phantom_lancer"
+		"Ability13" 			"special_bonus_unique_phantom_lancer_6"
+		"Ability15"				"special_bonus_12_crit_3"
+		"Ability10"				"special_bonus_agility_200"
+		"Ability12"				"special_bonus_strength_300"
+		
+		"MagicalResistance"				"40"
+		
+		"HasSpecializations"		"1"
+		"Specializations"
+		{
+			"Specialization1"		"specialization_phantom_assassin_bladesinger"
+			"Specialization2"		"specialization_phantom_assassin_shadow"
+			"Specialization3"		"specialization_phantom_assassin_revenant"
+		}
+	}
+
+	"npc_dota_hero_puck"
+	{
+		"override_hero"			"npc_dota_hero_puck"
+		
+		
+		"Ability10"		"special_bonus_unique_puck_orb_damage"
+		"Ability11"		"special_bonus_unique_puck_7"
+		// "Ability12"		"special_bonus_unique_puck"
+		"Ability12" 	"special_bonus_12_crit_3"
+		"Ability13"		"special_bonus_unique_puck_6"
+		"Ability14"		"special_bonus_unique_puck_2"
+		"Ability15"		"special_bonus_unique_puck_coil_damage"
+		"Ability16"		"special_bonus_all_stats_1000"
+		"Ability17"		"special_bonus_unique_puck_rift_radius"
+		
+	}
+	"npc_dota_hero_riki"
+	{
+		"override_hero"			"npc_dota_hero_riki"
+		
+		"Ability3"				"riki_backstab"
+		"Ability6"				"riki_tricks_of_the_trade"
+		
+		"MagicalResistance"				"40"
+	}
+	
+	"npc_dota_hero_nevermore"
+	{
+		"override_hero"			"npc_dota_hero_nevermore"
+		
+		"Ability11"				"special_bonus_agility_200"
+	}
+	"npc_dota_hero_medusa"
+	{
+		"override_hero"			"npc_dota_hero_medusa"
+		"Ability19"				"generic_hidden"
+		"Ability20"				"generic_hidden"
+		"Ability21"				"generic_hidden"
+		"Ability17"				"special_bonus_intelligence_6000"
+
+		"Facets"
+		{
+			"medusa_engorged" 
+			{
+				"Icon"				"snake"
+				"Color"				"Green"
+				"GradientID"		"1"
+			}
+			"medusa_mana_pact" 
+			{
+				"Icon"				"mana"
+				"Color"				"Blue"
+				"GradientID"		"1"
+				"Deprecated"		"true"
+			}
+			"medusa_slow_attacks"
+			{
+				"Icon"				"slow"
+				"Color"				"Yellow"
+				"GradientID"		"2"
+
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"medusa_venomed_volley"
+					}
+				}
+			}
+			"medusa_magic_to_barrier"
+			{
+				"Icon"				"damage"
+				"Color"				"Gray"
+				"GradientID"		"3"
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"medusa_magic_to_barrier"
+					}
+				}
+			}
+		}
+	}
+
+	"npc_dota_hero_morphling"
+	{
+		"override_hero"			"npc_dota_hero_morphling"
+		"Ability6"				"morphling_equalize"
+		"Ability20"				"special_bonus_unique_morphling_4"
+		"Ability18"				"special_bonus_agility_500"
+		"Ability22"				"special_bonus_all_stats_1000"
+
+		"Facets"
+		{
+
+			"morphling_agi"
+			{
+				"Icon"				"agility"
+				"Color"				"Green"
+				"GradientID"		"0"
+
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"morphling_ebb"
+					}
+				}
+			}
+
+			"morphling_str"
+			{
+				"Icon"				"strength"
+				"Color"				"Red"
+				"GradientID"		"0"
+
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"morphling_flow"
+					}
+				}
+			}
+
+			"morphling_primordial_form"
+			{
+				"Icon"				"chrono_cube"
+				"Color"				"Purple"
+				"GradientID"		"1"
+
+				"KeyValueOverrides"
+				{
+					"ModelScale"			"1.25"
+				}
+
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"		"morphling_primordial_form"
+						"ReplaceAbility"	"morphling_equalize"
+						"AutoLevelAbility" 	"false"
+					}
+				}
+			}
+		}
+	}
+
+	"npc_dota_hero_storm_spirit"
+	{
+		"override_hero"			"npc_dota_hero_storm_spirit"
+		
+		"Ability10"				"special_bonus_attack_speed_20"
+		"Ability11"				"special_bonus_mp_regen_10"
+		"Ability12"				"special_bonus_hp_5000"
+	}
+	"npc_dota_hero_sven"
+	{
+		"override_hero"			"npc_dota_hero_sven"
+		
+		"Ability1"					"imba_sven_storm_bolt"
+		"Ability2"					"imba_sven_great_cleave"
+		"Ability3"					"imba_sven_warcry_723"
+		// "Ability4"					"sven_warcry"
+		"Ability5"					"imba_sven_colossal_slash"
+		"Ability6"					"imba_sven_gods_strength"
+
+		"Ability10"					"special_bonus_strength_110"
+		"Ability11"					"special_bonus_attack_speed_200"
+		"Ability12"					"special_bonus_imba_sven_7"
+		"Ability13"					"special_bonus_imba_sven_10"
+		"Ability14"					"special_bonus_imba_sven_5"
+		"Ability15"					"special_bonus_imba_sven_6"
+		"Ability16"					"special_bonus_imba_sven_4"
+		"Ability17"					"special_bonus_imba_sven_8"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_treant"
+	{
+		"override_hero"			"npc_dota_hero_treant"
+		"Ability16"				"special_bonus_hp_24000"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_tusk"
+	{
+		"override_hero"					"npc_dota_hero_tusk"
+		
+		"Ability12"						"special_bonus_hp_8000"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_tidehunter"
+	{
+		"override_hero"			"npc_dota_hero_tidehunter"
+		"Ability14"				""
+		
+		"Ability10"				"special_bonus_unique_tidehunter_9"
+		"Ability11"				"special_bonus_unique_tidehunter_5"
+		"Ability12"				"special_bonus_unique_tidehunter_2"
+		"Ability13"				"special_bonus_unique_tidehunter_3"
+		"Ability14"				"special_bonus_strength_800"
+		// "Ability15"				"special_bonus_unique_tidehunter_4"
+		"Ability16"				"special_bonus_unique_tidehunter_7"
+		"Ability17" "special_bonus_unique_tidehunter_8"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_venomancer"
+	{
+		"override_hero"			"npc_dota_hero_venomancer"
+		"Ability15"				"special_bonus_all_stats_500"
+		
+	}
+	"npc_dota_hero_warlock"
+	{
+		"override_hero"			"npc_dota_hero_warlock"
+
+		"Facets"
+		{
+			"warlock_golem" 
+			{
+				"Icon"				"summons"
+				"Color"				"Red"
+				"GradientID"		"0"
+			}
+
+			"warlock_grimoire"
+			{
+				"Icon"				"xp"
+				"Color"				"Gray"
+				"GradientID"		"3"
+
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"warlock_black_grimoire"
+					}
+				}
+			}
+			"facet_intel_buff"
+			{
+				"Icon"				"damage"
+				"Color"				"Gray"
+				"GradientID"		"3"
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"facet_intel_buff"
+					}
+				}
+			}
+		}
+	}
+	
+	"npc_dota_hero_bane"
+	{
+		"override_hero"		"npc_dota_hero_bane"
+		"Ability10"		"special_bonus_armor_25"
+	}
+	"npc_dota_hero_elder_titan"
+	{
+		"override_hero"		"npc_dota_hero_elder_titan"
+		
+		"Ability11"			"special_bonus_attack_speed_90"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_huskar"
+	{
+		"override_hero"		"npc_dota_hero_huskar"
+	}
+	"npc_dota_hero_dazzle"
+	{
+		"override_hero"		"npc_dota_hero_dazzle"
+		"Ability10"		"special_bonus_attack_damage_1250"
+		"Ability11"		"special_bonus_mp_regen_875"
+		"Ability13"		"special_bonus_attack_speed_90"
+	}
+	"npc_dota_hero_earthshaker"
+	{
+		"override_hero"		"npc_dota_hero_earthshaker"
+		"Ability10"		"special_bonus_strength_1000"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_enchantress"
+	{
+		"override_hero"		"npc_dota_hero_enchantress"
+		"Ability12"		"special_bonus_attack_damage_2250"
+	}
+	"npc_dota_hero_furion"
+	{
+		"override_hero"		"npc_dota_hero_furion"
+		"Ability10"		"special_bonus_unique_furion_6"
+		"Ability11"		"special_bonus_unique_furion_5"
+		"Ability12"			"special_bonus_attack_speed_30"
+		"Ability13"		"special_bonus_unique_furion_teleportation_barrier"
+		"Ability14"		"special_bonus_unique_furion_7"
+		"Ability15"		"special_bonus_unique_furion_4"
+		"Ability16"		"special_bonus_unique_furion_3"
+		"Ability17"		"special_bonus_unique_furion"
+	}
+	"npc_dota_hero_snapfire"
+	{
+		"override_hero"		"npc_dota_hero_snapfire"
+		
+		"Ability10"				"special_bonus_unique_snapfire_7"
+		"Ability11"				"special_bonus_unique_snapfire_5"
+		"Ability12"				"special_bonus_unique_snapfire_2"
+		"Ability13"				"special_bonus_unique_snapfire_3"
+		"Ability14"				"special_bonus_unique_snapfire_8"
+		"Ability15"				"special_bonus_unique_snapfire_mortimer_kisses_impact_damage"
+		"Ability16"				"special_bonus_unique_snapfire_6"
+		"Ability17"				"special_bonus_unique_snapfire_1"
+	}
+	"npc_dota_hero_night_stalker"
+	{
+		"override_hero"					"npc_dota_hero_night_stalker"
+		"Ability15"						"special_bonus_strength_1000"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_slardar"
+	{
+		"override_hero"		"npc_dota_hero_slardar"
+		"Ability12"			"special_bonus_hp_6500"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_abaddon"
+	{	
+		"override_hero"		"npc_dota_hero_abaddon"
+		
+		"Ability10"		"special_bonus_unique_abaddon"
+		"Ability11"		"special_bonus_strength_450"
+		"Ability12"		"special_bonus_attack_damage_3000"
+		"Ability13"		"special_bonus_unique_abaddon_2"
+		"Ability14"		"special_bonus_unique_abaddon_aphotic_shield_damage"
+		"Ability15"		"special_bonus_unique_abaddon_immolation"
+		"Ability16"		"special_bonus_unique_abaddon_aphotic_shield_cd"
+		"Ability17"		"special_bonus_unique_abaddon_4"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_vengeful_spirit"
+	{
+		"override_hero"		"npc_dota_hero_vengefulspirit"
+		"Ability11"			"special_bonus_agility_300"
+	}
+	"npc_dota_hero_weaver"
+	{
+		"override_hero"			"npc_dota_hero_weaver"
+		
+		"Ability11"				"special_bonus_strength_400"
+		"Ability12"				"special_bonus_attack_damage_1000"
+	}
+	"npc_dota_hero_pudge"
+	{
+		"override_hero"					"npc_dota_hero_pudge"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_muerta"
+	{
+		"override_hero"					"npc_dota_hero_muerta"
+
+		"Ability7" "muerta_supernatural"
+		
+		"Ability11"						"special_bonus_strength_400"
+		"Ability13"						"special_bonus_intelligence_1000"
+	}
+	"npc_dota_hero_witch_doctor"
+	{
+		"override_hero"			"npc_dota_hero_witch_doctor"
+		
+		"Ability13"						"special_bonus_hp_8000"
+		
+		"HasSpecializations"		"1"
+		"Specializations"
+		{
+			"Specialization1"		"specialization_witch_doctor_malpractice"
+			"Specialization2"		"specialization_witch_doctor_voodoo"
+			"Specialization3"		"specialization_witch_doctor_shaman"
+		}
+		"Facets"
+		{
+			"witch_doctor_cleft_death"
+			{
+				"Icon"				"death_ward"
+				"Color"				"Purple"
+				"GradientID"		"0"
+			}
+
+			"witch_doctor_malpractice"
+			{
+				"Icon"				"nuke"
+				"Color"				"Red"
+				"GradientID"		"2"
+			}
+			"witch_doctor_ulti_sangar"
+			{
+				"Icon"				"nuke"
+				"Color"				"Red"
+				"GradientID"		"2"
+			}
+		}
+	}
+	"npc_dota_hero_rubick"
+	{
+		"override_hero"					"npc_dota_hero_rubick"
+	}
+	"npc_dota_hero_arc_warden"
+	{
+		"override_hero"					"npc_dota_hero_arc_warden"
+		"Ability11"						"special_bonus_hp_24000"
+	}
+	"npc_dota_hero_oracle"
+	{
+		"override_hero"					"npc_dota_hero_oracle"
+	}
+	
+	"npc_dota_hero_grimstroke"
+	{
+		"override_hero"					"npc_dota_hero_grimstroke"
+	}
+	
+	"npc_dota_hero_dark_seer"
+	{
+		"override_hero"					"npc_dota_hero_dark_seer"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_chen"
+	{
+		"override_hero"					"npc_dota_hero_chen"
+	}
+	"npc_dota_hero_razor"
+	{
+		"override_hero"					"npc_dota_hero_razor"
+	}
+	"npc_dota_hero_largo"
+	{
+		"override_hero"					"npc_dota_hero_largo"
+	}
+	"npc_dota_hero_nyx_assassin"
+	{
+		"override_hero"					"npc_dota_hero_nyx_assassin"
+		"Ability2"						"nyx_assassin_mana_burn"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_monkey_king"
+	{
+		"override_hero"					"npc_dota_hero_monkey_king"
+		
+		"Ability5"		"generic_hidden"
+		"Ability11"		"special_bonus_unique_monkey_king_12"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_meepo"
+	{
+		"override_hero"					"npc_dota_hero_meepo"
+		
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_bounty_hunter"
+	{
+		"override_hero"					"npc_dota_hero_bounty_hunter"
+		
+		"Ability10"						"special_bonus_unique_bounty_hunter_5"
+		"Ability11"						"special_bonus_unique_bounty_hunter_4"
+		"Ability12"						"special_bonus_unique_bounty_hunter_9"
+		"Ability13"						"special_bonus_unique_bounty_hunter_3"
+		"Ability14"						"special_bonus_unique_bounty_hunter_2"
+		"Ability15"						"special_bonus_unique_bounty_hunter"
+		"Ability16"						"special_bonus_unique_bounty_hunter_8"
+		// "Ability17"						"special_bonus_unique_bounty_hunter_3"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_shredder"
+	{
+		"override_hero"					"npc_dota_hero_shredder"
+		
+		"Ability10"						"special_bonus_hp_8000"
+		"Ability11"						"special_bonus_mp_regen_875"
+		"Ability16" 					"special_bonus_hp_regen_40"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_bounty_hunter"
+	{
+		"override_hero"					"npc_dota_hero_bounty_hunter"
+		
+		"MagicalResistance"				"40"
+	}
+	"npc_dota_hero_earth_spirit"
+	{
+		"override_hero"					"npc_dota_hero_earth_spirit"
+		
+		"Ability5"						"generic_hidden"
+		"Ability11"						"special_bonus_spell_amplify_25"
+		
+		"MagicalResistance"				"40"
+	}
+}
+

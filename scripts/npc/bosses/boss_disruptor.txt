@@ -1,0 +1,189 @@
+
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Disruptor: Thunder Strike
+	//=================================================================================================================
+	"boss_disruptor_thunder_strike"
+	{
+        "BaseClass" "disruptor_thunder_strike"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Disruptor.ThunderStrike.Target"
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"3"
+
+        "HasShardUpgrade"               "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_THUNDER_STRIKE"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0.05 0.05 0.05 0.05"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"9"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCastRange"
+			{
+				"value"								"1200"
+				"special_bonus_shard"				"+800"
+			}
+			"radius"						
+			{
+				"value" 							"350"
+				"special_bonus_unique_disruptor_3"	"+100"
+			}
+			"strikes"
+			{
+				"value"								"10"
+				"special_bonus_shard"				"+2"
+			}
+			"strike_interval"						"1"
+			"strike_damage"							"5750 12325 55000"
+			"strike_damage_bonus"
+			{
+				"value"								"0"
+				"special_bonus_unique_disruptor_consecutive_strike_damage"			"+15000"
+			}
+			"slow_duration"
+			{
+				"value"								"0.4"
+				"special_bonus_unique_disruptor"	".4"
+			}
+			"slow_amount"							"100"
+			"shard_ground_delay"					"5"	
+		}
+	}
+
+
+
+	//=================================================================================================================
+	// Disruptor: Kinetic Field
+	//=================================================================================================================
+	"boss_disruptor_kinetic_field"
+	{
+		
+		"BaseClass" "disruptor_kinetic_field"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Disruptor.KineticField"
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"3"
+		"HasScepterUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_KINETIC_FIELD"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0.05 0.05 0.05 0.05"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"8"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"						"800"
+			"formation_time"				"0"
+			"duration"
+			{
+				"value"						"4 6 7"
+			}
+			"damage_per_second"	
+			{
+				"special_bonus_scepter"		"3450 +6265 +11750 +22450"
+			}
+		}
+	}	
+
+
+
+	//=================================================================================================================
+	// Disruptor: Static Storm
+	//=================================================================================================================
+	"boss_disruptor_static_storm"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "disruptor_static_storm"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Disruptor.StaticStorm.Cast"
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"6"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_STATIC_STORM"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"17"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"	
+			{
+				"value"							"900"
+			}
+			"pulses"	
+			{
+				"value"							"40"
+			}
+			"damage_max"						"41030 49360 170575"
+			"duration"	
+			{
+				"value"							"11.0"
+			}
+		}
+	}
+
+}

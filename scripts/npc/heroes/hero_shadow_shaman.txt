@@ -1,0 +1,452 @@
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Shadow Shaman: Ether Shock
+	//=================================================================================================================
+"shadow_shaman_ether_shock"
+{
+	"ID"				"5078"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"FightRecapLevel"				"1"
+	"AbilitySound"				"Hero_ShadowShaman.EtherShock"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastRange"				"600"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+	"AbilityCooldown"				"8"
+	"AbilityManaCost"				"100 160 220 280 340 400 460"
+	"AbilityValues"
+	{
+		"start_radius"
+		{
+			"value"				"200 200 200 200"
+			"affected_by_aoe_increase"				"1"
+		}
+		"end_radius"
+		{
+			"value"				"300 300 300 300"
+			"affected_by_aoe_increase"				"1"
+		}
+		"end_distance"
+		{
+			"value"				"500 500 500 500"
+		}
+		"targets"
+		{
+			"value"				"10"
+		}
+		"damage"
+		{
+			"value"				"1975 2950 4010 5980 10700 19740 41875"
+			"special_bonus_unique_shadow_shaman_3"				"+75%"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+}
+//=================================================================================================================
+	// Shadow Shaman: Voodoo
+	//=================================================================================================================
+	"shadow_shaman_voodoo"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_shadow_shaman/shadow_shaman_voodoo"
+		"AbilityTextureName"			"shadow_shaman_voodoo"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_ShadowShaman.Hex.Target"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"movespeed"									"110 110 100 100 100 90"
+			"duration"									"1.25 2.0 2.75 3.5 3.75 4 4.25"
+			"linger_duration"							"0.75"
+			"cast_range"
+			{
+				"value"									"0"
+				"special_bonus_unique_shadow_shaman_7"	"+500"
+			}
+			"ally_duration"
+			{
+				"value"									"0"
+				"special_bonus_unique_shadow_shaman_7"	"+13"
+			}
+			"AbilityCooldown"
+			{
+				"value"									"13"
+				"special_bonus_unique_shadow_shaman_5"	"-3"
+			}
+			"damage_amp"				
+			{
+				"value"									"8 10 12 14 16 18 20"
+				"special_bonus_unique_shadow_shaman_hex_damage_amp"		"+10"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	//=================================================================================================================
+	// Shadow Shaman: Shackles
+	//=================================================================================================================
+	"shadow_shaman_shackles"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_shadow_shaman/shadow_shaman_shackles"
+		"AbilityTextureName"			"shadow_shaman_shackles"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+
+		"HasShardUpgrade"               "1"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityChannelTime"			"2.75 3.5 4.25 4.75 5 5.25 5.5 5.75 6.0"
+		"AbilityCooldown"				"10"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"140 170 200 230 260 290 320"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"tick_interval"								"0.1 0.1 0.1 0.1"
+			"total_damage"
+			{
+				"value"									"1125 2350 4010 6120 12500 25310 51025"
+				"special_bonus_unique_shadow_shaman_6"	"+150%"
+			}
+			"total_heal"
+			{
+				"value"									"1070 2110 3410 4900 9375 17715 33175"
+				"special_bonus_unique_shadow_shaman_6"	"+150%"
+			}
+			"channel_time"
+			{
+				"value"									"2.75 3.5 4.25 4.75 5 5.25 5.5 5.75 6.0"
+				"special_bonus_unique_shadow_shaman_2"	"+1"
+			}
+			"AbilityCastRange"
+			{
+				"value"						"400"
+				"special_bonus_scepter"		"+150"
+			}
+			"ward_linger_duration"
+			{
+				"value"					"0"
+				"special_bonus_scepter"		"=2.5"
+			}
+			"bonus_targets"
+			{
+				"value"						"0"
+			}
+			"bonus_targets_search_range"
+			{
+				"value"						"0"
+			}
+			"bonus_target_channel_time_pct"
+			{
+				"value"						"0"					// currently, damage done is calculated using base channel time, so 60% duration = 60% damage
+			}
+			"heal_percentage"
+			{
+				"value"						"100"
+			}
+
+			"scepter_shock_pct"
+			{
+				"special_bonus_scepter"						"100"
+			}
+
+			"scepter_shock_radius"
+			{
+				"special_bonus_scepter"						"600"
+			}
+
+			"scepter_shock_interval"
+			{
+				"special_bonus_scepter"						"0.9"
+			}
+
+			"alt_cast_on_allies"
+			{
+				"special_bonus_scepter"						"1"
+			}
+
+			"ally_break_range"
+			{
+				"special_bonus_scepter"						"2000"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Shadow Shaman: Urnaconda
+	//=================================================================================================================
+	"shadow_shaman_urnaconda"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_shadow_shaman/shadow_shaman_urnaconda"
+		"AbilityTextureName"			"shadow_shaman_urnaconda"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"2"
+		"MaxLevel"						"1"
+		"IsGrantedByShard"				"1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"650"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"140"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"AbilityCooldown"				"50"
+				"ward_duration"					"15"
+				"speed"							"1000"
+				"impact_radius"					"400"
+				"impact_damage"					"5000"
+				"megaward_multiplier_tooltip"			"4" //TOOLTIP ONLY. CHANGE IN MASS SERPENT WARDS IF VALUES CHANGE
+		}
+	}
+
+	//=================================================================================================================
+	// Shadow Shaman: Mass Serpent Ward
+	//=================================================================================================================
+	"shadow_shaman_mass_serpent_ward"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_shadow_shaman/shadow_shaman_mass_serpent_ward"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_ShadowShaman.SerpentWard"
+		"HasShardUpgrade"				"1"
+		"MaxLevel"						"6"
+		"LevelsBetweenUpgrades"			"6"
+
+		"AbilityDraftExtraAbilities"
+		{
+			"shadow_shaman_urnaconda" "shard"
+		}
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"550"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"110 105 100 80 70 60"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 350 550 600 650 700"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"ward_count"
+			{
+				"value"							"10"	// if changing this, change mega_ward_multiplier_tooltip
+			}
+			"bonus_damage"						"0"
+			"bonus_attack_range"
+			{
+				"special_bonus_unique_shadow_shaman_8" "+160"
+			}
+			"duration"						"45.0 45.0 45.0"
+			"spawn_radius"					"150"
+			"hits_to_destroy_tooltip"
+			{
+				"value"														"2"
+				"special_bonus_unique_shadow_shaman_1"						"50%"
+			}
+			"ward_health"
+			{
+				"value"						"4"
+				"special_bonus_unique_shadow_shaman_1"		"+2"
+			}
+			"bonus_attack_targets"
+			{
+				"special_bonus_unique_shadow_shaman_4" "+1"
+			}
+			"ward_damage_tooltip"
+			{
+				"value"														"6000 9000 12000 15000 18000 21000"
+			}
+			"mega_ward_multiplier_damage" 		
+			{
+				"value"				"0"
+				"special_bonus_shard"		"4"
+
+			}
+			"mega_ward_multiplier_health"	
+			{
+				"value"				"0"
+				"special_bonus_shard"		"4"
+
+			}
+			"mega_ward_health_tooltip"
+			{	
+				"value"					"0"
+				"special_bonus_shard"			"=8"
+				"special_bonus_unique_shadow_shaman_1"						"50%"
+				//"dynamic_value"						"true"
+			}
+			"mega_ward_damage_tooltip"
+			{		
+				"value"							"0 0 0"
+				"special_bonus_shard"			"200 340 480"
+			}
+
+			"mega_ward_model_scale_multiplier"			"2.0"
+
+		}
+	}
+
+	
+	//=================================================================================================================
+	// Shadow Shaman: Serpentine (scepter ability)
+	//=================================================================================================================
+"shadow_shaman_serpentine"
+{
+	"ID"				"536"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT  | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_PHYSICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilitySound"				"Hero_ShadowShaman.SerpentWard"
+	"FightRecapLevel"				"1"
+	"HasScepterUpgrade"				"1"
+	"MaxLevel"				"1"
+	"IsGrantedByScepter"				"1"
+	"HasScepterUpgrade"				"1"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastRange"				"1000"
+	"AbilityCastPoint"				"0.1"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_4"
+	"AbilityCooldown"				"35"
+	"AbilityManaCost"				"100"
+	
+	"AbilityValues"
+	{
+		"count"
+		{
+			"value"				"8"
+		}
+		"length"
+		{
+			"value"				"925"
+		}
+	}
+}
+//=================================================================================================================
+	// Shadow Shaman Innate: Fowl Play
+	//=================================================================================================================
+"shadow_shaman_fowl_play"
+{
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
+	"MaxLevel"				"1"
+	"Innate"				"1"
+	"AbilityCooldown"				"120"
+	"IsBreakable"				"1"
+	"AbilityValues"
+	{
+		"hex_duration"				"3.0"
+		"movespeed_bonus_pct"
+		{
+			"value"				"0"
+			"hero_levelup"				"+5"
+			"levelup_interval"				"5"
+		}
+		"damage_reduction_duration"
+		{
+			"value"				"3"
+			"special_bonus_shard"				"+1.5"
+		}
+		"damage_reduction_pct"				"100"
+		"allow_items"
+		{
+			"special_bonus_shard"				"1"
+		}
+		"invuln_duration"
+		{
+			"special_bonus_shard"				".1"
+		}
+		"invuln_vision_radius"
+		{
+			"special_bonus_shard"				"1000"
+		}
+		"ally_chicken_images_take_damage_percent"
+		{
+			"special_bonus_shard"				"200"
+		}
+		"ally_chicken_images_count"
+		{
+			"special_bonus_shard"				"3"
+		}
+		"ally_voodoo_duration"
+		{
+			"special_bonus_shard"				"3"
+		}
+		"total_chickens"
+		{
+			"value"				"1"
+			"hero_levelup"				"+1"
+			"levelup_interval"				"5"
+		}
+		"levels_per_chicken"				"6"
+	}
+}
+}

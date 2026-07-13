@@ -1,0 +1,444 @@
+"DOTAAbilities"
+{
+	"boss_spectre_dispersion_4"
+	{
+        "BaseClass"						"spectre_dispersion"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"MaxLevel"						"1"
+		"LevelsBetweenUpgrades"			"3"
+        "HasShardUpgrade"               "1"
+        "IsBreakable"					"1"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage_reflection_pct"
+			{
+				"value"									"90"
+			}
+			"min_radius"			"400"
+			"max_radius"			"1900"
+			"activation_cooldown"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+25"
+			}
+			"activation_manacost"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+50"
+			}
+			"activation_bonus_pct"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+100"
+			}
+			"activation_duration"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+5"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+    "boss_spectre_dispersion_3"
+	{
+        "BaseClass"						"spectre_dispersion"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		// "ID"							"5336"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+        "HasShardUpgrade"               "1"
+        "IsBreakable"					"1"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage_reflection_pct"
+			{
+				"value"									"50"
+				"special_bonus_unique_spectre_5"		"+5"
+			}
+			"min_radius"			"400"
+			"max_radius"			"1900"
+			"activation_cooldown"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+25"
+			}
+			"activation_manacost"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+50"
+			}
+			"activation_bonus_pct"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+100"
+			}
+			"activation_duration"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+5"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+    "boss_spectre_dispersion_2"
+	{
+        "BaseClass"						"spectre_dispersion"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		// "ID"							"5336"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+        "HasShardUpgrade"               "1"
+        "IsBreakable"					"1"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage_reflection_pct"
+			{
+				"value"									"17"
+				"special_bonus_unique_spectre_5"		"+5"
+			}
+			"min_radius"			"200"
+			"max_radius"			"800"
+			"activation_cooldown"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+25"
+			}
+			"activation_manacost"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+50"
+			}
+			"activation_bonus_pct"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+100"
+			}
+			"activation_duration"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+5"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+    "boss_spectre_dispersion"
+	{
+        "BaseClass"						"spectre_dispersion"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		// "ID"							"5336"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+        "HasShardUpgrade"               "1"
+        "IsBreakable"					"1"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage_reflection_pct"
+			{
+				"value"									"15"
+				"special_bonus_unique_spectre_5"		"+5"
+			}
+			"min_radius"			"200"
+			"max_radius"			"400"
+			"activation_cooldown"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+25"
+			}
+			"activation_manacost"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+50"
+			}
+			"activation_bonus_pct"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+100"
+			}
+			"activation_duration"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+5"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	"sunstrike_custom"
+	{
+		"BaseClass"            "ability_lua"
+		"ScriptFile"		   "bosses/boss_custom/sunstrike_custom"
+		"AbilityBehavior"      "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType"          "ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"    "SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType" "DAMAGE_TYPE_PURE"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		
+		"AbilityCooldown"      "15"
+		"AbilityManaCost"      "0"
+
+		"precache"
+		{
+			"particle" "particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
+			"particle" "particles/econ/items/invoker/invoker_apex/invoker_sun_strike_team_immortal1.vpcf"
+			"particle" "particles/ui_mouseactions/range_finder_tower_aoe.vpcf"
+		}
+		
+		"AbilityValues"
+		{
+			"damage"     "600000" // Damage per Sunstrike
+			"delay"      "1.7" // Delay sebelum Sunstrike muncul
+			"sunstrike_count"  "4" // Jumlah Sunstrike yang mengelilingi
+			"radius"  "800" // Radius lingkaran Sunstrike
+		}
+	}
+
+
+	"boss_terrorblade_terror_wave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "terrorblade_terror_wave"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"IsBreakable" "0"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		"AbilityValues"
+		{
+				"fear_duration"		"4.0"
+				"scepter_radius"				
+				{
+					"value"		"1600"
+					"affected_by_aoe_increase"	"1"		
+				}
+				"damage"			"20000"
+				"scepter_speed"				"1000"
+				"scepter_spawn_delay"		"0.6"
+				"scepter_meta_duration"		"15"
+		}
+	}
+
+	"gravitational_core"
+    {
+        "BaseClass"             "ability_lua"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "ScriptFile"            "bosses/boss_custom/gravitational_core"
+        "AbilityTextureName"    "void_spirit_aether_remnant"
+        "IsBreakable" "1"
+        
+        "AbilityValues"
+        {
+            "radius"        "2000"
+            "pull_speed"    "130"
+            "mana_drain" "4000"
+            "max_spawned_enemies" "10"
+            "spawn_radius" "300"
+            "enemy_duration" "20"
+        }
+    }
+
+
+	"boss_juggernaut_omni_slash"
+	{
+		"BaseClass" "juggernaut_omni_slash"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"6"
+		"LevelsBetweenUpgrades"			"6"
+		"FightRecapLevel"				"2"
+
+		"HasScepterUpgrade"			"1"
+		"AbilityDraftUltScepterAbility"		"juggernaut_swift_slash"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// damage only
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"attack_rate_multiplier"	"7"
+			"bonus_damage"				"10000 20000 60000"
+			"bonus_attack_speed"		"90"
+			"duration"
+			{
+				"value"					"5"
+				"special_bonus_unique_juggernaut_omnislash_duration"			"+1"
+			}
+			"omni_slash_radius"			
+			{
+				"value"		"1200"
+			}
+			"AbilityCastRange"				
+			{
+				"value"	"1200"
+			}
+			"dispel"
+			{
+				"value"		"1"
+			}
+		}
+	}
+
+	"boss_juggernaut_swift_slash"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "juggernaut_swift_slash"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"			"3"
+		}
+	}
+
+	"boss_juggernaut_blade_dash"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"bosses/boss_custom/boss_juggernaut_blade_dash"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"						"1"
+		"LevelsBetweenUpgrades"			"3"
+		"FightRecapLevel"				"1"
+		"AbilityTextureName"			"juggernaut_blade_dance"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_tgt.vpcf"
+			"particle"	"particles/econ/items/juggernaut/bladekeeper_omnislash/dc_juggernaut_omni_slash_rope.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"
+		}
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"dash_distance"
+			{
+				"value"					"1600"
+			}
+			"dash_speed"
+			{
+				"value"					"3000"
+			}
+			"search_radius"
+			{
+				"value"					"500"
+			}
+			"max_attack_count"
+			{
+				"value"					"15"
+			}
+		}
+	}
+
+}

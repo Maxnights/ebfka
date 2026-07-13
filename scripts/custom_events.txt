@@ -1,0 +1,120 @@
+// No spaces in event names, max length 32
+// All strings are case sensitive
+//
+// valid data key types are:
+//   string : a zero terminated string
+//   bool   : unsigned int, 1 bit
+//   byte   : unsigned int, 8 bit
+//   short  : signed int, 16 bit
+//   long   : signed int, 32 bit
+//   float  : float, 32 bit
+//   uint64 : unsigned int 64 bit
+//   local  : any data, but not networked to clients
+//
+// following key names are reserved:
+//   local      : if set to 1, event is not networked to clients
+//   unreliable : networked, but unreliable
+//   suppress   : never fire this event
+//   time	: firing server time
+//   eventid	: holds the event ID
+
+"CustomEvents"
+{   
+
+    // Stat collection
+    "stat_collection_part"
+    {
+        "data"          "string"
+    }
+
+    "stat_collection_send"
+    {
+    }
+	// Options module stuff
+    "gds_options"
+    {
+        "playerID"          "short"      // The ID of the player who should get stats
+        "command"           "string"    // The command to send to the website
+    }
+
+    "hero_selected"
+    {
+        "player_id"         "short"
+        "hero_option"       "string"
+    }
+
+    "hero_pick_confirm"
+    {
+        "player_id"         "short"
+    }
+
+    "ad_ability_selected"
+    {
+        "player_id"         "short"
+        "ability_name"      "string"
+        "ability_type"      "string"
+        "ban_player_id"     "local"
+    }
+
+    "ad_talent_selected"
+    {
+        "player_id"         "short"
+        "talent_name"       "string"
+        "talent_level"      "string"
+        "talent_slot"       "string"
+    }
+
+    "ad_talent_removed"
+    {
+        "player_id"         "short"
+        "talent_level"      "string"
+        "talent_slot"       "string"
+    }
+
+    "ad_talent_reroll"
+    {
+        "player_id"         "short"
+    }
+
+    "ad_heroes_reroll"
+    {
+        "player_id"         "short"
+    }
+
+    "ad_board_reroll"
+    {
+        "player_id"         "short"
+    }
+
+    "ad_board_freeze_column"
+    {
+        "player_id"         "short"
+        "column_id"         "short"
+        "abilities"         "local"
+    }
+
+    "ability_slot_swapped"
+    {
+        "player_id"         "short"
+        "ability_name"      "string"
+        "previous_slot"     "string"
+        "current_slot"      "string"
+    }
+
+    "ability_draft_player_ready"
+    {
+        "player_id"         "short"
+    }
+
+    "send_command_to_console"
+    {
+        "player_id"         "short"
+        "command"           "string"
+    }
+
+    "send_custom_chat_message"
+    {
+        "player_id"         "short"
+        "chat_event"        "local"
+    }
+}

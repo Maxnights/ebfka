@@ -1,0 +1,392 @@
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Treant Protector: Nature's Guise
+	//=================================================================================================================
+"treant_natures_guise"
+{
+	"ID"				"5434"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+	"FightRecapLevel"				"2"
+	"MaxLevel"				"1"
+	"AbilitySound"				"Hero_Treant.NaturesGuise.On"
+	"HasShardUpgrade"				"1"
+	"AbilityValues"
+	{
+		"radius"
+		{
+			"value"				"200"
+			"affected_by_aoe_increase"				"1"
+		}
+		"grace_time"				"0.75"
+		"cooldown_time"
+		{
+			"value"				"3"
+		}
+		"regen_amp"				"40"
+		"shard_root_time"
+		{
+			"value"				"1.0"
+			"RequiresShard"				"1"
+		}
+		"shard_by_tree_root_time"
+		{
+			"value"				"2.0"
+			"RequiresShard"				"1"
+		}
+		"shard_damage"
+		{
+			"value"				"9000"
+			"RequiresShard"				"1"
+			"DamageTypeTooltip"				"DAMAGE_TYPE_MAGICAL"
+		}
+		"attack_damage_pct"
+		{
+			"value"				"100"
+			"RequiresShard"				"1"
+			"DamageTypeTooltip"				"DAMAGE_TYPE_MAGICAL"
+		}
+		"movement_bonus"
+		{
+			"value"				"12"
+			"special_bonus_shard"				"+15"
+			"special_bonus_unique_treant_12"				"+2.5"
+		}
+		"shard_cooldown"
+		{
+			"value"				"10"
+			"RequiresShard"				"1"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"36"
+			"hero_levelup"				"-1"
+			"levelup_interval"				"1"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+	"Innate"				"1"
+}
+//=================================================================================================================
+	// Treant: Innate Attack Damage
+	//=================================================================================================================
+	"treant_innate_attack_damage"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+		"MaxLevel"						"1"
+		"Innate"						"1"
+
+		"AbilityValues"
+		{
+			"attack_damage_per_level"				
+			{ 
+				"value"						"0"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	//  Treant Protector: Nature's Grasp
+	//=================================================================================================================
+"treant_natures_grasp"
+{
+	"ID"				"338"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_TREE"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"AbilitySound"				"Hero_Treant.NaturesGuise.On"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastRange"				"1500"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCooldown"				"17"
+	"AbilityManaCost"				"75 80 85 90 95 100 105"
+	"AbilityValues"
+	{
+		"damage_per_second"
+		{
+			"value"				"325 500 725 1175 2275 4450 6585"
+			"special_bonus_unique_treant_9"				"+100%"
+		}
+		"movement_slow"				"30 35 40 45 50 55 70"
+		"vines_duration"				"15"
+		"creation_interval"				"0.1"
+		"initial_latch_delay"				"0.3"
+		"vine_spawn_interval"				"175"
+		"latch_range"
+		{
+			"value"				"135"
+			"affected_by_aoe_increase"				"1"
+		}
+		"latch_vision"
+		{
+			"value"				"150"
+			"affected_by_aoe_increase"				"1"
+		}
+		"creep_penalty"				"35"
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_3"
+}
+//=================================================================================================================
+	// Treant Protector: Leech Seed
+	//=================================================================================================================
+"treant_leech_seed"
+{
+	"ID"				"5435"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"AbilitySound"				"Hero_Treant.LeechSeed.Cast"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastPoint"				"0.3"
+	"AbilityCastRange"				"400 450 500 550 600 650 700"
+	"FightRecapLevel"				"1"
+	"AbilityManaCost"				"80 90 100 110 120 130 140"
+	"AbilityValues"
+	{
+		"damage_interval"				"1"
+		"leech_damage"
+		{
+			"value"				"3000 9000 15000 30000 45000 60000 80000"
+			"special_bonus_unique_treant_2"				"+100%"
+		}
+		"movement_slow"
+		{
+			"value"				"-10 -17 -25 -30 -39 -44 -54"
+			"special_bonus_unique_treant_3"				"-18"
+			"LinkedSpecialBonusOperation"				"SPECIAL_BONUS_SUBTRACT"
+		}
+		"radius"
+		{
+			"value"				"650"
+			"affected_by_aoe_increase"				"1"
+		}
+		"duration"				"5.0"
+		"projectile_speed"				"450"
+		"can_target_ground"
+		{
+			"value"				"0"
+			"special_bonus_facet_treant_sapling"				"=1"
+		}
+		"creep_damage_reduction_pct"
+		{
+			"value"				"0"
+			"special_bonus_facet_treant_sapling"				"=50"
+		}
+		"creep_heal_reduction_pct"				"50"
+		"flat_heal"				"15 25 35 45"
+		"leech_heal"
+		{
+			"value"				"20"
+			"special_bonus_unique_treant_3"				"+10"
+		}
+		"max_heal_units"				"5"
+		"AbilityCooldown"
+		{
+			"value"				"12"
+			"special_bonus_unique_treant_14"				"-3"
+		}
+		"healing_pulse_count"				"2"
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_2"
+	"IsBreakable"				"1"
+}
+//=================================================================================================================
+	// Treant Protector: Living Armor
+	//=================================================================================================================
+	"treant_living_armor"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5436"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"					
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Treant.LivingArmor.Cast"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+		//"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.3"
+		"FightRecapLevel"				"1"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30 25 20 15 12.5 10 7.5"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+
+
+		"AbilityValues"
+		{
+			"heal_per_second"
+			{
+				"value"								"100 150 200 250 300 350 800"
+				"special_bonus_unique_treant_8"			"+4"
+			}
+			"duration"			"12"
+			"aoe_radius"
+			{
+				"special_bonus_unique_treant_7"		"450"
+				"affected_by_aoe_increase"			"1"
+			}
+
+			"damage_block_base"
+			{
+				"value"								"120"
+				"special_bonus_unique_treant_13"	"+20"				
+			}
+
+			"passive_reset_cd"
+			{
+				"special_bonus_shard"				"0"
+			}
+
+			"damage_block_loss"						"35 30 25 20"
+			"damage_block_threshold"				"20"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+	//=================================================================================================================
+	// Treant Protector: Overgrowth
+	//=================================================================================================================
+"treant_overgrowth"
+{
+	"ID"				"5437"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"AbilityType"				"ABILITY_TYPE_ULTIMATE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"AbilitySound"				"Hero_Treant.Overgrowth.Cast"
+	"MaxLevel"				"6"
+	"LevelsBetweenUpgrades"				"6"
+	"AbilityCastPoint"				"0.5 0.5 0.5 0.5"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_5"
+	"FightRecapLevel"				"2"
+	"AbilityDraftUltScepterAbility"				"treant_eyes_in_the_forest"
+	"AbilityManaCost"				"200 250 300 350 400 450"
+	"AbilityValues"
+	{
+		"duration"				"5 7 8 9 10 11"
+		"radius"
+		{
+			"value"				"1200"
+			"LinkedSpecialBonus"				"special_bonus_unique_treant_5"
+			"affected_by_aoe_increase"				"1"
+		}
+		"eyes_radius"
+		{
+			"value"				"800"
+			"LinkedSpecialBonus"				"special_bonus_unique_treant_5"
+			"affected_by_aoe_increase"				"1"
+		}
+		"damage"
+		{
+			"value"				"1075 2150 5125 8000 9000 10000"
+			"CalculateSpellDamageTooltip"				"1"
+		}
+		"undispellable"
+		{
+			"value"				"0"
+			"special_bonus_unique_treant_11"				"+1"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"100"
+			"special_bonus_unique_treant_14"				"-40"
+			"special_bonus_scepter"				"-25"
+		}
+		"bloom_duration"
+		{
+			"special_bonus_scepter"				"16"
+		}
+		"strength_bonus"
+		{
+			"special_bonus_scepter"				"100"
+		}
+		"splash_pct"
+		{
+			"special_bonus_scepter"				"60"
+		}
+		"splash_radius"
+		{
+			"special_bonus_scepter"				"300"
+			"affected_by_aoe_increase"				"1"
+		}
+		"movement_speed"
+		{
+			"special_bonus_scepter"				"345"
+		}
+	}
+	"HasScepterUpgrade"				"1"
+	"AbilityDraftExtraAbilities"
+	{
+		"treant_eyes_in_the_forest"				"shard"
+	}
+}
+//=================================================================================================================
+	// Treant: Eyes In The Forest ( scepter ability )
+	//=================================================================================================================
+"treant_eyes_in_the_forest"
+{
+	"ID"				"5649"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_TREE"
+	"MaxLevel"				"1"
+	"FightRecapLevel"				"1"
+	"IsGrantedByScepter"				"1"
+	"HasScepterUpgrade"				"1"
+	"AbilitySound"				"Hero_Treant.Eyes.Cast"
+	"AbilityCastRange"				"160"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_4"
+	"AbilityCharges"				"6"
+	"AbilityChargeRestoreTime"				"40.0"
+	"AbilityManaCost"				"100"
+	"AbilitySpecial"
+	{
+		"vision_aoe"
+		{
+			"value"				"800"
+			"RequiresScepter"				"1"
+			"affected_by_aoe_increase"				"1"
+		}
+		"overgrowth_aoe"
+		{
+			"value"				"800"
+			"RequiresScepter"				"1"
+			"affected_by_aoe_increase"				"1"
+		}
+		"tree_respawn_seconds"
+		{
+			"value"				"5"
+			"RequiresScepter"				"1"
+		}
+	}
+	"IsGrantedByShard"				"1"
+	"HasShardUpgrade"				"1"
+	"AbilityValues"
+	{
+		"vision_aoe"
+		{
+			"value"				"800"
+			"affected_by_aoe_increase"				"1"
+		}
+		"hits_to_kill"				"2"
+		"duration"				"360"
+		"max_eyes"				"0"
+	}
+}
+}

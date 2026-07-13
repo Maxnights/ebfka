@@ -1,0 +1,46 @@
+"DOTAAbilities"
+{
+    "boss_terrorblade_reflection"	
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"terrorblade_reflection"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Terrorblade.Reflection"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastRange"				"3000"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"35 50"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"illusion_duration"			
+			{
+				"value"		"4"
+			}
+			"illusion_outgoing_damage"	"100"
+			"illusion_outgoing_tooltip"	"100"
+			"move_slow"
+			{
+				"value"					"30"
+				"special_bonus_unique_terrorblade_6"				"+15"
+			}
+			"range"						"1200"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+}

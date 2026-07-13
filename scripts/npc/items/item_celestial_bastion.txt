@@ -1,0 +1,205 @@
+"DOTAAbilities"
+{
+    
+    "item_celestial_bastion"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "item_lua"
+        "ScriptFile" "items/item_celestial_bastion.lua"
+        "AbilityTextureName" "bastion/bastion"
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown" "20"
+
+        "AbilitySharedCooldown" "bastion"
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "10000"
+        "Model" "models/props_gameplay/red_box.vmdl"
+        "Effect" "particles/generic_gameplay/dropped_item.vpcf"
+        "ItemShopTags" "agi;damage;evasion;attack_speed"
+        "ItemQuality" "epic"
+        "ItemAliases" "bstion;bastion"
+        "ItemAlertable" "1"
+        "ItemDeclarations" "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "active_duration" "2"
+            "hp_regen" "50"
+            "damage_reduction" "10"
+            "spell_immunity_radius" "700"
+
+            "bonus_armor" "5"
+            "bonus_armor_duration" "4"
+            "barrier_amount" "10000"
+
+        }
+    }
+    "item_recipe_celestial_bastion2"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "item_recipe_crimson_guard"
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "15000"
+        "ItemShopTags" ""
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe" "1"
+        "ItemResult" "item_celestial_bastion2"
+        "ItemRequirements"
+        {
+            "01" "item_celestial_bastion"
+        }
+    }
+
+    "item_celestial_bastion2"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "item_lua"
+        "ScriptFile" "items/item_celestial_bastion.lua"
+        "AbilityTextureName" "bastion/bastion_2"
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown" "20"
+
+        "AbilitySharedCooldown" "bastion"
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "25000"
+        "Model" "models/props_gameplay/red_box.vmdl"
+        "Effect" "particles/generic_gameplay/dropped_item.vpcf"
+        "ItemShopTags" "agi;damage;evasion;attack_speed"
+        "ItemQuality" "epic"
+        "ItemAliases" "bstion;bastion"
+        "ItemAlertable" "1"
+        "ItemDeclarations" "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "active_duration" "3"
+            "hp_regen" "70"
+            "damage_reduction" "15"
+            "spell_immunity_radius" "700"
+
+            "bonus_armor" "8"
+            "bonus_armor_duration" "6"
+            "barrier_amount" "20000"
+
+        }
+    }
+
+    "item_recipe_celestial_bastion3"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "item_recipe_crimson_guard"
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "20000"
+        "ItemShopTags" ""
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe" "1"
+        "ItemResult" "item_celestial_bastion3"
+        "ItemRequirements"
+        {
+            "01" "item_celestial_bastion2"
+        }
+    }
+    "item_celestial_bastion3"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "item_lua"
+        "ScriptFile" "items/item_celestial_bastion.lua"
+        "AbilityTextureName" "bastion/bastion_3"
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown" "20"
+
+        "AbilitySharedCooldown" "bastion"
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "41000"
+        "Model" "models/props_gameplay/red_box.vmdl"
+        "Effect" "particles/generic_gameplay/dropped_item.vpcf"
+        "ItemShopTags" "agi;damage;evasion;attack_speed"
+        "ItemQuality" "epic"
+        "ItemAliases" "bstion;bastion"
+        "ItemAlertable" "1"
+        "ItemDeclarations" "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "active_duration" "4"
+            "hp_regen" "90"
+            "damage_reduction" "17"
+            "spell_immunity_radius" "700"
+
+            "bonus_armor" "11"
+            "bonus_armor_duration" "7"
+            "barrier_amount" "30000"
+
+        }
+    }
+
+    "item_recipe_celestial_bastion4"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "item_recipe_crimson_guard"
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "35000"
+        "ItemShopTags" ""
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe" "1"
+        "ItemResult" "item_celestial_bastion4"
+        "ItemRequirements"
+        {
+            "01" "item_celestial_bastion3"
+        }
+    }
+    "item_celestial_bastion4"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "item_lua"
+        "ScriptFile" "items/item_celestial_bastion.lua"
+        "AbilityTextureName" "bastion/bastion_3"
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown" "20"
+
+        "AbilitySharedCooldown" "bastion"
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "45000"
+        "Model" "models/props_gameplay/red_box.vmdl"
+        "Effect" "particles/generic_gameplay/dropped_item.vpcf"
+        "ItemShopTags" "agi;damage;evasion;attack_speed"
+        "ItemQuality" "epic"
+        "ItemAliases" "bstion;bastion"
+        "ItemAlertable" "1"
+        "ItemDeclarations" "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "active_duration" "5"
+            "hp_regen" "120"
+            "damage_reduction" "20"
+            "spell_immunity_radius" "700"
+
+            "bonus_armor" "14"
+            "bonus_armor_duration" "8"
+            "barrier_amount" "40000"
+
+        }
+    }
+}

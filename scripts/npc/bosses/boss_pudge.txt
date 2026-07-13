@@ -1,0 +1,314 @@
+"DOTAAbilities"
+{
+    "boss_viper_corrosive_skin"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "viper_corrosive_skin"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"hero_viper.CorrosiveSkin"
+		"HasScepterUpgrade"				"1"
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"		"10"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"								"5.0"
+			"bonus_attack_speed"					"20"
+			"bonus_magic_resistance"	
+			{
+				"value"								"20 25 30"
+				
+			}
+			"damage"
+			{
+				"value"								"1470 2955 30000"
+				
+			}
+			"max_range_tooltip"						"1400"
+			"effect_multiplier_distance"
+			{
+				"value"								"500"
+				
+			}
+			"effect_multiplier"
+			{
+				"value"								"2"
+				
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+    "boss_pudge_meat_hook"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"pudge_meat_hook"
+		"AbilityTextureName"			"pudge_meat_hook"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Pudge.AttackHookExtend"
+		
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"3"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"2500"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage"
+			{
+				"value"									"18175 33800 150000"
+				"special_bonus_unique_pudge_7"			"+100%"
+			}
+			"hook_speed"								"2700.0"
+			"hook_width"								"300"
+			"hook_distance"								"2500"
+			"vision_radius"								"500 500 500"
+			"vision_duration"							"4.0 4.0 4.0"
+			"AbilityCooldown"				
+			{
+				"value"									"7"
+				"special_bonus_unique_pudge_5"			"-4"
+			}
+			"vector_target_distance"
+			{
+				"value"									"0"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Ability: Pudge Rot
+	//=================================================================================================================
+	"boss_pudge_rot"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"bosses/boss_pudge/boss_pudge_rot"
+		"AbilityTextureName"			"pudge_rot"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"HasScepterUpgrade"				"1"
+		
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"3"
+
+        "precache"
+		{
+			"soundfile"						"soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts"
+			"particle"						"particles/units/heroes/hero_pudge/pudge_rot.vpcf"
+			"particle"						"particles/units/heroes/hero_pudge/pudge_rot_recipient.vpcf"
+		}
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0 0 0 0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"rot_radius" "1000"
+			"rot_tick" "0.2"
+			"rot_slow" "-38 -40 -45"
+			"rot_damage" "3000 6000 40000"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+    "boss_pudge_dismember"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "pudge_dismember"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"FightRecapLevel"				"2"
+		"AbilityDraftPreAbility"		"pudge_eject"
+		"HasShardUpgrade"				"1"
+		
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"6"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"160"
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		"AbilityValues"
+		{
+			"dismember_damage"		
+			{
+				"value"							"27400 90000 100700"
+				"special_bonus_unique_pudge_3"	"x1.8"	
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"strength_damage"					""
+			"ticks"		
+			{
+				"value"							"6"
+				"special_bonus_unique_pudge_6"	"+2"
+			}
+			"pull_units_per_second"				"75"
+			"pull_distance_limit"				"125"
+			"animation_rate"					"1.5"
+			"AbilityChannelTime"			
+			{
+				"value"							"3.75"
+				"special_bonus_unique_pudge_6"	"+0.8"
+			}
+			"creep_dismember_duration_tooltip"	
+			{
+				"value"							"2.75"
+				"special_bonus_unique_pudge_6"	"+0.8"
+			}
+			"AbilityCooldown"				
+			{
+				"value"							"20"
+				"special_bonus_shard"			"-5"
+			}
+			"shard_regen_pct"			
+			{
+				"value"					"5"
+				"RequiresShard"					"1"
+			}
+			"order_lock_duration"		
+			{
+				"value"							"3"
+				"RequiresShard"					"1"
+			}
+			"shard_cast_range"		
+			{
+				"value"							"300"
+				"RequiresShard"					"1"
+			}
+			"shard_cooldown_reduction"		
+			{
+				"value"							"3.3"
+				"RequiresShard"					"1"
+			}
+		}
+	}
+
+	"boss_pudge_mind_control"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"bosses/boss_pudge/boss_pudge_mind_control"
+        
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+        
+        "AbilityTextureName"			"night_stalker_hunter_in_the_night"
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+            "soundfile"	"soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts"
+			
+        }
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange" "5000"
+        "AbilityCastMinimumRange" "50"
+        
+        "AbilityCastAnimation" "ACT_DOTA_SPAWN" // Activity
+        "AnimationPlaybackRate" "1.0" // Animation speed multiplier
+        "AnimationIgnoresModelScale" "1"
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown" "16.0"
+        "AbilityCastPoint" "0"
+
+        
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"					"5000"
+			"duration"					"7"											
+		}
+	}
+
+	"astral_abyss"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"bosses/boss_pudge/astral_abyss"
+        
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE "
+        "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+        
+        "AbilityTextureName"			"enigma_black_hole"
+        "precache"
+        {
+			"soundfile"						"soundevents/game_sounds_heroes/game_sounds_enigma.vsndevts"
+			"particle"	"particles/econ/items/enigma/enigma_world_chasm/enigma_blackhole_ti5.vpcf"
+			
+        }
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange" "5000"
+        "AbilityCastMinimumRange" "50"
+        
+        "AbilityCastAnimation" "ACT_DOTA_SPAWN" // Activity
+        "AnimationPlaybackRate" "1.0" // Animation speed multiplier
+        "AnimationIgnoresModelScale" "1"
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown" "17"
+        "AbilityCastPoint" "0"
+
+        
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"black_hole_radius"					"400"
+			"teleport_radius"					"5000"
+			"spawn_radius"					"600"
+			"duration"						"7"
+		}
+	}
+}

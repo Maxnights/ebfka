@@ -1,0 +1,362 @@
+"DOTAAbilities"
+{	
+	"reapers_scythe_custom"
+    {
+        "BaseClass"                 "ability_lua"
+        "ScriptFile"				"bosses/boss_necro/reapers_scythe_custom"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+        "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityDamageType"         "DAMAGE_TYPE_PURE"
+        "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityTextureName"        "necrolyte_reapers_scythe"
+        "AbilityCooldown"           "10"
+        "AbilityManaCost"           "0"
+        "AbilityCastRange"          "1000"
+
+        "precache"
+        {
+            "particle" "particles/econ/items/necrolyte/necro_sullen_harvest/necro_ti7_immortal_scythe_start.vpcf"
+        }
+
+        "AbilityValues"
+        {
+            "damage_per_hp_missing" "1.5 1.5 1.5"
+            "stun_duration"     "1.5 1.5 1.5"
+        }
+    }
+
+    "boss_necrolyte_ghost_shroud"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "necrolyte_ghost_shroud"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilitySound"					"Hero_Necrolyte.SpiritForm.Cast"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+
+		"AbilityCastPoint"				"0"
+		"AbilityManaCost"				"0"
+		
+		
+		"AbilityValues"
+		{
+			"duration"		"3 4 5"
+			"heal_bonus"
+			{	
+				"value"			"50000 50000 50000"
+			}			
+			"movement_speed"
+			{
+				"value"			"19 22 25"
+			}
+			"movement_transfer"
+			{
+				"value"			"50"
+			}
+			"slow_aoe"		
+			{
+				"value"		"900"
+				"affected_by_aoe_increase"	"1"
+			}
+			"bonus_damage" "0"
+			"AbilityCooldown"
+			{
+				"value"						"20 20 20"
+			} 	
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+    "boss_necrolyte_heartstopper_aura"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "necrolyte_heartstopper_aura"
+        "AbilityTextureName" "necrolyte_heartstopper_aura"
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+        "AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "SpellImmunityType" "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityUnitDamageType" "DAMAGE_TYPE_MAGICAL"
+        "IsBreakable" "1"
+        "HasScepterUpgrade" "1"
+        "AbilityValues"
+        {
+            "aura_radius" "2000"
+            "aura_damage"
+            {
+                "value" "2.1 2.3 2.9"
+                "DamageTypeTooltip" "DAMAGE_TYPE_NONE"
+                "CalculateSpellDamageTooltip" "0"
+            }
+            "creep_damage"
+            {
+                "value" "1.7 1.8 1.9"
+                "DamageTypeTooltip" "DAMAGE_TYPE_NONE"
+                "CalculateSpellDamageTooltip" "0"
+            }
+            "health_regen" "150 250 500"
+            "mana_regen" "2.5 3 3.5"
+            "hero_multiplier" "5"
+            "kill_multiplier" "2"
+            "regen_duration"
+            {
+                "value" "8"
+            }
+            "heal_reduction_pct"
+            {
+                "value" "0"
+            }
+            "heal_regen_to_damage"
+            {
+                "value" "0"
+                "special_bonus_scepter" "+1550"
+            }
+        }
+        "AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_3"
+    }
+
+    // ------------------------------------------ OLD SKILLs ------------------------------------------------
+
+    "boss_death_orb"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "ability_datadriven"
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+        "SpellImmunityType" "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityUnitDamageType" "DAMAGE_TYPE_MAGICAL"
+        "AbilityTextureName" "death_orb"
+        "precache"
+        {
+            "particle" "particles/death_spear.vpcf"
+        }
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange" "2000"
+        "AbilityCastAnimation" "ACT_DOTA_SPAWN" // Activity
+        "AnimationPlaybackRate" "0.8" // Animation speed multiplier
+        "AnimationIgnoresModelScale" "1"
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown" "40"
+        "AbilityCastPoint" "0.5"
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost" "0 0 0 0"
+        "OnAbilityPhaseStart"
+        {
+            "CreateThinker"
+            {
+                "ModifierName" "target_telegraph_fx"
+                "Target" "CASTER"
+            }
+        }
+        "OnSpellStart"
+        {
+            "ApplyModifier"
+            {
+                "ModifierName" "stun_skill"
+                "Target" "CASTER"
+            }
+            "RunScript"
+            {
+                "ScriptFile" "lua_abilities/abilities_simple.lua"
+                "Function" "projectile_death_orbs"
+            }
+        }
+        "Modifiers"
+        {
+            "stun_skill"
+            {
+                "duration" "5.0"
+                "States"
+                {   
+                    "MODIFIER_STATE_DISARMED" "MODIFIER_STATE_VALUE_ENABLED"
+                    // "MODIFIER_STATE_SILENCED" "MODIFIER_STATE_VALUE_ENABLED"
+                    // "MODIFIER_STATE_COMMAND_RESTRICTED" "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_IGNORING_MOVE_AND_ATTACK_ORDERS" "MODIFIER_STATE_VALUE_ENABLED"
+                    // "MODIFIER_STATE_CANNOT_TARGET_ENEMIES" "MODIFIER_STATE_VALUE_ENABLED"
+                }
+            }
+            "target_telegraph_fx"
+            {
+                "OnCreated"
+                {
+                    "AttachEffect"
+                    {
+                        "EffectName" "particles/econ/generic/generic_aoe_shockwave_1/generic_aoe_shockwave_1.vpcf"
+                        "EffectAttachType" "follow_origin"
+                        "Target" "CASTER"
+                        "ControlPoints"
+                        {
+                            "00" "0 0 0"
+                            "01" "500 0 0"
+                            "02" "6 0 1" // telegraph
+                            "03" "200 0 0"
+                            "04" "0 0 0"
+                        }
+                    }
+                }
+            }
+        }
+        // Modifiers
+        //-------------------------------------------------------------------------------------------------------------
+        "OnProjectileHitUnit"
+        {
+            "DeleteOnHit" "1"
+            "RunScript"
+            {
+                "ScriptFile" "lua_abilities/abilities_simple.lua"
+                "Function" "projectile_death_orbs_hit"
+            }
+        }
+    }
+    "boss_death_time"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "ability_datadriven"
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+        "SpellImmunityType" "SPELL_IMMUNITY_ENEMIES_YES"
+        "FightRecapLevel" "1"
+        "AbilityTextureName" "death_timer"
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange" "1000"
+        "AnimationPlaybackRate" "0.8" // Animation speed multiplier
+        "AnimationIgnoresModelScale" "1"
+        "AbilityCastPoint" "0.5"
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown" "15.0"
+        // Damage.
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost" "0"
+        
+        "AbilityValues"
+        {
+            "radius" "1500"
+        }
+        "precache"
+        {
+            "particle" "particles/generic_aoe_persistent_circle_1/death_timer_glow_rev.vpcf"
+            "particle" "particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
+        }
+        "OnSpellStart"
+        {
+            "CreateThinker"
+            {
+                "ModifierName" "target_telegraph_fx"
+                "Target" "CASTER"
+            }
+            "CreateThinker"
+            {
+                "ModifierName" "caster_chrono_fx"
+                "Target" "CASTER"
+            }
+            "RunScript"
+            {
+                "ScriptFile" "lua_abilities/abilities_simple.lua"
+                "Function" "boss_death_time"
+            }
+            "ApplyModifier"
+            {
+                "ModifierName" "stun_skill"
+                "Target" "CASTER"
+            }
+        }
+        "Modifiers"
+        {
+            "stun_skill"
+            {
+                "duration" "5.0"
+                "States"
+                {
+                    // "MODIFIER_STATE_DISARMED" "MODIFIER_STATE_VALUE_ENABLED"
+                    // "MODIFIER_STATE_SILENCED" "MODIFIER_STATE_VALUE_ENABLED"
+                    // "MODIFIER_STATE_COMMAND_RESTRICTED" "MODIFIER_STATE_VALUE_ENABLED"
+                    // "MODIFIER_STATE_IGNORING_MOVE_AND_ATTACK_ORDERS" "MODIFIER_STATE_VALUE_ENABLED"
+                    // "MODIFIER_STATE_CANNOT_TARGET_ENEMIES" "MODIFIER_STATE_VALUE_ENABLED"
+                }
+            }
+            "target_telegraph_fx"
+            {
+                "OnCreated"
+                {
+                    "AttachEffect"
+                    {
+                        "EffectName" "particles/econ/generic/generic_aoe_shockwave_1/generic_aoe_shockwave_1.vpcf"
+                        "EffectAttachType" "follow_origin"
+                        "Target" "CASTER"
+                        "ControlPoints"
+                        {
+                            "00" "0 0 0"
+                            "01" "1500 0 0"
+                            "02" "6 0 1" // telegraph
+                            "03" "175 250 75"
+                            "04" "0 0 0"
+                        }
+                    }
+                }
+            }
+            "caster_chrono_fx"
+            {
+                "Duration" "5" // Should work without the added time but appears to have a off by one error so time added so it doesnt destroy itself before occuring
+                "ThinkInterval" "1.0"
+                "OnCreated"
+                {
+                    "AttachEffect"
+                    {
+                        "EffectName" "particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
+                        "EffectAttachType" "attach_origin"
+                        "Target" "CASTER"
+                        "ControlPoints"
+                        {
+                            "01" "1500 1500 0"
+                            "03" "175 250 75"
+                        }
+                    }
+                }
+            }
+            "target_warning"
+            {
+                "IsDebuff" "1"
+                "IsPurgable" "0"
+                "RemoveOnDeath" "0"
+            }
+        }
+    }
+    "boss_blink_on_far"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "ability_datadriven"
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "SpellImmunityType" "SPELL_IMMUNITY_ENEMIES_YES"
+        "FightRecapLevel" "1"
+        "AbilityTextureName" "death_blink"
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint" "0.1"
+        "AbilityCastRange" "5000"
+        // Time
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown" "15.0"
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost" "0"
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile" "lua_abilities/abilities_simple.lua"
+                "Function" "boss_blink_on_far"
+            }
+        }
+    }
+}

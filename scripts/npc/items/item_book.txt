@@ -1,0 +1,88 @@
+"DOTAAbilities"
+{
+    "item_spamp_book"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"				    "items/item_spamp_book"
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+		"ItemQuality" "epic"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"    		"item_tome_of_aghanim"
+		
+		"AbilityCooldown"				"0.5"
+		
+		"ItemPermanent"					"0"
+		"ItemCost"						"3000"
+		"ItemPurchasable"				"0"
+		"ItemShareability"						"ITEM_FULLY_SHAREABLE"
+        "AbilityValues"
+        {
+            "spell_amp" "100"
+        }
+	}
+    "item_attack_range_book"
+    {
+        "BaseClass"						"item_lua"
+		"ScriptFile"				    "items/item_attack_range_book"
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+		"ItemQuality" "epic"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"    		"item_tome_of_aghanim"
+		
+		"AbilityCooldown"				"0.5"
+		
+		"ItemPermanent"					"0"
+		"ItemCost"						"3000"
+		"ItemPurchasable"				"0"
+		"ItemShareability"						"ITEM_FULLY_SHAREABLE"
+        "AbilityValues"
+        {
+            "attack_range" "200"
+        }
+    }
+    "item_mana_regen_book"
+    {
+        "BaseClass"						"item_lua"
+		"ScriptFile"				    "items/item_mana_regen_book"
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+		"ItemQuality" "epic"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"    		"item_tome_of_aghanim"
+		
+		"AbilityCooldown"				"0.5"
+		
+		"ItemPermanent"					"0"
+		"ItemCost"						"3000"
+		"ItemPurchasable"				"0"
+		"ItemShareability"						"ITEM_FULLY_SHAREABLE"
+        "AbilityValues"
+        {
+            "mana_regen" "200"
+        }
+    }
+	"item_attack_to_barrier"
+    {
+        "BaseClass"						"item_lua"
+		"ScriptFile"				    "items/item_attack_to_barrier"
+		"Model"							"models/props_gameplay/treasure_chest001.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+		"ItemQuality" "artifact"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"    		"item_tome_of_aghanim"
+		
+		"AbilityCooldown"				"0.5"
+		
+		"ItemPermanent"					"0"
+		"ItemCost"						"0"
+		"ItemPurchasable"				"0"
+		"ItemShareability"						"ITEM_FULLY_SHAREABLE"
+        "AbilityValues"
+		{
+			"max_barrier"		"100000"
+			"barrier_conversion" 	"100"
+		}
+    }
+}

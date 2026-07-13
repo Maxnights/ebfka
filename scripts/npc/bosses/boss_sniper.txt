@@ -1,0 +1,86 @@
+"DOTAAbilities"
+{
+    "boss_imba_sniper_assassinate"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"imba_sniper_assassinate"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"FightRecapLevel"				"2"
+		"AbilityTextureName"			"sniper_assassinate"
+		"HasScepterUpgrade"				"1"
+        "AbilityCastRange"				"3000"
+		
+		"AbilityCastPoint"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------		
+		"AbilityCastRangeBuffer"		"1000"
+		
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"10"
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts"
+			"soundfile"					"soundevents/voscripts/game_sounds_vo_sniper.vsndevts"
+			"particle"					"particles/units/heroes/hero_sniper/sniper_assassinate.vpcf"
+			"particle"					"particles/units/heroes/hero_sniper/sniper_crosshair.vpcf"
+		}
+
+		"AbilityValues"
+		{
+			"damage"                "2000 2000 2000"
+			"ministun_duration"     "0.03"
+			"bullet_radius"         "200 250 300"
+			"travel_speed"          "3000"
+			"sight_duration"        "4"
+			"charge_time"           "1"
+			"cast_range"            "3000"
+			"projectiles"           "1"
+			"scepter_cast_time"     "0.2"
+			"scepter_stun_duration" "0.5 0.6 0.7"
+		}
+	}
+
+	"special_bonus_boss_imba_sniper_2" // Assassinate now knockbacks all units hit
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"special_bonus_undefined"
+		"AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"AbilityValues"
+		{
+			"value"	                    "10 10 10 300"
+			"ad_linked_abilities" "boss_imba_sniper_assassinate"
+		}
+	}
+
+    "special_bonus_boss_imba_sniper_6" // Assassination's cast point increases. When executed, it launches three projectiles towards the target. 
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"special_bonus_undefined"
+		"AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"AbilityValues"
+		{
+			"ad_linked_abilities" "boss_imba_sniper_assassinate"
+			"cast_point_increase"       "2"
+			"total_projectiles"	        "5"
+			"refire_delay"		        "0.2"
+		}
+	}
+}

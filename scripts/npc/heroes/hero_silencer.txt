@@ -1,0 +1,317 @@
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Silencer: Arcane Curse
+	//=================================================================================================================
+"silencer_curse_of_the_silent"
+{
+	"ID"				"5377"
+	"AbilityType"				"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"FightRecapLevel"				"1"
+	"AbilitySound"				"Hero_Silencer.Curse.Cast"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"AbilityCastRange"				"1000"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+	"AbilityManaCost"				"130 135 140 145 150 155 160"
+	"AbilityModifierSupportValue"				"0.5"
+	"AbilityValues"
+	{
+		"damage"
+		{
+			"value"				"450 615 810 1345 2460 4625 8870"
+			"special_bonus_unique_silencer"				"+50%"
+		}
+		"application_damage"				"900 1230 1620 2690 4920 9250 17740"
+		"AbilityCooldown"
+		{
+			"value"				"14"
+		}
+		"AbilityCharges"
+		{
+			"value"				"0"
+			"special_bonus_unique_silencer_arcane_curse_charges"				"2"
+		}
+		"radius"
+		{
+			"value"				"340 360 380 400 420 440 460"
+			"affected_by_aoe_increase"				"1"
+			"special_bonus_unique_silencer_arcane_curse_radius"				"+200"
+		}
+		"duration"
+		{
+			"value"				"6"
+			"special_bonus_unique_silencer_arcane_curse_duration"				"+2"
+			"dynamic_value"				"true"
+		}
+		"movespeed"				"-10 -15 -20 -25 -30 -35 -40"
+		"undispellable"
+		{
+			"value"				"0"
+			"special_bonus_unique_silencer_arcane_curse_undispellable"				"+1"
+		}
+		"penalty_duration"
+		{
+			"value"				"2"
+			"special_bonus_unique_silencer_arcane_curse_duration"				"+1"
+		}
+		"penalty_multiplier"
+		{
+			"value"				"1.5"
+			"special_bonus_unique_silencer"				"+0.5"
+		}
+		"duration_percent_per_stolen_int"
+		{
+			"special_bonus_facet_silencer_burden_of_knowledge"				"1"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_1"
+}
+//=================================================================================================================
+	// Silencer: Glaives of Wisdom
+	//=================================================================================================================
+	"silencer_glaives_of_wisdom"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_silencer/silencer_glaives_of_wisdom"
+		"AbilityTextureName"			"silencer_glaives_of_wisdom"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilitySound"					"Hero_Silencer.GlaivesOfWisdom"
+		"MaxLevel"						"7"
+		"LevelsBetweenUpgrades"			"3"
+
+        "HasShardUpgrade"               "1"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDuration"				"0.0 0.0 0.0 0.0"
+		"AbilityCastRange"				"600"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"20 24 28 32 36 40 44"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"intellect_damage_pct"
+			{
+				"value"								"80"
+				"special_bonus_unique_silencer_3"	"+25"
+				"CalculateSpellDamageTooltip" 		"0"
+			}
+			"int_steal"		
+			{
+				"value"								"2 2 3 3 4 4 5"
+				"special_bonus_shard"				"+2"
+			}
+			"int_steal_duration"		
+			{
+				"value"			"40"
+				"special_bonus_unique_silencer_5"		"+50"
+			}
+			"bounce_range"
+			{
+				"value"					"0"
+				"special_bonus_facet_silencer_spread_the_knowledge"		"=0 =0 =0 =0 =450"
+				"affected_by_aoe_increase"	"1"
+			}
+			"bounce_range_tooltip"
+			{
+				"special_bonus_facet_silencer_spread_the_knowledge"		"+450"
+			}
+			"bounce_count"
+			{
+				"value"															"0"
+				"special_bonus_facet_silencer_spread_the_knowledge"		"=0 =0 =0 =0 =1"
+			}
+			"stacks_for_silence"
+			{
+				"value"						"0"
+				"special_bonus_shard"											"+1"
+			}							
+			"silence_duration"
+			{
+				"value"						"0"
+			}	
+			"debuff_linger_duration"		"60"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+
+	//=================================================================================================================
+	// Silencer: Last Word
+	//=================================================================================================================
+"silencer_last_word"
+{
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
+	"FightRecapLevel"				"1"
+	"AbilitySound"				"Hero_Silencer.LastWord.Target"
+	"MaxLevel"				"7"
+	"LevelsBetweenUpgrades"				"3"
+	"HasScepterUpgrade"				"1"
+	"AbilityValues"
+	{
+		"damage"
+		{
+			"value"				"2250 3750 5425 7300 12550 22550 41850"
+			"CalculateSpellDamageTooltip"				"1"
+		}
+		"int_multiplier"
+		{
+			"value"				"1 1.5 2 2.5 3.0 3.5 4.0"
+			"LinkedSpecialBonus"				"special_bonus_unique_silencer_4"
+			"CalculateSpellDamageTooltip"				"1"
+		}
+		"debuff_duration"
+		{
+			"value"				"4"
+			"LinkedSpecialBonus"				"special_bonus_unique_silencer_2"
+		}
+		"duration"				"6"
+		"radius"
+		{
+			"value"				"0"
+			"special_bonus_unique_silencer_4"				"+250"
+			"affected_by_aoe_increase"				"1"
+		}
+	}
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_3"
+	"AbilityCastPoint"				"0.3"
+	"AbilityCastRange"				"900"
+	"AbilityCooldown"				"22 18 14 10"
+	"AbilityManaCost"				"100 105 110 115"
+	"AbilityModifierSupportValue"				"0.3"
+}
+//=================================================================================================================
+	// Silencer: Global Silence
+	//=================================================================================================================
+"silencer_global_silence"
+{
+	"AbilityType"				"ABILITY_TYPE_ULTIMATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"SpellDispellableType"				"SPELL_DISPELLABLE_YES"
+	"FightRecapLevel"				"2"
+	"AbilitySound"				"Hero_Silencer.GlobalSilence.Cast"
+	"MaxLevel"				"6"
+	"LevelsBetweenUpgrades"				"6"
+	"AbilityCastPoint"				"0.3 0.3 0.3"
+	"AbilityCastAnimation"				"ACT_DOTA_CAST_ABILITY_4"
+	"AbilityManaCost"				"300 450 600 750 900 1050"
+	"AbilityModifierSupportValue"				"0.5"
+	"AbilityValues"
+	{
+		"AbilityDuration"
+		{
+			"value"				"4.5 5.25 6.0 6.75 7.5 8.25"
+			"special_bonus_facet_silencer_reverberating_silence"				"=0"
+			"special_bonus_unique_silencer_global_duration"				"+2"
+		}
+		"apply_twice"
+		{
+			"special_bonus_facet_silencer_reverberating_silence"				"1"
+		}
+		"first_duration"
+		{
+			"special_bonus_facet_silencer_reverberating_silence"				"3 3.5 4 4.5 5 5.5"
+		}
+		"second_duration"
+		{
+			"special_bonus_facet_silencer_reverberating_silence"				"1.5 1.75 2 2.25 2.5 2.75"
+		}
+		"applies_curse"
+		{
+			"special_bonus_scepter"				"+1"
+		}
+		"AbilityCooldown"
+		{
+			"value"				"35"
+			"special_bonus_unique_silencer_7"				"-15"
+		}
+	}
+	"HasScepterUpgrade"				"1"
+}
+//=================================================================================================================
+	// Ability: Silencer Mind Eater
+	//=================================================================================================================
+	"silencer_brain_drain"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_silencer/silencer_brain_drain"
+		"AbilityTextureName"			"silencer_brain_drain"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+        "HasShardUpgrade"               "1"
+
+		"AbilityValues"
+		{
+			"permanent_int_steal_range"	
+			{
+				"value"		"1600"			
+				"affected_by_aoe_increase"	"1"
+			}
+			"permanent_int_steal_amount"
+			{
+				"value"						"2"
+				"special_bonus_shard"		"+3"
+				"CalculateAttributeTooltip"	"1"
+			}	
+		}
+	}
+
+
+	//=================================================================================================================
+	// Ability: Silencer Oppressive Silence
+	//=================================================================================================================
+"silencer_oppressive_silence"
+{
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	"MaxLevel"				"7"
+	"DependentOnAbility"				"silencer_global_silence"
+	"IsBreakable"				"1"
+	"AbilityValues"
+	{
+		"damage_pct"				"8 12 16 20 24 28 32"
+	}
+	"Innate"				"1"
+}
+//=================================================================================================================
+	// Ability: Silencer Blabbermouth
+	//=================================================================================================================
+	"silencer_irrepressible"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"MaxLevel"						"1"
+		"IsBreakable"					"1"
+	}
+
+}

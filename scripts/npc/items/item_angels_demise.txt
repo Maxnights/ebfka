@@ -1,0 +1,240 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Recipe: TITAN
+	//=================================================================================================================
+	"item_recipe_angels_demise_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_angels_demise"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"20"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_angels_demise_2"
+		"ItemRequirements"
+		{
+			"01"						"item_angels_demise;item_orb_1;item_relic"
+		}
+	}
+	
+	//=================================================================================================================
+	// angels_demiseh Of Titan
+	//=================================================================================================================
+	"item_angels_demise_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_angels_demise"
+		"AbilityTextureName"			"angels_demise/angels_demise_2"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"6.0"
+		
+		"ItemCost"						"6200"
+		"ItemShopTags"					"int;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"staff;misery;sm"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		"AbilityValues"
+		{				
+			"bonus_health"					"2000"
+			"bonus_mana_regen"			"20"
+			"bonus_mana"					"750"			
+			"bonus_all_stats"				"100"
+			"slow"							"50"
+			"slow_duration"					"1.5"
+			"bonus_spell_damage"		"6000"
+		}
+	}
+	//=================================================================================================================
+	// Recipe: TITAN
+	//=================================================================================================================
+	"item_recipe_angels_demise_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_angels_demise"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"25"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_angels_demise_3"
+		"ItemRequirements"
+		{
+			"01"						"item_angels_demise_2;item_orb_2;item_scythe_2"
+		}
+	}
+	
+	//=================================================================================================================
+	// angels_demiseh Of Titan
+	//=================================================================================================================
+	"item_angels_demise_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_angels_demise"
+		"AbilityTextureName"			"angels_demise/angels_demise_3"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"6.0"
+		
+		"ItemCost"						"6200"
+		"ItemShopTags"					"int;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"staff;misery;sm"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_health"					"8000"
+			"bonus_mana_regen"			"30"
+			"bonus_mana"					"3000"			
+			"bonus_all_stats"				"500"
+			"slow"							"50"
+			"slow_duration"					"1.5"
+			"bonus_spell_damage"		"20000"
+		}
+	}
+	//=================================================================================================================
+	// Recipe: TITAN
+	//=================================================================================================================
+	"item_recipe_angels_demise_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_angels_demise"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"25"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_angels_demise_4"
+		"ItemRequirements"
+		{
+			"01"						"item_angels_demise_3;item_orb_3;item_scythe_3"
+		}
+	}
+
+	//=================================================================================================================
+	// angels_demise Of Deity
+	//=================================================================================================================
+	"item_angels_demise_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_angels_demise"
+		"AbilityTextureName"			"angels_demise/angels_demise_4"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"6.0"
+		
+		"ItemCost"						"6200"
+		"ItemShopTags"					"int;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"staff;misery;sm"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_health"					"15000"
+			"bonus_mana_regen"			"40"
+			"bonus_mana"					"6000"			
+			"bonus_all_stats"				"600"
+			"slow"							"50"
+			"slow_duration"					"1.5"
+			"bonus_spell_damage"		"30000"
+		}
+	}
+	//=================================================================================================================
+	// Recipe: TITAN
+	//=================================================================================================================
+	"item_recipe_angels_demise_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_recipe_angels_demise"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"25"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_angels_demise_5"
+		"ItemRequirements"
+		{
+			"01"						"item_angels_demise_4;item_orb_4;item_scythe_4"
+		}
+	}
+	//=================================================================================================================
+	// angels_demise Of Bahamut
+	//=================================================================================================================
+	"item_angels_demise_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_angels_demise"
+		"AbilityTextureName"			"angels_demise/angels_demise_5"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"6.0"
+		
+		"ItemCost"						"6200"
+		"ItemShopTags"					"int;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"staff;misery;sm"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_health"					"25000"
+			"bonus_mana_regen"			"50"
+			"bonus_mana"					"9500"			
+			"bonus_all_stats"				"750"
+			"slow"							"50"
+			"slow_duration"					"1.5"
+			"bonus_spell_damage"		"50000"
+		}
+	}
+}

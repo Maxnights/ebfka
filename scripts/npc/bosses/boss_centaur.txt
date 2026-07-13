@@ -1,0 +1,28 @@
+"DOTAAbilities"
+{
+    // "centaur_return"
+	// {
+	// 	"BaseClass" "centaur_return"
+	// 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	// 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	// 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+	// 	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+	// 	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	// 	"AbilityCastGestureSlot"		"DEFAULT"
+
+		
+	// 	// Special
+	// 	//-------------------------------------------------------------------------------------------------------------
+	// 	"AbilityValues"
+	// 	{
+	// 			"return_damage"				
+	// 			{
+	// 				"value"	"2500 3500 4500"
+	// 				"special_bonus_unique_centaur_3"	"+45"	
+	// 				"CalculateSpellDamageTooltip"	"1"
+	// 			}
+	// 			"return_damage_str"			"24 32 60"
+	// 			"aura_radius"				"4000"
+	// 	}
+	// }
+}

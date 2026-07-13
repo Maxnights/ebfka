@@ -1,0 +1,92 @@
+"DOTAAbilities"
+{
+	"item_god_slayer_receipt"
+	{
+		"BaseClass"						"item_datadriven"
+		"ItemPurchasable"				"1"
+		"AbilityTextureName"			"recipe"
+		"ItemCost"						"99000"
+		"ItemShopTags"					"damage"
+		"ItemQuality"					"common"
+		"ItemAliases"					"god slayer receipt"
+		"ItemSellable"					"1"
+		"ItemKillable"					"1"
+		"ItemDroppable"					"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS | DECLARE_PURCHASES_IN_SPEECH"
+	}
+
+	"item_recipe_god_slayer"
+    {
+        "BaseClass"						"item_recipe_crimson_guard"
+        "ItemCost"						"0"
+        "ItemShopTags"					""
+        "ItemRecipe"					"1"
+        "ItemResult"					"item_god_slayer"
+        "ItemRequirements"
+        {
+            "01" "item_god_slayer_receipt"
+            "02" "item_god_slayer_receipt"
+        }
+    }
+
+    "item_god_slayer"
+	{
+		"BaseClass"								"item_lua"
+		"ScriptFile"							"items/item_god_slayer"
+		"ItemPurchasable"						"1"
+		"AbilityTextureName"					"god_slayer"
+		"AbilityBehavior"						"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"					"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"					"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"				"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityType"                           "ABILITY_TYPE_ULTIMATE"
+		"AbilityCastRange"						"2200"
+		"AbilityCastPoint"						"0"
+		"AbilityManaCost"						"5000"
+		"AbilityCastAnimation"					"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityUnitDamageType"					"DAMAGE_TYPE_PURE"
+		"Model"									"models/props_gameplay/divine_rapier.vmdl"
+		"Effect"	   							"particles/generic_gameplay/dropped_item_rapier.vpcf"
+		"ItemShareability"						"ITEM_NOT_SHAREABLE"
+		"ItemCost"								"100000"
+		"ItemShopTags"							"damage"
+		"ItemQuality"							"epic"
+		"ItemAliases"							"god;slayer"
+		"ItemSellable"							"0"
+		"ItemKillable"							"0"
+		"ItemDroppable" 						"1"
+		"ItemDisassembleRule"					"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"ItemDeclarations"	"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS | DECLARE_PURCHASES_IN_SPEECH"
+		"ItemContributesToNetWorthWhenDropped"	"0"
+		"ItemStackable"							"1"
+		"ItemRequiresCharges"					"0"
+		"AllowedInBackpack"						"0"
+		"IsTempestDoubleClonable"				"0"
+		"AbilityCooldown"						"75"
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_ember_spirit.vsndevts"
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
+			"particle"		"particles/econ/items/ogre_magi/ogre_magi_arcana/ogre_magi_arcana_ignite_debuff.vpcf"
+			"particle"		"particles/econ/items/monkey_king/arcana/fire/mk_arcana_fire_spring_cast_ringouterpnts.vpcf"
+			"particle"		"particles/econ/items/juggernaut/jugg_arcana/juggernaut_arcana_omni_slash_trail.vpcf"
+		}
+		"AbilityValues"
+		{
+			"armor"						"5"
+			"attack_interval"			"0.09"
+			"duration"					"5.0"
+			"radius"					"900"
+			"stack_str"					"20"
+			"stack_agi"					"20"
+			"stack_spellamp"			"50"
+			"stack_health"				"100"
+			"stack_regen"				"6"
+			"stack_armor"				"1"
+			"mana_per"					"15"
+
+			"stack_chance"				"20"
+			"stuff"						"15"
+		}
+	}
+}

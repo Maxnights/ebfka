@@ -1,0 +1,156 @@
+"DOTAAbilities"
+{	
+	"boss_riki_smoke_screen"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"bosses/boss_riki/boss_riki_smoke_screen"
+		"AbilityTextureName"			"riki_smoke_screen"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Hero_Riki.Smoke_Screen"
+		"MaxLevel"						"3"
+		"LevelsBetweenUpgrades"			"3"
+		"HasShardUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"550"
+		"AbilityCastPoint"				"0.2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCooldown"
+			{
+				"value"							"15 13 10"
+				"special_bonus_unique_riki_3"	"-3"
+			}				
+			"AbilityDuration"
+			{
+				"value"							"6"
+			}
+			"radius"
+			{
+				"value"							"300 400 500"
+				"special_bonus_unique_riki_7"	"+75"
+			}
+			"miss_rate"							"70"
+			"block_targeting"
+			{
+				"value"							"0"
+				"special_bonus_shard"			"1"
+			}
+			"armor_reduction"
+			{
+				"value"							"0"
+				"special_bonus_shard"			"7"
+			}
+		}
+		
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+    "boss_riki_permanent_invisibility"
+    {
+        "BaseClass" "riki_permanent_invisibility"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        // "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"  
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+		{
+			"fade_delay"           "4 3 0"
+			"movement_speed"       "20 40 60"
+		}
+
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
+    }
+
+	"boss_riki_tricks_of_the_trade"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"riki_tricks_of_the_trade"
+		"AbilityTextureName"			"riki_tricks_of_the_trade"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"						"3"
+		"AbilityChannelTime"            "2.0"
+		"LevelsBetweenUpgrades"			"6"
+		"HasScepterUpgrade"				"1"
+		"AbilitySound"					"Hero_Riki.TricksOfTheTrade.Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+
+		// Ability Data
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"55 85 110 140 165 195 220"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCooldown"
+			{
+				"value"							"16"
+				"special_bonus_unique_riki_6"	"-30%"
+			}
+			"duration"
+			{
+				"value"							"2.0"
+				"special_bonus_scepter"			"+1"
+			}				
+			"radius"
+			{
+				"value"							"450"
+				"special_bonus_unique_riki_4"	"+350"
+			}
+			"attack_rate"
+			{
+				"value"							"0.5"
+				"special_bonus_unique_riki_6"	"-30%"
+			}						
+			"damage_pct"						"100"
+			"agility_pct"
+			{
+				"value" 						"80 100 120 140 160 180"
+				"special_bonus_unique_riki_2"	"+75"
+			}
+			"AbilityCastRange"
+			{
+				"value"							"400"
+				"special_bonus_scepter"			"+300"
+				"RequiresScepter"				"1"
+			}
+			"dispel"
+			{
+				"value"							"0"
+				"special_bonus_unique_riki_5"	"+1"
+			}
+		}
+	}
+}
