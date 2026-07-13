@@ -16,7 +16,6 @@ function UpdateItem()
 	
 	if ( Items.ShowSecondaryCharges( m_Item ) )
 	{
-		// Ward stacks display charges differently depending on their toggle state
 		hasCharges = true;
 		hasAltCharges = true;
 		if ( Abilities.GetToggleState( m_Item ) )
@@ -68,42 +67,27 @@ function UpdateItem()
 
 function ItemShowTooltip()
 {
-	if ( m_Item == -1 )
-		return;
-
+	if ( m_Item == -1 ) return;
 	var itemName = Abilities.GetAbilityName( m_Item );
 	$.DispatchEvent( "DOTAShowAbilityTooltipForEntityIndex", $.GetContextPanel(), itemName, m_QueryUnit );
 }
 
-function ItemHideTooltip()
-{
-	$.DispatchEvent( "DOTAHideAbilityTooltip", $.GetContextPanel() );
-}
-
-function ActivateItem()
-{
-	if ( m_Item == -1 )
-		return;
-
-	// Items are abilities - just execute the ability
-	Abilities.ExecuteAbility( m_Item, m_QueryUnit, false );
-}
-
-function DoubleClickItem()
-{
-	ActivateItem();
-}
+function ItemHideTooltip() { $.DispatchEvent( "DOTAHideAbilityTooltip", $.GetContextPanel() ); }
+function ActivateItem() { if ( m_Item == -1 ) return; Abilities.ExecuteAbility( m_Item, m_QueryUnit, false ); }
+function DoubleClickItem() { ActivateItem(); }
 
 var DOTA_ITEM_STASH_MIN = 6;
-
-function IsInStash()
-{
-	return ( m_ItemSlot >= DOTA_ITEM_STASH_MIN );
-}
+function IsInStash() { return ( m_ItemSlot >= DOTA_ITEM_STASH_MIN ); }
 
 function RightClickItem()
 {
 	ItemHideTooltip();
+
+	// ИСПРАВЛЕНИЕ: Используем == вместо ===
+	if (m_ItemSlot == 16 && m_Item != -1) {
+		GameEvents.SendCustomGameEventToServer("take_out_neutral_item", { item_entindex: m_Item });
+		return; 
+	}
 
 	var bSlotInStash = IsInStash();
 	var bControllable = Entities.IsControllableByPlayer( m_QueryUnit, Game.GetLocalPlayerID() );
@@ -113,11 +97,7 @@ function RightClickItem()
 	var bShowInShop = Items.IsPurchasable( m_Item );
 	var bDropFromStash = bControllable;
 
-	if ( !bSellable && !bDisassemble && !bShowInShop && !bDropFromStash && !bAlertable && !bMoveToStash )
-	{
-		// don't show a menu if there's nothing to do
-		return;
-	}
+	if ( !bSellable && !bDisassemble && !bShowInShop && !bDropFromStash && !bAlertable && !bMoveToStash ) return;
 
 	var contextMenu = $.CreatePanel( "DOTAContextMenuScript", $.GetContextPanel(), "" );
 	contextMenu.AddClass( "ContextMenu_NoArrow" );
@@ -128,41 +108,59 @@ function RightClickItem()
 	contextMenu.GetContentsPanel().SetHasClass( "bShowInShop", bShowInShop );
 	contextMenu.GetContentsPanel().SetHasClass( "bDropFromStash", bDropFromStash );
 	contextMenu.GetContentsPanel().SetHasClass( "bAlertable", bAlertable );
-	contextMenu.GetContentsPanel().SetHasClass( "bMoveToStash", false ); // TODO
+	contextMenu.GetContentsPanel().SetHasClass( "bMoveToStash", false );
 	contextMenu.GetContentsPanel().BLoadLayout( "file://{resources}/layout/custom_game/inventory_context_menu.xml", false, false );
 }
 
 function OnDragEnter( a, draggedPanel )
 {
 	var draggedItem = draggedPanel.Data().m_DragItem;
-
-	// only care about dragged items other than us
-	if ( draggedItem === null || draggedItem == m_Item )
-		return true;
-
-	// highlight this panel as a drop target
+	if ( draggedItem === null || draggedItem == m_Item ) return true;
 	$.GetContextPanel().AddClass( "potential_drop_target" );
+	return true;
+}
+
+function OnDragStart( panelId, dragCallbacks )
+{
+	if ( m_Item == -1 ) return true;
+
+	var itemName = Abilities.GetAbilityName( m_Item );
+	ItemHideTooltip();
+
+	var displayPanel = $.CreatePanel( "DOTAItemImage", $.GetContextPanel(), "dragImage" );
+	displayPanel.itemname = itemName;
+	displayPanel.contextEntityIndex = m_Item;
+	displayPanel.Data().m_DragItem = m_Item;
+	displayPanel.Data().m_DragItemSlot = m_ItemSlot; // Запоминаем слот!
+	displayPanel.Data().m_DragCompleted = false; 
+
+	dragCallbacks.displayPanel = displayPanel;
+	dragCallbacks.offsetX = 0;
+	dragCallbacks.offsetY = 0;
+	
+	$.GetContextPanel().AddClass( "dragging_from" );
 	return true;
 }
 
 function OnDragDrop( panelId, draggedPanel )
 {
 	var draggedItem = draggedPanel.Data().m_DragItem;
-	
-	// only care about dragged items other than us
-	if ( draggedItem === null )
-		return true;
-
-	// executing a slot swap - don't drop on the world
+	if ( draggedItem === null ) return true;
 	draggedPanel.Data().m_DragCompleted = true;
-	
-	// item dropped on itself? don't acutally do the swap (but consider the drag completed)
-	if ( draggedItem == m_Item )
-		return true;
+	if ( draggedItem == m_Item ) return true;
 
-	// create the order
-	var moveItemOrder =
-	{
+	var sourceSlot = draggedPanel.Data().m_DragItemSlot;
+	
+	// ИСПРАВЛЕНИЕ: Используем == вместо ===
+	if (m_ItemSlot == 16 || sourceSlot == 16) {
+		GameEvents.SendCustomGameEventToServer("force_swap_item", {
+			source_slot: sourceSlot,
+			target_slot: m_ItemSlot
+		});
+		return true; 
+	}
+
+	var moveItemOrder = {
 		OrderType: dotaunitorder_t.DOTA_UNIT_ORDER_MOVE_ITEM,
 		TargetIndex: m_ItemSlot,
 		AbilityIndex: draggedItem
@@ -174,80 +172,39 @@ function OnDragDrop( panelId, draggedPanel )
 function OnDragLeave( panelId, draggedPanel )
 {
 	var draggedItem = draggedPanel.Data().m_DragItem;
-	if ( draggedItem === null || draggedItem == m_Item )
-		return false;
-
-	// un-highlight this panel
+	if ( draggedItem === null || draggedItem == m_Item ) return false;
 	$.GetContextPanel().RemoveClass( "potential_drop_target" );
-	return true;
-}
-
-function OnDragStart( panelId, dragCallbacks )
-{
-	if ( m_Item == -1 )
-	{
-		return true;
-	}
-
-	var itemName = Abilities.GetAbilityName( m_Item );
-
-	ItemHideTooltip(); // tooltip gets in the way
-
-	// create a temp panel that will be dragged around
-	var displayPanel = $.CreatePanel( "DOTAItemImage", $.GetContextPanel(), "dragImage" );
-	displayPanel.itemname = itemName;
-	displayPanel.contextEntityIndex = m_Item;
-	displayPanel.Data().m_DragItem = m_Item;
-	displayPanel.Data().m_DragCompleted = false; // whether the drag was successful
-
-	// hook up the display panel, and specify the panel offset from the cursor
-	dragCallbacks.displayPanel = displayPanel;
-	dragCallbacks.offsetX = 0;
-	dragCallbacks.offsetY = 0;
-	
-	// grey out the source panel while dragging
-	$.GetContextPanel().AddClass( "dragging_from" );
 	return true;
 }
 
 function OnDragEnd( panelId, draggedPanel )
 {
-	// if the drag didn't already complete, then try dropping in the world
+	// ИСПРАВЛЕНИЕ: Любой бросок на землю идет через наш сервер!
 	if ( !draggedPanel.Data().m_DragCompleted )
 	{
-		Game.DropItemAtCursor( m_QueryUnit, m_Item );
+		GameEvents.SendCustomGameEventToServer("force_drop_item", {
+			item_entindex: m_Item
+		});
 	}
 
-	// kill the display panel
 	draggedPanel.DeleteAsync( 0 );
-
-	// restore our look
 	$.GetContextPanel().RemoveClass( "dragging_from" );
 	return true;
 }
 
-function SetItemSlot( itemSlot )
-{
-	m_ItemSlot = itemSlot;
-}
-
-function SetItem( queryUnit, iItem )
-{
-	m_Item = iItem;
-	m_QueryUnit = queryUnit;
-}
+function SetItemSlot( itemSlot ) { m_ItemSlot = itemSlot; }
+function SetItem( queryUnit, iItem ) { m_Item = iItem; m_QueryUnit = queryUnit; }
 
 (function()
 {
 	$.GetContextPanel().Data().SetItem = SetItem;
 	$.GetContextPanel().Data().SetItemSlot = SetItemSlot;
 
-	// Drag and drop handlers ( also requires 'draggable="true"' in your XML, or calling panel.SetDraggable(true) )
 	$.RegisterEventHandler( 'DragEnter', $.GetContextPanel(), OnDragEnter );
 	$.RegisterEventHandler( 'DragDrop', $.GetContextPanel(), OnDragDrop );
 	$.RegisterEventHandler( 'DragLeave', $.GetContextPanel(), OnDragLeave );
 	$.RegisterEventHandler( 'DragStart', $.GetContextPanel(), OnDragStart );
 	$.RegisterEventHandler( 'DragEnd', $.GetContextPanel(), OnDragEnd );
 
-	UpdateItem(); // initial update of dynamic state
+	UpdateItem(); 
 })();
